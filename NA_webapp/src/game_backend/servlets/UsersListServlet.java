@@ -3,6 +3,7 @@ package game_backend.servlets;
 import game_backend.utils.ServletUtils;
 import com.google.gson.Gson;
 import game_backend.utils.SessionUtils;
+import webEngine.users.User;
 import webEngine.users.UserManager;
 
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class UsersListServlet extends HttpServlet {
             case "currentUser":
                 getCurrentUser(request, response);
                 break;
+
         }
 
     }
@@ -36,7 +38,7 @@ public class UsersListServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             Gson gson = new Gson();
             UserManager userManager = ServletUtils.getUserManager(getServletContext());
-            Set<String> usersList = userManager.getUsers();
+            Set<User> usersList = userManager.getUsers();
             String json = gson.toJson(usersList);
             out.println(json);
             out.flush();

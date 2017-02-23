@@ -117,3 +117,166 @@ function loadGameCallback(json) {
         alert(json.errorMessage);
     }
 }
+
+function createGameDialog(event) {
+    var td = event.currentTarget.children[0];
+    var number = td.innerText;
+    $.ajax
+    (
+        {
+            url: 'games',
+            data: {
+                action: 'gameDetails',
+                key: number
+            },
+            type: 'GET',
+            success: createGameDialogCallback
+        }
+    )
+}
+
+function createGameDialogCallback(json) {
+    var div = $('.dialogDiv')[0];
+    div.style.display = "block";
+    var playersNamesDiv = $('.playersNames');
+
+    var key = json.key;
+    var creatorName = json.creatorName;
+    var gameName = json.gameTitle;
+    var boardSize = json.rows + " X " + json.cols;
+    var moves = json.moves;
+    var playerNumber = json.registeredPlayers + " / " + json.requiredPlayers
+
+    $('.key').text("Game id: " + key + ".");
+    $('.creatorName').text("Game Creator: " + creatorName + ".");
+    $('.gameName').text("Game Title: " + gameName);
+    $('.boardSize').text("Board size: " + boardSize);
+    $('.moves').text("Moves number: " + moves);
+    $('.playerNumber').text("Players : " + playerNumber);
+    for (i = 0; i < json.registeredPlayers; i++) {
+        var playerDiv = $(document.createElement('div'));
+        playerDiv.addClass('playerDiv');
+        playerDiv.appendTo(playersNamesDiv);
+    }
+
+    var playerDivs = $('.playerDiv');
+    for (i = 0; i < json.registeredPlayers; i++) {
+        playerDivs[i].innerHTML = (+i + 1) + '. ' + json.players[i].m_Name + '.';
+    }
+
+    createBoard(json.rows, json.cols, json.rowBlocks, json.colBlocks);
+}
+
+function removeGameDialog() {
+    $('.dialogDiv')[0].style.display = "none";
+}
+
+function createBoard(rows, cols, rowBlocks, colBlocks) {
+    var board = $('.board');
+    board.contents().remove();
+    colBlocksDiv = $(document.createElement('div'));
+    colBlocksDiv.addClass('colBlocks');
+    colBlocksDiv.appendTo(board);
+
+
+    for (i = 0; i < rows; i++) { // creates squares + row blocks.
+        rowDiv = $(document.createElement('div'));
+        rowDiv.addClass('rowDiv');
+        rowSquares = $(document.createElement('div'));
+        rowSquares.addClass('rowSquares');
+        rowBlocksDiv = $(document.createElement('div'));
+        rowBlocksDiv.addClass('rowBlocks');
+        rowSquares.appendTo(rowDiv);
+        rowBlocksDiv.appendTo(rowDiv);
+
+        /*for (hint = 0; hint < rowBlocks[i].length; hint++) {
+            rowHint = $(document.createElement('div'));
+            rowHint.addClass('rowHint');
+            rowHint.appendTo(rowBlocksDiv);
+        }*/
+
+        for (j = 0; j < cols; j++) { // add the squares.
+            squareDiv = $(document.createElement('div'));
+            squareDiv.addClass('square');
+            squareDiv.appendTo(rowSquares);
+        }
+        rowDiv.appendTo(board);
+    }
+
+    for (col = 0; col < cols; col++) { // creates column blocks.
+        colBlockDiv = $(document.createElement('div'));
+        colBlockDiv.addClass('colBlock');
+        //for (hint = 0; hint < colBlocks[col].length; hint++) {
+          //  hintDiv = $(document.createElement('div'));
+            //hintDiv.addClass('colHint');
+            //hintDiv.appendTo(colBlockDiv);
+            //hintDiv.innerHTML = colBlocks[col][hint];
+        //}
+        colBlockDiv.appendTo(colBlocksDiv);
+    }
+
+}
+
+function isUserComputer() {
+    var result;
+    $.ajax
+    ({
+        async: false,
+        url: 'usersList',
+        data: {
+            action: "currentUser"
+        },
+        type: 'GET',
+        success: function (json) {
+            result = json.isComputer;
+        }
+    });
+    return result;
+}
+
+function joinGameClicked() {
+    var name = getUserName();
+    var isComputer = isUserComputer();
+    var gameId = getGameId();
+    $.ajax
+    (
+        {
+            url: 'games',
+            data: {
+                action: 'joinGame',
+                user: name,
+                isComputer: isComputer,
+                gameId: gameId
+            },
+            type: 'GET',
+            success: joinGameClickedCallback
+        }
+    );
+}
+
+function joinGameClickedCallback(json) {
+
+    if (json.isLoaded)
+    {
+        didUserCloseWindow = false;
+        window.location = "GameRoom.html";
+    }
+    else {
+        alert(json.errorMessage);
+    }
+}
+
+function getGameId() {
+    var string = $('.key').text();
+    var result = +0;
+    var i = 9;
+    var temp = +string[i];
+    while (!isNaN(temp)) // while temp is a number..
+    {
+        result = result * 10 + temp;
+        i++;
+        temp = +string[i];
+    }
+    return result;
+}
+

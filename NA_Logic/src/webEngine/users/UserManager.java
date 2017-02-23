@@ -6,21 +6,21 @@ import java.util.Set;
 
 public class UserManager {
 
-    private final Set<String> usersSet;
+    private final Set<User> usersSet;
 
     public UserManager() {
         usersSet = new HashSet<>();
     }
 
-    public void addUser(String username) {
-        usersSet.add(username);
+    public void addUser(String username, boolean isComputer) {
+        usersSet.add(new User(username, isComputer));
     }
 
     public void removeUser(String username) {
         usersSet.remove(username);
     }
 
-    public Set<String> getUsers() {
+    public Set<User> getUsers() {
         return Collections.unmodifiableSet(usersSet);
     }
 

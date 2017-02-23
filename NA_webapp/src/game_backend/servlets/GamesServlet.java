@@ -3,6 +3,8 @@ package game_backend.servlets;
 import com.google.gson.Gson;
 import game_backend.utils.ServletUtils;
 import game_backend.utils.SessionUtils;
+import webEngine.gamesManager.GameObject;
+import webEngine.gamesManager.GamesManager;
 import webEngine.users.UserManager;
 
 import javax.servlet.ServletException;
@@ -19,8 +21,11 @@ import java.util.Set;
         urlPatterns = {"/games"}
 )
 public class GamesServlet extends HttpServlet{
+    GamesManager gamesManager = new GamesManager();
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+
 //        String action = request.getParameter("action");
 //        switch (action){
 //            case "userslist":
@@ -72,7 +77,53 @@ public class GamesServlet extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        String action = request.getParameter("action");
+        switch (action) {
+            case "gameDetail":
+                getGameDetails(request, response);
+                break;
+            case "joinGame":
+                joinGame(request, response);
+                break;
+            case "gamesList":
+                getGamesList(request, response);
+                break;
+
+
+        }
+
+    }
+
+    private void getGamesList(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+
+
+        out.println(gson.toJson(this.gamesManager.getGamesList()));
+        //return GamesManager.getGamesList();
+    }
+
+    private void joinGame(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+    }
+
+    private void getGameDetails(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        int key = Integer.parseInt(request.getParameter("key"));
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        if(key != -1) {
+            GameObject game = this.gamesManager.getGameByKey(key);
+            out.println(gson.toJson(game));
+        } //TODO else?
+
     }
 
     /**
