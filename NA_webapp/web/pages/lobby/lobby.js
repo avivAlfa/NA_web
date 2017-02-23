@@ -118,7 +118,7 @@ function loadGameCallback(json) {
     }
 }
 
-<<<<<<< HEAD
+
 function createGameDialog(event) {
     var td = event.currentTarget.children[0];
     var number = td.innerText;
@@ -132,7 +132,9 @@ function createGameDialog(event) {
             },
             type: 'GET',
             success: createGameDialogCallback
-=======
+        }
+    )
+}
 function refreshGamesList() {
     $.ajax
     (
@@ -143,12 +145,12 @@ function refreshGamesList() {
             },
             type: 'GET',
             success: refreshGamesListCallback
->>>>>>> 6582ec4d45d73bacc16711c212a02fd5468c6d0e
+
         }
     )
 }
 
-<<<<<<< HEAD
+
 function createGameDialogCallback(json) {
     var div = $('.dialogDiv')[0];
     div.style.display = "block";
@@ -294,7 +296,7 @@ function getGameId() {
     return result;
 }
 
-=======
+
 function refreshGamesListCallback(json) {
     var gamesTable = $('.gamesTable tbody');
     gamesTable.empty();
@@ -324,4 +326,3 @@ function refreshGamesListCallback(json) {
         tr[i].onclick = createGameDialog;
     }
 }
->>>>>>> 6582ec4d45d73bacc16711c212a02fd5468c6d0e
