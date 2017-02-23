@@ -1,17 +1,21 @@
 package game_backend.servlets;
 
+import Exceptions.CellOutOfBoundsException;
 import com.google.gson.Gson;
-import game_backend.utils.ServletUtils;
-import game_backend.utils.SessionUtils;
+
 import webEngine.gamesManager.GameObject;
 import webEngine.gamesManager.GamesManager;
-import webEngine.users.UserManager;
+
+import webEngine.gamesManager.LoadGameStatus;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.xml.bind.JAXBException;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Set;
@@ -22,6 +26,7 @@ import java.util.Set;
 )
 public class GamesServlet extends HttpServlet{
     GamesManager gamesManager = new GamesManager();
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
@@ -137,8 +142,68 @@ public class GamesServlet extends HttpServlet{
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String action = request.getParameter("action");
+        switch (action){
+            case "loadGame":
+                loadGameAction(request, response);
+                break;
+//            case "currentUser":
+//                getCurrentUser(request, response);
+//                break;
+        }
     }
+
+    private void loadGameAction(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String gameContent = request.getParameter("file");
+        String gameCreator = request.getParameter("creator");
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+
+        try {
+            this.gamesManager.addGame(gameContent, gameCreator);
+            out.println(gson.toJson(new LoadGameStatus(true, "")));
+
+
+        } catch (CellOutOfBoundsException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.CursorCellException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.DuplicateCellException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.InvalidBoardSizeException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.InvalidRangeException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.InvalidRangeCompareToBoardSizeException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.InvalidRangeValuesException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.InvalidNumberOfColorsException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.InvalidNumberOfPlayersException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.InvalidNumberOfIDsException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (Exceptions.InvalidPlayerTypeException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
+        } catch (FileNotFoundException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, "File not found!")));
+        } catch (JAXBException e) {
+            if (!gameContent.endsWith(".xml"))
+                out.println(gson.toJson(new LoadGameStatus(false, "The file you asked for isn't a xml file!")));
+            else
+            out.println(gson.toJson(new LoadGameStatus(false, "Error trying to retrieve data from XML file")));
+        } catch (Exception e) {
+            out.println(gson.toJson(new LoadGameStatus(false, "An unhandled error occured")));
+        }
+//            out.println(gson.toJson(new LoadGameStatus(true, "")));
+//        } catch (Exception var8) {
+//            out.println(gson.toJson(new LoadGameStatus(false, var8.getMessage())));
+//        }
+
+    }
+
 
     /**
      * Returns a short description of the servlet.
