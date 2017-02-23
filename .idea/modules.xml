@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/NA_Logic/NA_Logic.iml" filepath="$PROJECT_DIR$/NA_Logic/NA_Logic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NA_webapp/NA_webapp.iml" filepath="$PROJECT_DIR$/NA_webapp/NA_webapp.iml" />
+    </modules>
+  </component>
+</project>

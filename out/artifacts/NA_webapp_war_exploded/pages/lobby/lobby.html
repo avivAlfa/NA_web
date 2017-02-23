@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Lobby</title>
+    <script src="../../common/jquery-2.0.3.min.js"></script>
+    <script src="../../common/context-path-helper.js"></script>
+    <script src="lobby.js"></script>
+    <!--<link rel="stylesheet" href="../../common/bootstrap.min.css">-->
+    <link rel="stylesheet" type="text/css" href="lobby.css">
+</head>
+<body>
+<div class="toolBar">
+    <div class="toolbarContent">
+        <span class="logoutSpan"><form action="../../game_backend/logout">
+            <input type="submit" value="Logout" />
+        </form></span>
+
+        <span class="userNameSpan"></span>
+        <span class="emptySpan"></span>
+       <!-- <span class="logoSpan"><img src="nonogramLogo.JPG" class="image"/></span>-->
+    </div>
+</div>
+<div class="mainDiv">
+    <!--<div class="dialogDiv">
+        <div class="close" onclick="removeGameDialog()">
+            <img src="close.JPG"/>
+        </div>
+        <div class="dialogContent">
+            <div class="details">
+                <div class="gameName"></div>
+                <div class="key"></div>
+                <div class="creatorName"></div>
+                <div class="boardSize"></div>
+                <div class="moves"></div>
+                <div class="playerNumber"></div>
+                <div>Registered players:</div>
+                <div class="playersNames"></div>
+            </div>
+            <div class="board">
+
+            </div>
+        </div>
+        <div class="dialogButtons">
+            <div class="dialogButton" onclick="joinGameClicked()">Join game</div>
+        </div>
+    </div>-->
+    <div class="gamesDiv">
+        <div class="gamesActions">
+            <span>Upload Game:</span>
+            <input id="fileInput" type="file" class="fileInput" accept="text/xml" onchange="loadGameClicked(event)"/>
+        </div>
+        <table class="gamesTable">
+            <thead>
+            <th>Game number</th>
+            <th>Game name</th>
+            <th>Creator's name</th>
+            <th>Board size</th>
+            <th>Players amount</th>
+            </thead>
+            <tbody class="tableBody">
+            </tbody>
+        </table>
+    </div>
+    <div class="usersDiv">
+        <table class="usersTable">
+            <thead>
+            <th>Online users:</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <!--<div class="row">-->
+        <!--<div class="col-xs-1">-->
+            <!--<div class="button">-->
+                <!--&lt;!&ndash;-->
+                <!--Here we could give game_backend/logout, and the executed request was relative to this page url (=== <context path>/pages/chatroom/),-->
+                <!--in this option it would have come out eventually with '<context path>/pages/chatroom/game_backend/logout'-->
+                <!--(note that this option is the one used with the form above for the action of 'sendChat'...)-->
+
+                <!--Another option, just to prove that the browser takes everything relative to the current page (<context path>/pages/chatroom/),-->
+                <!--is to use relative path here.-->
+                <!--So '../../game_backend/logout' steps backward 2 levels from current page (putting it in the root web app, right after the context path: '/<context path>/')-->
+                <!--and from there assembles the rest, so we end up with <context path>/game_backend/logout.-->
+                <!--(when this request will arrive to tomcat it will strip down the context path and will expect to find a registered servlet with the mapping of /game_backend/logout)-->
+                <!---->
+                <!--<a href="../../game_backend/logout">Logout</a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script type="text/javascript" src="lobby.js"></script>
+</body>
+</html>

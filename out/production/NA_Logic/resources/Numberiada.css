@@ -1,0 +1,48 @@
+.root {
+    -fx-font-size: 7pt;
+    -fx-font-family: "Arial";
+    -fx-background-image: url("background.png");
+    -fx-text-fill: black;
+    -fx-text-alignment: left;
+
+}
+#statisticsPane {
+    -fx-background-image: url("background.png");
+}
+#topPane {
+    -fx-background-image: url("background.png");
+}
+.label {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Arial";
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+}
+
+.button {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Times New Roman";
+    -fx-background-color: rgb(225, 170, 110);
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: rgb(100, 50, 70);
+}
+
+.button:hover {
+    -fx-background-color: rgb(225, 170, 150);
+
+}
+.choice-box {
+    -fx-background-color: slategrey;
+
+}
+
+
+.radio-button:hover {
+    -fx-background-color: rgb(225, 170, 150);
+}
+.statsVal {
+    -fx-alignment: top-right;
+
+}

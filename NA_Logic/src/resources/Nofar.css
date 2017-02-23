@@ -1,0 +1,42 @@
+.root {
+    -fx-font-size: 7pt;
+    -fx-font-family: "Arial";
+    -fx-base: rgb(225, 170, 210);
+    -fx-background: rgb(100, 50, 70);
+    -fx-text-fill: plum;
+    -fx-text-alignment: left;
+
+}
+
+.label {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Arial";
+    -fx-font-style: italic;
+    -fx-font-weight: bold;
+    -fx-text-fill: plum;
+}
+
+.button {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Times New Roman";
+    -fx-background-color: rgb(225, 170, 210);
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-text-fill: rgb(100, 50, 70);
+}
+
+.button:hover {
+    -fx-background-color: rgb(225, 170, 150);
+
+}
+.choice-box {
+    -fx-background-color: slategrey;
+
+}
+.radio-button:hover {
+    -fx-background-color: rgb(225, 170, 150);
+}
+.statsVal {
+    -fx-alignment: top-right;
+
+}

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="NA_Logic:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/NA_Logic_jar</output-path>
+    <root id="archive" name="NA_Logic.jar">
+      <element id="module-output" name="NA_Logic" />
+    </root>
+  </artifact>
+</component>

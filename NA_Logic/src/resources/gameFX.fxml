@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxUI.GameController">
+   <content>
+      <Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="608.0" prefWidth="726.0">
+         <children>
+            <Pane fx:id="topPane" prefHeight="75.0" prefWidth="727.0">
+               <children>
+                  <Label id="messageLabel" fx:id="messageLabel" layoutX="109.0" layoutY="41.0" prefHeight="17.0" prefWidth="491.0" textFill="RED" />
+                  <Button fx:id="startButton" layoutX="14.0" layoutY="45.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#startButton_OnClick" prefHeight="25.0" prefWidth="90.0" text="Start" />
+                  <TextArea fx:id="pathTxt" editable="false" layoutX="110.0" layoutY="7.0" minHeight="25.0" minWidth="25.0" prefHeight="37.0" prefWidth="390.0" />
+                  <Button fx:id="loadFileButton" layoutX="14.0" layoutY="9.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#loadFileButton_OnClick" prefHeight="29.0" prefWidth="90.0" text="Load File" />
+                  <Label layoutX="619.0" layoutY="15.0" prefHeight="17.0" prefWidth="70.0" text="Skin select:" />
+                  <CheckBox fx:id="animationCheckBox" layoutX="508.0" layoutY="15.0" mnemonicParsing="false" text="Animation " />
+                  <CheckBox fx:id="opportunitiesCheckBox" layoutX="508.0" layoutY="33.0" mnemonicParsing="false" text="Opportunities" />
+                  <ChoiceBox fx:id="skinSelectChoiceBox" layoutX="619.0" layoutY="32.0" prefHeight="0.0" prefWidth="95.0" />
+               </children>
+            </Pane>
+            <ScrollPane fx:id="gameBoardPane" layoutY="75.0" maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="610.0">
+               <content>
+                  <GridPane fx:id="gameGrid">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="60.0" minWidth="60.0" prefWidth="60.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="60.0" minHeight="60.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                  </GridPane>
+               </content>
+            </ScrollPane>
+            <Pane fx:id="statisticsPane" layoutX="500.0" layoutY="77.0" prefHeight="496.0" prefWidth="225.0">
+               <children>
+                  <Label fx:id="statisticsLabel" layoutX="52.0" layoutY="4.0" prefHeight="21.0" prefWidth="67.0" text="Statistics">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="12.0" layoutY="34.0" styleClass="statsKey" text="Total moves:" />
+                  <Label fx:id="currentPlayerLabel" layoutX="103.0" layoutY="57.0" prefHeight="21.0" prefWidth="97.0" styleClass="statsVal" />
+                  <Label layoutX="13.0" layoutY="59.0" styleClass="statsKey" text="Current player:" />
+                  <Label fx:id="totalMovesLabel" layoutX="83.0" layoutY="30.0" prefHeight="25.0" prefWidth="78.0" styleClass="statsVal" />
+                  <ListView fx:id="playersListView" layoutY="127.0" prefHeight="200.0" prefWidth="225.0" />
+                  <Label layoutX="14.0" layoutY="85.0" styleClass="statsKey" text="Current Player id:" />
+                  <Label fx:id="playerIdLabel" layoutX="116.0" layoutY="83.0" prefHeight="22.0" prefWidth="92.0" styleClass="statsVal" />
+                  <Label layoutX="14.0" layoutY="110.0" text="Name" />
+                  <Label layoutX="71.0" layoutY="110.0" text="ID" />
+                  <Label layoutX="122.0" layoutY="110.0" text="Score" />
+                  <Label layoutX="176.0" layoutY="110.0" text="Color" />
+               </children>
+            </Pane>
+            <Pane fx:id="buttomPane" layoutY="578.0" prefHeight="32.0" prefWidth="728.0">
+               <children>
+                  <Button fx:id="playMoveButton" layoutX="4.0" layoutY="2.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#playMoveButton_OnClick" prefHeight="25.0" prefWidth="122.0" text="Play move" />
+                  <Button fx:id="retireButton" layoutX="132.0" layoutY="2.0" minHeight="25.0" minWidth="25.0" mnemonicParsing="false" onAction="#retireButton_OnClick" prefHeight="25.0" prefWidth="122.0" text="Get me out of here!" />
+                  <Button fx:id="nextButton" layoutX="360.0" layoutY="2.0" minHeight="25.0" minWidth="90.0" mnemonicParsing="false" onAction="#nextButton_OnClick" prefHeight="25.0" prefWidth="25.0" text="Next" />
+                  <Button fx:id="prevButton" layoutX="260.0" layoutY="2.0" minHeight="25.0" minWidth="90.0" mnemonicParsing="false" onAction="#prevButton_OnClick" prefHeight="25.0" prefWidth="90.0" text="Prev" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </content>
+</ScrollPane>
