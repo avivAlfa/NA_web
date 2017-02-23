@@ -18,6 +18,8 @@ import javax.xml.bind.JAXBException;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @WebServlet(
@@ -92,10 +94,9 @@ public class GamesServlet extends HttpServlet{
                 joinGame(request, response);
                 break;
             case "gamesList":
+                System.out.println("go get games list");
                 getGamesList(request, response);
                 break;
-
-
         }
 
     }
@@ -107,8 +108,8 @@ public class GamesServlet extends HttpServlet{
         PrintWriter out = response.getWriter();
         response.setContentType("application/json");
 
-
-        out.println(gson.toJson(this.gamesManager.getGamesList()));
+        System.out.println("try to reuturn");
+        out.println(gson.toJson(gamesManager.getGamesList()));
         //return GamesManager.getGamesList();
     }
 
@@ -195,7 +196,9 @@ public class GamesServlet extends HttpServlet{
             else
             out.println(gson.toJson(new LoadGameStatus(false, "Error trying to retrieve data from XML file")));
         } catch (Exception e) {
-            out.println(gson.toJson(new LoadGameStatus(false, "An unhandled error occured")));
+           // out.println(gson.toJson(new LoadGameStatus(false, "An unhandled error occured")));
+            out.println(gson.toJson(new LoadGameStatus(false, e.getClass().toString())));
+
         }
 //            out.println(gson.toJson(new LoadGameStatus(true, "")));
 //        } catch (Exception var8) {

@@ -2,6 +2,7 @@ package webEngine.gamesManager;
 
 import game.GameEngine;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 
 import javax.xml.bind.JAXBException;
@@ -9,24 +10,29 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GamesManager {
-    Integer numberOfGames;
-    HashMap<Integer, GameObject> games;
+    Integer numberOfGames = 0;
+    HashMap<Integer, GameObject> games = new HashMap<Integer, GameObject>();
 
 
     public GameObject getGameByKey(int key) {
         return games.get(key);
     }
 
-    public ArrayList<GameObject> getGamesList() {
-        return (ArrayList<GameObject>) games.values();
+    public List<GameObject> getGamesList() {
+//        return (List<GameObject>) games.values();
+        return (List)this.games.entrySet().stream().map((entry) -> {
+            return (GameObject)entry.getValue();
+        }).collect(Collectors.toList());
     }
 
     public void addGame(String xmlDescription, String creator) throws Exception {
         GameObject newGame = new GameObject();
+
+        String gameName = newGame.initGame(xmlDescription, creator, Integer.valueOf(numberOfGames.intValue() + 1));
         numberOfGames = Integer.valueOf(numberOfGames.intValue() + 1);
-        String gameName = newGame.initGame(xmlDescription, creator, numberOfGames);
        // if(this.isGameNameTaken(gameName)) {
         //    throw new InvalidGameDataException("Game title is already in use.");
         //} else {

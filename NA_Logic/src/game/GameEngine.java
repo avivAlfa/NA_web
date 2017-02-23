@@ -13,7 +13,7 @@ import java.util.List;
 
 public abstract class GameEngine {
     protected Board gameBoard;
-    protected List<Player> players = null;
+    protected List<Player> players = new ArrayList<Player>();
     protected List<Player> resignedPlayers;
     protected int playerTurnIndex;
     protected int cursorRow;
@@ -201,10 +201,13 @@ public abstract class GameEngine {
             cursorRow = marker.getRow().intValue() - 1;
             cursorCol = marker.getColumn().intValue() - 1;
         }
-        if(gd.getPlayers() != null) {
-            players = buildPlayersListFromDescriptor(gd.getPlayers().getPlayer());
-        }
-        else {
+//        if(gd.getPlayers() != null) {
+//            players = buildPlayersListFromDescriptor(gd.getPlayers().getPlayer());
+//        }
+//        else {
+//            buildBasicPlayers();
+//        }
+        if(gd.getGameType().equals("Basic")){
             buildBasicPlayers();
         }
     }

@@ -9,6 +9,7 @@ import javax.xml.bind.Unmarshaller;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
+import java.io.StringReader;
 import java.math.BigInteger;
 import java.util.HashSet;
 import java.util.List;
@@ -18,18 +19,19 @@ import java.util.Set;
 public class XML_Handler {
     private final static String JAXB_XML_GAME_PACKAGE_NAME = "generated";
 
-    public static GameDescriptor getGameDescriptorFromXml(String xml_path) throws Exception{
+    public static GameDescriptor getGameDescriptorFromXml(String xmlDescription) throws Exception{
         GameDescriptor gameDescriptor = null;
-        InputStream inputStream; //XML_Handler.class.getResourceAsStream("\\resources\\random.xml");
+        //InputStream inputStream; //XML_Handler.class.getResourceAsStream("\\resources\\random.xml");
         try {
-            inputStream = new FileInputStream(xml_path);
-            gameDescriptor = deserializeFrom(inputStream);
-
+            //inputStream = new FileInputStream(xml_path);
+            System.out.println("@@@@@@@@@@@@@before desreial");
+            gameDescriptor = deserializeFrom(xmlDescription);
+            System.out.println(gameDescriptor.getGameType());
 
         } catch (JAXBException e) {
             throw e;
-        } catch (FileNotFoundException e) {
-            throw e;
+//        } catch (FileNotFoundException e) {
+//            throw e;
         } catch (Exception e) {
             throw e;
         }
@@ -37,10 +39,13 @@ public class XML_Handler {
         return gameDescriptor;
     }
 
-    private static GameDescriptor deserializeFrom(InputStream in) throws JAXBException {
+    private static GameDescriptor deserializeFrom(String in) throws JAXBException {
         JAXBContext jc = JAXBContext.newInstance(JAXB_XML_GAME_PACKAGE_NAME);
         Unmarshaller u = jc.createUnmarshaller();
-        return (GameDescriptor) u.unmarshal(in);
+
+        StringReader sr = new StringReader(in);
+        return (GameDescriptor)u.unmarshal(sr);
+       // return (GameDescriptor) u.unmarshal(in);
     }
 
     public static void validate(GameDescriptor gd) throws Exception {

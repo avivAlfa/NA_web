@@ -8,6 +8,7 @@ import generated.GameDescriptor;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
+import java.io.InputStream;
 
 public class GameObject {
     private GameEngine gameEngine;
@@ -37,17 +38,15 @@ public class GameObject {
 
     }
 
-    public void loadGame(String xml_path) throws Exception {
+    public void loadGame(String inputStream) throws Exception {
         GameDescriptor gameDescriptor = null;
 
-        gameDescriptor = game.XML_Handler.getGameDescriptorFromXml(xml_path);
+        gameDescriptor = game.XML_Handler.getGameDescriptorFromXml(inputStream);
         game.XML_Handler.validate(gameDescriptor);
         this.title = gameDescriptor.getDynamicPlayers().getGameTitle();
         this.requiredNumOfPlayers = gameDescriptor.getDynamicPlayers().getTotalPlayers();
         if (gameDescriptor != null) {
             loadGameEngine(gameDescriptor); //loading basic/advance gameEngine
-
-
         }
     }
 

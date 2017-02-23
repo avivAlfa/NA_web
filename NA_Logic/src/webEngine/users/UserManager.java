@@ -13,7 +13,8 @@ public class UserManager {
     }
 
     public void addUser(String username, boolean isComputer) {
-        usersSet.add(new User(username, isComputer));
+        User newUser = new User(username, isComputer);
+        usersSet.add(newUser);
     }
 
     public void removeUser(String username) {

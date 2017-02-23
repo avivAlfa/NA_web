@@ -31,7 +31,7 @@ function refreshUserListCallback(json) {
 
     $.each(json || [], function(index, username) {
         var tr = $(document.createElement('tr'));
-        var td = $(document.createElement('td')).text(username);
+        var td = $(document.createElement('td')).text(username.userName);
         td.appendTo(tr);
         tr.appendTo(usersTable);
     });
@@ -75,7 +75,6 @@ function loadGameClicked(event) {
     var file = event.target.files[0];
     var reader = new FileReader();
     var creatorName = getUserName();
-
     reader.onload = function () {
         var content = reader.result;
         $.ajax(
@@ -92,18 +91,18 @@ function loadGameClicked(event) {
         );
     };
 
-    // $.ajax // Getting creator's name.
-    // ({
-    //     url: 'login',
-    //     data: {
-    //         action: "status"
-    //     },
-    //     type: 'GET',
-    //     success: function (json) {
-    //         creatorName = json.userName;
-    //         reader.readAsText(file);
-    //     }
-    // });
+    $.ajax // Getting creator's name.
+    ({
+        url: '/userslist',
+        data: {
+            action: "currentUser"
+        },
+        type: 'GET',
+        success: function (json) {
+            creatorName = json;
+            reader.readAsText(file);
+        }
+    });
 }
 
 function loadGameCallback(json) {
@@ -141,11 +140,10 @@ function refreshGamesList() {
         {
             url: '/games',
             data: {
-                action: 'gameList'
+                action: 'gamesList'
             },
             type: 'GET',
             success: refreshGamesListCallback
-
         }
     )
 }
@@ -298,25 +296,24 @@ function getGameId() {
 
 
 function refreshGamesListCallback(json) {
+    console.log("here try to add gameslist");
     var gamesTable = $('.gamesTable tbody');
     gamesTable.empty();
-    var gamesList = json.games;
+    var gamesList = json;
 
     gamesList.forEach(function (game) {
         var tr = $(document.createElement('tr'));
         var tdGameNumber = $(document.createElement('td')).text(game.key);
-        var tdGameName = $(document.createElement('td')).text(game.gameTitle);
+        var tdGameName = $(document.createElement('td')).text(game.title);
         var tdCreatorName = $(document.createElement('td')).text(game.creatorName);
-        var tdBoardSize = $(document.createElement('td')).text(game.rows + " X " + game.cols);
-        var tdPlayerNumber = $(document.createElement('td')).text(game.registeredPlayers + " / " + game.requiredPlayers);
-        var tdMovesNumber = $(document.createElement('td')).text(game.moves);
+        var tdBoardSize = $(document.createElement('td')).text(game.gameEngine.gameBoard.size);
+        var tdPlayerNumber = $(document.createElement('td')).text(game.registredNumOfPlayers + " / " + game.requiredNumOfPlayers);
 
         tdGameNumber.appendTo(tr);
         tdGameName.appendTo(tr);
         tdCreatorName.appendTo(tr);
         tdBoardSize.appendTo(tr);
         tdPlayerNumber.appendTo(tr);
-        tdMovesNumber.appendTo(tr);
 
         tr.appendTo(gamesTable);
     });
@@ -325,4 +322,8 @@ function refreshGamesListCallback(json) {
     for (var i = 0; i < tr.length; i++) {
         tr[i].onclick = createGameDialog;
     }
+}
+
+function clearFileInput() {
+    document.getElementById("fileInput").value = "";
 }
