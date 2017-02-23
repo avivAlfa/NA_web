@@ -57,10 +57,10 @@ public class XML_Handler {
         }else{
             validateExplicitBoard(gd);
         }
-        if(gd.getGameType().equals("Advance"))
-            validatePlayers(gd, true);
-        else
-            validatePlayers(gd, false);
+//        if(gd.getGameType().equals("Advance"))
+//            validatePlayers(gd, true);
+//        else
+//            validatePlayers(gd, false);
 
     }
 
@@ -130,40 +130,40 @@ public class XML_Handler {
         }
     }
 
-    private static void validatePlayers(GameDescriptor gd, boolean isAdvance)throws Exception{
-        HashSet<BigInteger> playersIds = new HashSet<>();
-        HashSet<Integer> playersColors = new HashSet<>();
-        if(gd.getPlayers()!=null) {
-            List<GameDescriptor.Players.Player> players = gd.getPlayers().getPlayer();
-
-
-            for (GameDescriptor.Players.Player player : players) {
-                if (!player.getType().equals("Human") && !player.getType().equals("Computer")) {
-                    throw new InvalidPlayerTypeException();
-                }
-                if(isAdvance) {
-                    playersIds.add(player.getId());
-                    playersColors.add(player.getColor());
-                }
-            }
-            if(isAdvance) {
-                if(playersIds.size() != players.size()) {
-                    throw new InvalidNumberOfIDsException();
-                }
-                if(playersColors.size() != players.size()) {
-                    throw new InvalidNumberOfColorsException();
-                }
-                if(players.size() < 3 || players.size() > 6){
-                    throw new InvalidNumberOfPlayersException();
-                }
-            }
-            else{
-                if(players.size() != 2){
-                    throw new InvalidNumberOfPlayersException();
-                }
-            }
-
-        }
-    }
+//    private static void validatePlayers(GameDescriptor gd, boolean isAdvance)throws Exception{
+//        HashSet<BigInteger> playersIds = new HashSet<>();
+//        HashSet<Integer> playersColors = new HashSet<>();
+//        if(gd.getPlayers()!=null) {
+//            List<GameDescriptor.Players.Player> players = gd.getPlayers().getPlayer();
+//
+//
+//            for (GameDescriptor.Players.Player player : players) {
+//                if (!player.getType().equals("Human") && !player.getType().equals("Computer")) {
+//                    throw new InvalidPlayerTypeException();
+//                }
+//                if(isAdvance) {
+//                    playersIds.add(player.getId());
+//                    playersColors.add(player.getColor());
+//                }
+//            }
+//            if(isAdvance) {
+//                if(playersIds.size() != players.size()) {
+//                    throw new InvalidNumberOfIDsException();
+//                }
+//                if(playersColors.size() != players.size()) {
+//                    throw new InvalidNumberOfColorsException();
+//                }
+//                if(players.size() < 3 || players.size() > 6){
+//                    throw new InvalidNumberOfPlayersException();
+//                }
+//            }
+//            else{
+//                if(players.size() != 2){
+//                    throw new InvalidNumberOfPlayersException();
+//                }
+//            }
+//
+//        }
+//    }
 
 }

@@ -80,7 +80,7 @@ function loadGameClicked(event) {
         var content = reader.result;
         $.ajax(
             {
-                url: 'games',
+                url: '/games',
                 data: {
                     action: "loadGame",
                     file: content,
@@ -115,5 +115,49 @@ function loadGameCallback(json) {
     else {
         clearFileInput();
         alert(json.errorMessage);
+    }
+}
+
+function refreshGamesList() {
+    $.ajax
+    (
+        {
+            url: '/games',
+            data: {
+                action: 'gameList'
+            },
+            type: 'GET',
+            success: refreshGamesListCallback
+        }
+    )
+}
+
+function refreshGamesListCallback(json) {
+    var gamesTable = $('.gamesTable tbody');
+    gamesTable.empty();
+    var gamesList = json.games;
+
+    gamesList.forEach(function (game) {
+        var tr = $(document.createElement('tr'));
+        var tdGameNumber = $(document.createElement('td')).text(game.key);
+        var tdGameName = $(document.createElement('td')).text(game.gameTitle);
+        var tdCreatorName = $(document.createElement('td')).text(game.creatorName);
+        var tdBoardSize = $(document.createElement('td')).text(game.rows + " X " + game.cols);
+        var tdPlayerNumber = $(document.createElement('td')).text(game.registeredPlayers + " / " + game.requiredPlayers);
+        var tdMovesNumber = $(document.createElement('td')).text(game.moves);
+
+        tdGameNumber.appendTo(tr);
+        tdGameName.appendTo(tr);
+        tdCreatorName.appendTo(tr);
+        tdBoardSize.appendTo(tr);
+        tdPlayerNumber.appendTo(tr);
+        tdMovesNumber.appendTo(tr);
+
+        tr.appendTo(gamesTable);
+    });
+
+    var tr = $('.tableBody tr');
+    for (var i = 0; i < tr.length; i++) {
+        tr[i].onclick = createGameDialog;
     }
 }
