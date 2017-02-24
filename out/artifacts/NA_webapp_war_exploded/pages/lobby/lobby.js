@@ -56,7 +56,7 @@ function getUserName() {
     var result;
     $.ajax
     ({
-        url: "../userslist",
+        url: "/userslist",
         data: {
             action: "currentUserName"
         },

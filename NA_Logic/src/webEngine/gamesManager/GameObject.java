@@ -4,11 +4,13 @@ package webEngine.gamesManager;
 import game.AdvancedGameEngine;
 import game.BasicGameEngine;
 import game.GameEngine;
+import game.Player;
 import generated.GameDescriptor;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
 
 public class GameObject {
     private GameEngine gameEngine;
@@ -19,12 +21,17 @@ public class GameObject {
     private int registredNumOfPlayers;
     private GameStatus gameStatus;
 
+    public GameEngine getGameEngine() {
+        return gameEngine;
+    }
+
     public int getKey() {
         return key;
     }
     public void setKey(int key) {
         this.key = key;
     }
+
     public GameStatus getGameStatus() {
         return gameStatus;
     }
@@ -72,5 +79,14 @@ public class GameObject {
         }
         gameEngine.loadGameParams();
         gameEngine.loadGameParamsFromDescriptor(gameDescriptor);
+    }
+
+    public boolean containsUserName(String userName){
+        List<Player> players = gameEngine.getPlayers();
+        for (Player p : players) {
+            if(p.getName().equals(userName))
+                return true;
+        }
+        return false;
     }
 }

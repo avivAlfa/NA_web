@@ -3,13 +3,10 @@ package webEngine.gamesManager;
 import game.GameEngine;
 
 import java.io.InputStream;
-import java.util.ArrayList;
+import java.util.*;
 
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
 import java.util.stream.Collectors;
 
 public class GamesManager {
@@ -49,5 +46,21 @@ public class GamesManager {
        // }
     }
 
+    public GameObject getGameByUserName(String userName) {
+//        GameObject[] result = new GameController[1];
+//        this.games.forEach((key, game) -> {
+//            if(game.hasPlayerWithName(userName)) {
+//                result[0] = game;
+//            }
+//
+//        });
+//        return result[0];
+        for(Map.Entry<Integer, GameObject> gameEntry : this.games.entrySet()) {
+            GameObject game = gameEntry.getValue();
+            if(game.containsUserName(userName))
+                return game;
+        }
+        return null;
+    }
 
 }

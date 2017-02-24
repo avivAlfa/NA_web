@@ -5,8 +5,8 @@ package webEngine.users;
  */
 public class User {
 
-    String userName;
-    boolean isComputer;
+    private String userName;
+    private boolean isComputer;
 
     public User(String userName, boolean isComputer) {
         this.isComputer = isComputer;

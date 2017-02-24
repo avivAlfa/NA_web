@@ -3,10 +3,8 @@ package game_backend.servlets;
 import Exceptions.CellOutOfBoundsException;
 import com.google.gson.Gson;
 
-import webEngine.gamesManager.GameObject;
-import webEngine.gamesManager.GamesManager;
-
-import webEngine.gamesManager.LoadGameStatus;
+import game_backend.utils.SessionUtils;
+import webEngine.gamesManager.*;
 
 
 import javax.servlet.ServletException;
@@ -96,6 +94,9 @@ public class GamesServlet extends HttpServlet{
             case "gamesList":
                 getGamesList(request, response);
                 break;
+            case "gameStatusMessage":
+                getGameStatusAndCurrentPlayerName(request,response);
+                break;
         }
 
     }
@@ -126,8 +127,29 @@ public class GamesServlet extends HttpServlet{
         if(key != -1) {
             GameObject game = this.gamesManager.getGameByKey(key);
             out.println(gson.toJson(game));
-        } //TODO else?
+        } else{
+            String currentUserName = SessionUtils.getUsername(request);
+            GameObject game = this.gamesManager.getGameByUserName(currentUserName);
+            out.println(gson.toJson(game));
 
+        }
+    }
+
+    private void getGameStatusAndCurrentPlayerName(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        String userName = SessionUtils.getUsername(request);
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+        if(game != null) {
+            GameStatus status = game.getGameStatus();
+            String name = "";
+            if(status == GameStatus.Running) {
+                name = game.getGameEngine().getCurrentPlayerName();
+            }
+
+            out.println(gson.toJson(new GameStatusMessage(status, name)));
+        }
     }
 
     /**
