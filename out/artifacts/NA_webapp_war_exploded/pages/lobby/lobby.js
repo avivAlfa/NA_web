@@ -127,8 +127,7 @@ function refreshGamesList() {
     )
 }
 function refreshGamesListCallback(json) {
-    console.log("here try to add gameslist");
-    var gamesTable = $('.gamesTable tbody');
+        var gamesTable = $('.gamesTable tbody');
     gamesTable.empty();
     var gamesList = json;
 
@@ -244,7 +243,7 @@ function createBoard(rows, cols, boardArr) {
                 squareDiv.append(boardArr[i][j].value);
             if(boardArr[i][j].isCursor) {
                 imgElem = $(document.createElement('img'));
-                imgElem.prop('src', "marker.png");
+                imgElem.prop('src', "../../common/images/marker.png");
                 squareDiv.append(imgElem)
             }
             squareDiv.appendTo(rowDiv);
