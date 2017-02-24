@@ -188,7 +188,7 @@ public abstract class GameEngine {
         playerTurnIndex = 0;
         movesCnt = 0;
         resignedPlayers = null;
-        players = null;
+        players = new ArrayList<>();
     }
 
     public void loadGameParamsFromDescriptor(GameDescriptor gd){
@@ -382,4 +382,20 @@ public abstract class GameEngine {
 
         return newList;
     }
+
+    public void addPlayer(String userName, boolean isComputer) {
+        Player player = new Player(userName, 0, 0 , players.size() -1, !isComputer);
+       /* player.setName(userName);
+        player.setId(0);
+        player.setColor(players.size() - 1);
+
+        if(isComputer)
+            player.setAsComputer();
+        else
+            player.setAsHuman();
+*/
+        System.out.println(players);
+        players.add(player);
+    }
+
 }

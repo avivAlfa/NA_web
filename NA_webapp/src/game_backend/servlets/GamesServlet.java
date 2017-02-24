@@ -115,6 +115,22 @@ public class GamesServlet extends HttpServlet{
     private void joinGame(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+        String userName = request.getParameter("user");
+        boolean isComputer = request.getParameter("isComputer").equals("true");
+        int gameId = Integer.parseInt(request.getParameter("gameId"));
+        GameObject currentGame = this.gamesManager.getGameByKey(gameId);
+      //  LoginManager loginManager = LoginManager.getInstance();
+        PrintWriter out = response.getWriter();
+        Gson gson = new Gson();
+        response.setContentType("application/json");
+      //  if(loginManager.canUserJoinGame(userName) && currentGame.getStatus().equals(GameStatus.WaitingForPlayers)) {
+       //     loginManager.userJoinGame(userName, gameId);
+            currentGame.getGameEngine().addPlayer(userName, isComputer);
+            out.print(gson.toJson(new LoadGameStatus(true, "")));
+       // } else {
+       //     out.print(gson.toJson(new LoadGameStatus(false, "Couldn\'t join game.")));
+       // }
+
     }
 
     private void getGameDetails(HttpServletRequest request, HttpServletResponse response)

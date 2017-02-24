@@ -249,18 +249,35 @@ function isUserComputer() {
     return result;
 }
 
+function getUser() {
+    var result;
+    $.ajax
+    ({
+        async: false,
+        url: '/userslist',
+        data: {
+            action: "currentUser"
+        },
+        type: 'GET',
+        success: function(json) {
+            result = json;
+        }
+    });
+    return result;
+}
+
 function joinGameClicked() {
-    var name = getUserName();
-    var isComputer = isUserComputer();
+    var user = getUser();
+    //var isComputer = isUserComputer();
     var gameId = getGameId();
     $.ajax
     (
         {
-            url: 'games',
+            url: '/games',
             data: {
                 action: 'joinGame',
-                user: name,
-                isComputer: isComputer,
+                user: user.userName,
+                isComputer: user.isComputer,
                 gameId: gameId
             },
             type: 'GET',
@@ -274,7 +291,7 @@ function joinGameClickedCallback(json) {
     if (json.isLoaded)
     {
         didUserCloseWindow = false;
-        window.location = "GameRoom.html";
+        window.location = "/pages/gameroom/gameRoom.html";
     }
     else {
         alert(json.errorMessage);
