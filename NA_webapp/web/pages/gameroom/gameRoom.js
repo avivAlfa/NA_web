@@ -235,6 +235,74 @@ function createBoard(rows,cols, rowBlocks, colBlocks) {
     }
 }
 
+//Refresh methods
+//-------------------
+function updatePlayersDetails() {
+    $.ajax
+    (
+        {
+            url: 'games',
+            data:
+            {
+                action: 'gamePlayers'
+            },
+            type: 'GET',
+            success: updatePlayersDetailsCallback
+        }
+    )
+}
+function updatePlayersDetailsCallback(json) {
+    //$('.registeredPlayers').text(json.length);
+
+    var playersNamesDiv = $('.playersNamesBody');
+    var playersTypeDiv = $('.playersTypesBody');
+    var playersColorDiv = $('.playersColorBody');
+    var playersScoreDiv = $('.playersScoreBody');
+
+    playersNamesDiv.empty();
+    playersTypeDiv.empty();
+    playersColorDiv.empty();
+    playersScoreDiv.empty();
+    for (i=0; i<json.length; i++)
+    {
+        var playerContainerDiv = $(document.createElement('div'));
+        playerContainerDiv.addClass('playerContainerDiv');
+        playerContainerDiv.appendTo(playersNamesDiv);
+
+        var playerDiv = $(document.createElement('div'));
+        playerDiv.addClass('playerDiv');
+        playerDiv.appendTo(playerContainerDiv);
+
+        var typeDiv = $(document.createElement('div'));
+        typeDiv.addClass('typeDiv');
+        typeDiv.appendTo(playersTypeDiv);
+
+        var colorDiv = $(document.createElement('div'));
+        typeDiv.addClass('colorDiv');
+        typeDiv.appendTo(playersColorDiv);
+
+        var scoreDiv = $(document.createElement('div'));
+        scoreDiv.addClass('scoreDiv');
+        scoreDiv.appendTo(playersScoreDiv);
+    }
+
+    var playerDivs = $('.playerDiv');
+    var typeDivs = $('.typeDiv');
+    var colorDivs = $('.colorDiv');
+    var scoreDivs = $('.scoreDiv');
+
+    for (i=0; i<json.length; i++)
+    {
+        playerDivs[i].innerHTML = json[i].name// + ' #' + json[i].id;
+        if(json[i].type)
+            typeDivs[i].innerHTML = "Computer";
+        else
+            typeDivs[i].innerHTML = "Human";
+        colorDivs[i].innerHTML = json[i].color; //TODO:change to color name
+        scoreDivs[i].innerHTML = json[i].score;
+    }
+}
+
 function gameStatus() { //this function refresh all game details(except players details), kind of game loop
     $.ajax
     (
@@ -260,10 +328,10 @@ function gameStatusCallBack(json) {
             status = newStatus;
             break;
         case 'Running':
-            if (!isReplayOn)
-            {
+            //if (!isReplayOn)
+            //{
                 updateGamePage();
-            }
+           // }
 
             $('.currentPlayerName')[0].innerHTML = newCurrentPlayerName;
             if (status === 'WaitingForPlayers')
@@ -307,6 +375,76 @@ function gameStatusCallBack(json) {
             break;
     }
     $('.gameStatus').text('Game status: ' + status);
+}
+//-------------------
+
+function updateGamePage() {
+    $.ajax
+    (
+        {
+            url: 'games',
+            data:
+            {
+                action: 'pageDetails'
+            },
+            type: 'GET',
+            success: turnPlayCallback
+        }
+    )
+}
+
+function turnPlayCallback(json) {
+    var currentMove = json.move;
+    // var totalMoves = $('.totalMoves')[0].innerHTML;
+    // if (totalMoves != undefined && totalMoves < currentMove)
+    // {
+    //     currentMove--;
+    // }
+
+    // $('.scoreSpan')[0].innerHTML = json.score;
+    // $('.currentMove')[0].innerHTML = currentMove;
+    // $('.undoSpan')[0].innerHTML = json.undo;
+    // $('.turnSpan')[0].innerHTML = json.turn;
+
+    // if (isMyTurn)
+    // {
+    //     $('.turnSpan')[0].innerHTML = json.turn;
+    // }
+    // else
+    // {
+    //     $('.turnSpan')[0].innerHTML = '0';
+    // }
+
+    var color;
+    var board = json.board.m_Board;
+    var square;
+    turn = json.turn;
+    for (i=0; i<board.length; i++)
+    {
+        for (j=0; j<board[0].length; j++)
+        {
+            square = $('.square[row="' + i + '"][col="' + j + '"]')[0];
+            removeClass(square);
+            color = board[i][j].m_CellState;
+            if (color === 'BLACK')
+            {
+                square.classList.add('black');
+            }
+            else if (color ==='EMPTY')
+            {
+                square.classList.add('empty');
+            }
+            else
+            {
+                //nothing..
+            }
+        }
+    }
+    if (isMyTurn)
+    {
+        setPerfectRows(json.perfectRows);
+        setPerfectCols(json.perfectCols);
+    }
 }
 
 document.addEventListener("click",clickHandler,true);
@@ -444,61 +582,6 @@ function setReason(reason) {
     }
 }
 
-function updatePlayersDetails() {
-    $.ajax
-    (
-        {
-            url: 'games',
-            data:
-            {
-                action: 'gamePlayers'
-            },
-            type: 'GET',
-            success: updatePlayersDetailsCallback
-        }
-    )
-}
-
-function updatePlayersDetailsCallback(json) {
-    $('.registeredPlayers').text(json.length);
-
-    var playersNamesDiv = $('.playersNamesBody');
-    var playersScoreDiv = $('.playersScoreBody');
-    var playersTypeDiv = $('.playersTypesBody');
-
-
-    playersNamesDiv.empty();
-    playersTypeDiv.empty();
-    playersScoreDiv.empty();
-    for (i=0; i<json.length; i++)
-    {
-        var playerContainerDiv = $(document.createElement('div'));
-        playerContainerDiv.addClass('playerContainerDiv');
-        playerContainerDiv.appendTo(playersNamesDiv);
-
-        var playerDiv = $(document.createElement('div'));
-        playerDiv.addClass('playerDiv');
-        playerDiv.appendTo(playerContainerDiv);
-
-        var scoreDiv = $(document.createElement('div'));
-        scoreDiv.addClass('scoreDiv');
-        scoreDiv.appendTo(playersScoreDiv);
-
-        var typeDiv = $(document.createElement('div'));
-        typeDiv.addClass('typeDiv');
-        typeDiv.appendTo(playersTypeDiv);
-    }
-
-    var playerDivs = $('.playerDiv');
-    var scoreDivs = $('.scoreDiv');
-    var typeDivs = $('.typeDiv');
-    for (i=0; i<json.length; i++)
-    {
-        playerDivs[i].innerHTML = json[i].name + ' #' + json[i].id;
-        scoreDivs[i].innerHTML = json[i].score;
-        typeDivs[i].innerHTML = json[i].type;
-    }
-}
 
 function onSquareClick(event) {
     if (event.target.classList.contains('selected'))
@@ -582,75 +665,6 @@ function onPlayMoveClick() {
                 success: turnPlayCallback
             }
         )
-    }
-}
-
-function updateGamePage() {
-    $.ajax
-    (
-        {
-            url: 'games',
-            data:
-            {
-                action: 'pageDetails'
-            },
-            type: 'GET',
-            success: turnPlayCallback
-        }
-    )
-}
-
-function turnPlayCallback(json) {
-    var currentMove = json.move;
-    var totalMoves = $('.totalMoves')[0].innerHTML;
-    if (totalMoves != undefined && totalMoves < currentMove)
-    {
-        currentMove--;
-    }
-
-    $('.scoreSpan')[0].innerHTML = json.score;
-    $('.currentMove')[0].innerHTML = currentMove;
-    $('.undoSpan')[0].innerHTML = json.undo;
-    $('.turnSpan')[0].innerHTML = json.turn;
-
-    if (isMyTurn)
-    {
-        $('.turnSpan')[0].innerHTML = json.turn;
-    }
-    else
-    {
-        $('.turnSpan')[0].innerHTML = '0';
-    }
-
-    var color;
-    var board = json.board.m_Board;
-    var square;
-    turn = json.turn;
-    for (i=0; i<board.length; i++)
-    {
-        for (j=0; j<board[0].length; j++)
-        {
-            square = $('.square[row="' + i + '"][col="' + j + '"]')[0];
-            removeClass(square);
-            color = board[i][j].m_CellState;
-            if (color === 'BLACK')
-            {
-                square.classList.add('black');
-            }
-            else if (color ==='EMPTY')
-            {
-                square.classList.add('empty');
-            }
-            else
-            {
-                //nothing..
-            }
-        }
-    }
-    if (isMyTurn)
-    {
-        setPerfectRows(json.perfectRows);
-        setPerfectCols(json.perfectCols);
     }
 }
 

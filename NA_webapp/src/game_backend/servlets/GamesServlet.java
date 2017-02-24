@@ -97,6 +97,8 @@ public class GamesServlet extends HttpServlet{
             case "gameStatusMessage":
                 getGameStatusAndCurrentPlayerName(request,response);
                 break;
+            case "gamePlayers":
+                getGamePlayersList(request, response);
         }
 
     }
@@ -150,6 +152,18 @@ public class GamesServlet extends HttpServlet{
 
             out.println(gson.toJson(new GameStatusMessage(status, name)));
         }
+    }
+
+    private void getGamePlayersList(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String userName = SessionUtils.getUsername(request);
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        if(game != null) {
+            out.println(gson.toJson(game.getGameEngine().getPlayers()));
+        }
+
     }
 
     /**
