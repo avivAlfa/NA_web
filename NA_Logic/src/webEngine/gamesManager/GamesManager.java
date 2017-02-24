@@ -23,8 +23,14 @@ public class GamesManager {
 
     public List<GameObject> getGamesList() {
 //        return (List<GameObject>) games.values();
+//        return (List)this.games.entrySet().stream().map((entry) -> {
+//            return (GameObject)entry.getValue();
+//        }).collect(Collectors.toList());
+
         return (List)this.games.entrySet().stream().map((entry) -> {
             return (GameObject)entry.getValue();
+        }).filter((game) -> {
+            return game.getGameStatus().equals(GameStatus.WaitingForPlayers);
         }).collect(Collectors.toList());
     }
 

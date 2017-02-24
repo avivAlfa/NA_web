@@ -12,4 +12,8 @@ public class User {
         this.isComputer = isComputer;
         this.userName = userName;
     }
+
+    public String getUserName() {
+        return userName;
+    }
 }

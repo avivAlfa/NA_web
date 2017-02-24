@@ -18,7 +18,8 @@ public class UserManager {
     }
 
     public void removeUser(String username) {
-        usersSet.remove(username);
+        usersSet.remove(getUserByName(username));
+
     }
 
     public Set<User> getUsers() {
@@ -26,6 +27,14 @@ public class UserManager {
     }
 
     public boolean isUserExists(String username) {
-        return usersSet.contains(username);
+        return usersSet.contains(getUserByName(username));
+    }
+
+    public User getUserByName(String username){
+        for (User u:usersSet) {
+            if(u.getUserName().equals(username))
+                return u;
+        }
+        return null;
     }
 }

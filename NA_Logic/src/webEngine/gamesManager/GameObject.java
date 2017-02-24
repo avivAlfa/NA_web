@@ -17,6 +17,7 @@ public class GameObject {
     private String creatorName;
     private int requiredNumOfPlayers;
     private int registredNumOfPlayers;
+    private GameStatus gameStatus;
 
     public int getKey() {
         return key;
@@ -24,13 +25,20 @@ public class GameObject {
     public void setKey(int key) {
         this.key = key;
     }
+    public GameStatus getGameStatus() {
+        return gameStatus;
+    }
+    public void setGameStatus(GameStatus gameStatus) {
+        this.gameStatus = gameStatus;
+    }
 
     public String initGame(String xmlDescription, String creatorName, int key) throws Exception {
         this.key = key;
         this.creatorName = creatorName;
         this.registredNumOfPlayers = 0;
-        loadGame(xmlDescription);
 
+        loadGame(xmlDescription);
+        gameStatus = GameStatus.WaitingForPlayers;
        // this.players = new ArrayList();
        // this.status = GameStatus.WaitingForPlayers;
        // this.initControllerData();
@@ -43,6 +51,7 @@ public class GameObject {
 
         gameDescriptor = game.XML_Handler.getGameDescriptorFromXml(inputStream);
         game.XML_Handler.validate(gameDescriptor);
+        System.out.println("after validating");
         this.title = gameDescriptor.getDynamicPlayers().getGameTitle();
         this.requiredNumOfPlayers = gameDescriptor.getDynamicPlayers().getTotalPlayers();
         if (gameDescriptor != null) {

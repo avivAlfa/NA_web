@@ -2,6 +2,7 @@ package game_backend.servlets;
 
 import game_backend.utils.ServletUtils;
 import game_backend.utils.SessionUtils;
+import webEngine.users.User;
 import webEngine.users.UserManager;
 
 import java.io.IOException;
@@ -25,6 +26,9 @@ public class LogoutServlet extends HttpServlet {
         if (usernameFromSession != null) {
             System.out.println("Clearing session for " + usernameFromSession);
             userManager.removeUser(usernameFromSession);
+            for (User u: userManager.getUsers()) {
+                System.out.println(u.getUserName());
+            }
             SessionUtils.clearSession(request);
 
             /*

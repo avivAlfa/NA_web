@@ -23,7 +23,8 @@ public abstract class GameEngine {
 
     public abstract List<Point> getPossibleCells();
     public abstract boolean endGame();
-    protected abstract List<PoolElement> createPool(int boardSize, int rangeFrom, int rangeTo, List<GameDescriptor.Players.Player> players);
+    //protected abstract List<PoolElement> createPool(int boardSize, int rangeFrom, int rangeTo, List<GameDescriptor.Players.Player> players);
+    protected abstract List<PoolElement> createPool(int boardSize, int rangeFrom, int rangeTo, int numOfPlayers);
     public abstract String getPlayerColor(Player player);
     public abstract List<Point> getNextPlayerOpportunities(int selectedRow, int selectedCol);
     public abstract List<Point> getAllPossibleCells();
@@ -193,8 +194,12 @@ public abstract class GameEngine {
     public void loadGameParamsFromDescriptor(GameDescriptor gd){
 
         if(gd.getBoard().getStructure().getType().toLowerCase().equals("random")) {
-            List<GameDescriptor.Players.Player> players = (gd.getPlayers()!=null)?gd.getPlayers().getPlayer():null;
-            gameBoard = buildRandomBoard(gd.getBoard().getSize().intValue(), gd.getBoard().getStructure().getRange().getFrom(), gd.getBoard().getStructure().getRange().getTo(), players);
+            //List<GameDescriptor.Players.Player> players = (gd.getPlayers()!=null)?gd.getPlayers().getPlayer():null;
+            //gameBoard = buildRandomBoard(gd.getBoard().getSize().intValue(), gd.getBoard().getStructure().getRange().getFrom(), gd.getBoard().getStructure().getRange().getTo(), players);
+            int numOfPlayers = gd.getDynamicPlayers().getTotalPlayers();
+            System.out.println("before buildRandomBoard");
+            gameBoard = buildRandomBoard(gd.getBoard().getSize().intValue(), gd.getBoard().getStructure().getRange().getFrom(), gd.getBoard().getStructure().getRange().getTo(),numOfPlayers);
+
         } else {
             gameBoard = buildExplicitBoard(gd);
             GameDescriptor.Board.Structure.Squares.Marker marker = gd.getBoard().getStructure().getSquares().getMarker();
@@ -272,9 +277,9 @@ public abstract class GameEngine {
         return new Board(boardArray, boardSize);
     }
 
-    public Board buildRandomBoard(int boardSize, int rangeFrom, int rangeTo, List<GameDescriptor.Players.Player> players) {
+    public Board buildRandomBoard(int boardSize, int rangeFrom, int rangeTo, int numOfPlayers) {
         Cell[][] boardArray = createEmptyBoard(boardSize);
-        List<PoolElement> poolOfNumbers = createPool(boardSize, rangeFrom, rangeTo, players);
+        List<PoolElement> poolOfNumbers = createPool(boardSize, rangeFrom, rangeTo, numOfPlayers);
         Collections.shuffle(poolOfNumbers);
         int index=0;
         for(int i = 0; i < boardSize; i++) {
@@ -291,6 +296,7 @@ public abstract class GameEngine {
                 index++;
             }
         }
+        System.out.println("finished building");
         return new Board(boardArray, boardSize);
     }
 

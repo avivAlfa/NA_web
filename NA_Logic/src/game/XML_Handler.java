@@ -21,12 +21,10 @@ public class XML_Handler {
 
     public static GameDescriptor getGameDescriptorFromXml(String xmlDescription) throws Exception{
         GameDescriptor gameDescriptor = null;
-        //InputStream inputStream; //XML_Handler.class.getResourceAsStream("\\resources\\random.xml");
+        //InputStream inputStream; //  XML_Handler.class.getResourceAsStream("\\resources\\random.xml");
         try {
             //inputStream = new FileInputStream(xml_path);
-            System.out.println("@@@@@@@@@@@@@before desreial");
             gameDescriptor = deserializeFrom(xmlDescription);
-            System.out.println(gameDescriptor.getGameType());
 
         } catch (JAXBException e) {
             throw e;
@@ -53,7 +51,6 @@ public class XML_Handler {
         if(boardSize < 5 || boardSize > 50){
             throw new InvalidBoardSizeException();
         }
-
         if((gd.getBoard().getStructure().getType()).toLowerCase().equals("random")){
             if(gd.getGameType().equals("Basic"))
                 validateBasicRandomBoard(gd);
@@ -91,8 +88,8 @@ public class XML_Handler {
         int rangeFrom = gd.getBoard().getStructure().getRange().getFrom();
         int rangeTo = gd.getBoard().getStructure().getRange().getTo();
         int boardSize = gd.getBoard().getSize().intValue();
-
-        if((rangeTo - rangeFrom + 1)*(gd.getPlayers().getPlayer().size()) > Math.pow(boardSize,2) - 1 ){
+        int numOfPlayers = gd.getDynamicPlayers().getTotalPlayers();
+        if((rangeTo - rangeFrom + 1)*(numOfPlayers) > Math.pow(boardSize,2) - 1 ){
             throw new InvalidRangeCompareToBoardSizeException();
         }
 

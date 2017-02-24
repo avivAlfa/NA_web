@@ -7,9 +7,9 @@ window.onload = function ()
 {
     refreshLoginStatus();
     refreshUserList();
-    setInterval(refreshUserList, 2000);
-    //setInterval(refreshGamesList, 2000);
     setInterval(refreshLoginStatus, 2000);
+    setInterval(refreshUserList, 2000);
+    setInterval(refreshGamesList, 2000);
 };
 
 function refreshUserList() {
@@ -24,7 +24,6 @@ function refreshUserList() {
         }
     );
 }
-
 function refreshUserListCallback(json) {
     var usersTable = $('.usersTable tbody');
     usersTable.empty();
@@ -48,7 +47,6 @@ function refreshLoginStatus() {
         success: statusCallback
     });
 }
-
 function statusCallback(json) {
     $('.userNameSpan').text("Hello " + json);
 
@@ -69,7 +67,6 @@ function getUserName() {
     });
     return result;
 }
-
 
 function loadGameClicked(event) {
     var file = event.target.files[0];
@@ -104,7 +101,6 @@ function loadGameClicked(event) {
         }
     });
 }
-
 function loadGameCallback(json) {
     if (json.isLoaded) {
         alert("Load game Success !!");
@@ -117,6 +113,47 @@ function loadGameCallback(json) {
     }
 }
 
+function refreshGamesList() {
+    $.ajax
+    (
+        {
+            url: '/games',
+            data: {
+                action: 'gamesList'
+            },
+            type: 'GET',
+            success: refreshGamesListCallback
+        }
+    )
+}
+function refreshGamesListCallback(json) {
+    console.log("here try to add gameslist");
+    var gamesTable = $('.gamesTable tbody');
+    gamesTable.empty();
+    var gamesList = json;
+
+    gamesList.forEach(function (game) {
+        var tr = $(document.createElement('tr'));
+        var tdGameNumber = $(document.createElement('td')).text(game.key);
+        var tdGameName = $(document.createElement('td')).text(game.title);
+        var tdCreatorName = $(document.createElement('td')).text(game.creatorName);
+        var tdBoardSize = $(document.createElement('td')).text(game.gameEngine.gameBoard.size);
+        var tdPlayerNumber = $(document.createElement('td')).text(game.registredNumOfPlayers + " / " + game.requiredNumOfPlayers);
+
+        tdGameNumber.appendTo(tr);
+        tdGameName.appendTo(tr);
+        tdCreatorName.appendTo(tr);
+        tdBoardSize.appendTo(tr);
+        tdPlayerNumber.appendTo(tr);
+
+        tr.appendTo(gamesTable);
+    });
+
+    var tr = $('.tableBody tr');
+    for (var i = 0; i < tr.length; i++) {
+        tr[i].onclick = createGameDialog;
+    }
+}
 
 function createGameDialog(event) {
     var td = event.currentTarget.children[0];
@@ -134,20 +171,6 @@ function createGameDialog(event) {
         }
     )
 }
-function refreshGamesList() {
-    $.ajax
-    (
-        {
-            url: '/games',
-            data: {
-                action: 'gamesList'
-            },
-            type: 'GET',
-            success: refreshGamesListCallback
-        }
-    )
-}
-
 
 function createGameDialogCallback(json) {
     var div = $('.dialogDiv')[0];
@@ -295,34 +318,6 @@ function getGameId() {
 }
 
 
-function refreshGamesListCallback(json) {
-    console.log("here try to add gameslist");
-    var gamesTable = $('.gamesTable tbody');
-    gamesTable.empty();
-    var gamesList = json;
-
-    gamesList.forEach(function (game) {
-        var tr = $(document.createElement('tr'));
-        var tdGameNumber = $(document.createElement('td')).text(game.key);
-        var tdGameName = $(document.createElement('td')).text(game.title);
-        var tdCreatorName = $(document.createElement('td')).text(game.creatorName);
-        var tdBoardSize = $(document.createElement('td')).text(game.gameEngine.gameBoard.size);
-        var tdPlayerNumber = $(document.createElement('td')).text(game.registredNumOfPlayers + " / " + game.requiredNumOfPlayers);
-
-        tdGameNumber.appendTo(tr);
-        tdGameName.appendTo(tr);
-        tdCreatorName.appendTo(tr);
-        tdBoardSize.appendTo(tr);
-        tdPlayerNumber.appendTo(tr);
-
-        tr.appendTo(gamesTable);
-    });
-
-    var tr = $('.tableBody tr');
-    for (var i = 0; i < tr.length; i++) {
-        tr[i].onclick = createGameDialog;
-    }
-}
 
 function clearFileInput() {
     document.getElementById("fileInput").value = "";

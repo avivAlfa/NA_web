@@ -60,12 +60,13 @@ body{
 
 th {
     padding: 0% 5% 2% 1%;
-    background: lightskyblue;
+    background: steelblue;
 }
 
 .gamesDiv tr {
-    background: lightsteelblue;
-    color: navy;
+    background: silver;
+    color: black;
+    text-align: center;
 }
 
 .usersDiv tr{

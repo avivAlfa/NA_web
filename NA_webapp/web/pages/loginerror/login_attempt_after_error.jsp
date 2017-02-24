@@ -20,13 +20,13 @@
 <!--        and\or any other scripts you might need to operate the JSP file behind the scene once it arrives to the client-->
     </head>
     <body>
-        <div class="container">
+        <div class="container" align="center">
             <% String usernameFromSession = SessionUtils.getUsername(request);%>
             <% String usernameFromParameter = request.getParameter(Constants.USERNAME) != null ? request.getParameter(Constants.USERNAME) : "";%>
             <% if (usernameFromSession == null) {%>
-            <h1>Welcome to the Online Chat</h1>
+            <h1>Welcome to the Numberiada registration</h1>
             <br/>
-            <h2>Please enter a unique user name:</h2>
+            <h4>Please enter a user name:</h4>
             <form method="GET" action="login">
                 <input type="text" name="<%=Constants.USERNAME%>" value="<%=usernameFromParameter%>"/>
                 <input type="submit" value="Login"/>
@@ -36,8 +36,8 @@
             <span class="bg-danger" style="color:red;"><%=errorMessage%></span>
             <% } %>
             <% } else {%>
-            <h1>Welcome back, <%=usernameFromSession%></h1>
-            <a href="../chatroom/chatroom.html">Click here to enter the game_backend room</a>
+            <%--<h1>Welcome back, <%=usernameFromSession%></h1>--%>
+            <%--<a href="../chatroom/chatroom.html">Click here to enter the game_backend room</a>--%>
             <br/>
             <a href="login?logout=true" id="logout">logout</a>
             <% }%>

@@ -94,7 +94,6 @@ public class GamesServlet extends HttpServlet{
                 joinGame(request, response);
                 break;
             case "gamesList":
-                System.out.println("go get games list");
                 getGamesList(request, response);
                 break;
         }
@@ -108,7 +107,6 @@ public class GamesServlet extends HttpServlet{
         PrintWriter out = response.getWriter();
         response.setContentType("application/json");
 
-        System.out.println("try to reuturn");
         out.println(gson.toJson(gamesManager.getGamesList()));
         //return GamesManager.getGamesList();
     }

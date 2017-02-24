@@ -103,26 +103,59 @@ public class AdvancedGameEngine extends GameEngine {
     }
 
 
+//    @Override
+//    public List<PoolElement> createPool(int boardSize, int rangeFrom, int rangeTo, List<GameDescriptor.Players.Player> players) {
+//        List<PoolElement> pool = new ArrayList<PoolElement>();
+//        int rangeSize = rangeTo - rangeFrom + 1;
+//        PoolElement tempElem;
+//        int numOfPlayers = players.size();
+//        List<Integer> playerColors = new ArrayList<>();
+//
+//        for(GameDescriptor.Players.Player player : players) {
+//            playerColors.add(player.getColor());
+//        }
+//
+//        int numOfImpressions = (int)(Math.pow(boardSize,2) - 1) / (rangeSize*numOfPlayers);
+//
+//        for(int i = rangeFrom; i <= rangeTo; i++) {
+//            for (int j = 0; j < numOfImpressions; j++) {
+//               for(int colorIndex = 0; colorIndex < numOfPlayers; colorIndex++) {
+//                    tempElem = new PoolElement(i, playerColors.get(colorIndex));
+//                    pool.add(tempElem);
+//               }
+//            }
+//        }
+//        for(int i = 0; i < ((int)((Math.pow(boardSize,2) - 1) % (rangeSize*numOfPlayers))); i++) { //empty cells
+//            tempElem = new PoolElement(-999, 0);
+//            pool.add(tempElem);
+//            //pool.add(-999);
+//        }
+//        tempElem = new PoolElement(999, 0);
+//        pool.add(tempElem);
+//        //pool.add(999); //cursor
+//
+//        return pool;
+//    }
+
     @Override
-    public List<PoolElement> createPool(int boardSize, int rangeFrom, int rangeTo, List<GameDescriptor.Players.Player> players) {
+    public List<PoolElement> createPool(int boardSize, int rangeFrom, int rangeTo, int numOfPlayers) {
         List<PoolElement> pool = new ArrayList<PoolElement>();
         int rangeSize = rangeTo - rangeFrom + 1;
         PoolElement tempElem;
-        int numOfPlayers = players.size();
         List<Integer> playerColors = new ArrayList<>();
 
-        for(GameDescriptor.Players.Player player : players) {
-            playerColors.add(player.getColor());
-        }
+
+        for(int i = 1;i <=numOfPlayers; i++)
+            playerColors.add(i);
 
         int numOfImpressions = (int)(Math.pow(boardSize,2) - 1) / (rangeSize*numOfPlayers);
 
         for(int i = rangeFrom; i <= rangeTo; i++) {
             for (int j = 0; j < numOfImpressions; j++) {
-               for(int colorIndex = 0; colorIndex < numOfPlayers; colorIndex++) {
+                for(int colorIndex = 0; colorIndex < numOfPlayers; colorIndex++) {
                     tempElem = new PoolElement(i, playerColors.get(colorIndex));
                     pool.add(tempElem);
-               }
+                }
             }
         }
         for(int i = 0; i < ((int)((Math.pow(boardSize,2) - 1) % (rangeSize*numOfPlayers))); i++) { //empty cells
