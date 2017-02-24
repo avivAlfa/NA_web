@@ -1,8 +1,5 @@
-/**
- * Created by user on 18/10/2016.
- */
-
 var status;
+var user;
 var userName;
 var isComputer;
 var turn = 0;
@@ -23,17 +20,37 @@ window.onload = function()
 function checkLoginStatus() {
     $.ajax
     ({
-        url: 'login',
+        url: 'userslist',
         data: {
-            action: "status"
+            action: "currentuserName"
         },
         type: 'GET',
         success: statusCallback
     });
 }
 
+function statusCallback(json)
+{
+    // if (!json.isConnected)
+    // {
+    //     window.location = "index.html";
+    // }
+    // else if (json.gameNumber === -1)
+    // {
+    //     window.location = "LobbyPage.html";
+    // }
+    // else
+    if (isFirstStatus)
+    {
+        isFirstStatus = false;
+        initializePage();
+    }
+}
+
 function initializePage() {
-    userName = getUserName();
+    user = getUser();
+    userName = user.userName;
+    isComputer = user.isComputer;
     isComputer = isUserComputer();
     isButtonsEnabled = true;
     showScoreBoard = true;
@@ -47,21 +64,55 @@ function initializePage() {
     setInterval(gameStatus, intervalTimer);
 }
 
-function statusCallback(json)
-{
-    if (!json.isConnected)
-    {
-        window.location = "index.html";
-    }
-    else if (json.gameNumber === -1)
-    {
-        window.location = "LobbyPage.html";
-    }
-    else if (isFirstStatus)
-    {
-        isFirstStatus = false;
-        initializePage();
-    }
+function getUser() {
+    var result;
+    $.ajax
+    ({
+        async: false,
+        url: 'userslist',
+        data: {
+            action: "currentUser"
+        },
+        type: 'GET',
+        success: function(json) {
+            result = json;
+        }
+    });
+    return result;
+}
+
+function getUserName() {
+    var result;
+    $.ajax
+    ({
+        async: false,
+        url: 'userslist',
+        data: {
+            action: "currentUserName"
+        },
+        type: 'GET',
+        success: function(json) {
+            result = json;
+        }
+    });
+    return result;
+}
+
+function isUserComputer() {
+    var result;
+    $.ajax
+    ({
+        async: false,
+        url: 'usersList',
+        data: {
+            action: "currentUser"
+        },
+        type: 'GET',
+        success: function(json) {
+            result = json.isComputer;
+        }
+    });
+    return result;
 }
 
 document.addEventListener("click",clickHandler,true);
@@ -496,42 +547,6 @@ function onColorChooserClick(event)
     }
 }
 
-function getUserName()
-{
-    var result;
-    $.ajax
-    ({
-        async: false,
-        url: 'login',
-        data: {
-            action: "status"
-        },
-        type: 'GET',
-        success: function(json) {
-            result = json.userName;
-        }
-    });
-    return result;
-}
-
-function isUserComputer()
-{
-    var result;
-    $.ajax
-    ({
-        async: false,
-        url: 'login',
-        data: {
-            action: "status"
-        },
-        type: 'GET',
-        success: function(json) {
-            result = json.isComputer;
-        }
-    });
-    return result;
-}
-
 function onLeaveGameClick()
 {
     $.ajax
@@ -548,7 +563,7 @@ function onLeaveGameClick()
     });
 }
 
-function onPlayTurnClick()
+function onPlayMoveClick()
 {
     var selectedSquares = $('.selected');
     var row;
@@ -565,7 +580,7 @@ function onPlayTurnClick()
         {
             row = selectedSquares[i].getAttribute('row');
             col = selectedSquares[i].getAttribute('col');
-            pairList.push({row,col});
+          //  pairList.push({row,col});
             selectedSquares[i].classList.remove('selected');
         }
 

@@ -26,9 +26,10 @@ public class UsersListServlet extends HttpServlet {
             case "currentUserName":
                 getCurrentUserName(request, response);
                 break;
-
+            case "currentUser":
+                getCurrentUser(request, response);
+                break;
         }
-
     }
 
     private void getUsersList(HttpServletRequest request, HttpServletResponse response)
@@ -52,6 +53,22 @@ public class UsersListServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             Gson gson = new Gson();
             String currentUser = SessionUtils.getUsername(request);
+            String json = gson.toJson(currentUser);
+            out.println(json);
+            out.flush();
+        }
+    }
+
+    private void getCurrentUser(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.setContentType("application/json");
+        try (PrintWriter out = response.getWriter()) {
+            Gson gson = new Gson();
+            String currentUserName = SessionUtils.getUsername(request);
+            UserManager userManager = ServletUtils.getUserManager(getServletContext());
+            Set<User> usersSet = userManager.getUsers();
+            User currentUser = userManager.getUserByName(currentUserName);
             String json = gson.toJson(currentUser);
             out.println(json);
             out.flush();
