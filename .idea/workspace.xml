@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="8fd79f17-daa6-48f0-a167-2a97715c073c" name="Default" comment="" />
-    <ignored path="NA_web.iws" />
-=======
-    <list default="true" id="cd39b837-c3d1-4616-91e9-a62917b61aa5" name="Default" comment="" />
+    <list default="true" id="ea0114d9-051d-4c49-b5bb-9657db5dbe9c" name="Default" comment="" />
     <ignored path="Numberiada NA Web.iws" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -23,343 +18,270 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
-    <favorites_list name="NA_web" />
+    <favorites_list name="Numberiada NA Web" />
   </component>
   <component name="FileEditorManager">
     <leaf>
-<<<<<<< HEAD
-      <file leaf-file-name="GamesServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="127" column="40" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GameEngine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="190" column="34" selection-start-line="190" selection-start-column="34" selection-end-line="190" selection-end-column="34" />
-              <folding />
-=======
-      <file leaf-file-name="gameRoom.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="239" column="32" selection-start-line="239" selection-start-column="32" selection-end-line="239" selection-end-column="32" />
-              <folding>
-                <element signature="e#291#318#0" expanded="false" />
-                <element signature="n#!!block;n#checkLoginStatus#0" expanded="false" />
-                <element signature="e#367#518#0" expanded="false" />
-                <element signature="e#409#458#0" expanded="false" />
-                <element signature="n#!!block;n#statusCallback#0" expanded="false" />
-                <element signature="e#560#585#0" expanded="false" />
-                <element signature="e#791#855#0" expanded="false" />
-                <element signature="n#!!block;n#initializePage#0" expanded="false" />
-                <element signature="n#!!block;n#getUser#0" expanded="false" />
-                <element signature="e#1355#1563#0" expanded="false" />
-                <element signature="e#1419#1464#0" expanded="false" />
-                <element signature="e#1519#1557#0" expanded="false" />
-                <element signature="e#1587#2188#0" expanded="false" />
-                <element signature="n#!!block;n#loadWindowDetails#0" expanded="false" />
-                <element signature="n#!!block;n#loadGameDetails#0" expanded="false" />
-                <element signature="n#!!block;n#loadGameDetailsCallback#0" expanded="false" />
-                <element signature="e#2679#2701#0" expanded="false" />
-                <element signature="e#2873#2916#0" expanded="false" />
-                <element signature="n#!!block;n#createBoard#0" expanded="false" />
-                <element signature="e#3659#4675#0" expanded="false" />
-                <element signature="e#4118#4345#0" expanded="false" />
-                <element signature="e#4385#4636#0" expanded="false" />
-                <element signature="e#4787#5312#0" expanded="false" />
-                <element signature="e#4978#5262#0" expanded="false" />
-                <element signature="e#5395#5606#0" expanded="false" />
-                <element signature="e#5517#5600#0" expanded="false" />
-                <element signature="e#5689#5896#0" expanded="false" />
-                <element signature="e#5807#5890#0" expanded="false" />
-                <element signature="n#!!block;n#updatePlayersDetails#0" expanded="false" />
-                <element signature="n#!!block;n#updatePlayersDetailsCallback#0" expanded="false" />
-                <element signature="n#!!block;n#gameStatus#0" expanded="false" />
-                <element signature="e#8059#8278#0" expanded="false" />
-                <element signature="e#8143#8202#0" expanded="false" />
-                <element signature="n#!!block;n#gameStatusCallBack#0" expanded="false" />
-                <element signature="n#!!block;n#updateGamePage#0" expanded="false" />
-                <element signature="n#!!block;n#clickHandler#0" expanded="false" />
-                <element signature="e#11645#11709#0" expanded="false" />
-                <element signature="n#!!block;n#isButtonAvailable#0" expanded="false" />
-                <element signature="e#11919#11948#0" expanded="false" />
-                <element signature="e#12134#12162#0" expanded="false" />
-                <element signature="e#12186#12352#0" expanded="false" />
-                <element signature="e#12226#12262#0" expanded="false" />
-                <element signature="e#12309#12346#0" expanded="false" />
-                <element signature="e#12381#12684#0" expanded="false" />
-                <element signature="e#12421#12594#0" expanded="false" />
-                <element signature="e#12540#12584#0" expanded="false" />
-                <element signature="e#12641#12678#0" expanded="false" />
-                <element signature="n#!!block;n#showEndGameDiaglog#0" expanded="false" />
-                <element signature="e#12805#12996#0" expanded="false" />
-                <element signature="e#12863#12912#0" expanded="false" />
-                <element signature="n#!!block;n#showEndGameDiaglogCallback#0" expanded="false" />
-                <element signature="e#13253#13492#0" expanded="false" />
-                <element signature="n#!!block;n#createBoardForEndDialog#0" expanded="false" />
-                <element signature="e#13766#14540#0" expanded="false" />
-                <element signature="e#14048#14497#0" expanded="false" />
-                <element signature="e#14315#14375#0" expanded="false" />
-                <element signature="e#14427#14487#0" expanded="false" />
-                <element signature="n#!!block;n#setReason#0" expanded="false" />
-                <element signature="e#14577#15038#0" expanded="false" />
-                <element signature="n#!!block;n#onSquareClick#0" expanded="false" />
-                <element signature="e#15132#15189#0" expanded="false" />
-                <element signature="e#15203#15258#0" expanded="false" />
-                <element signature="n#!!block;n#onColorChooserClick#0" expanded="false" />
-                <element signature="e#15362#15425#0" expanded="false" />
-                <element signature="e#15439#15794#0" expanded="false" />
-                <element signature="e#15558#15735#0" expanded="false" />
-                <element signature="e#15642#15725#0" expanded="false" />
-                <element signature="n#!!block;n#onLeaveGameClick#0" expanded="false" />
-                <element signature="e#15844#16063#0" expanded="false" />
-                <element signature="e#15904#15947#0" expanded="false" />
-                <element signature="e#15998#16057#0" expanded="false" />
-                <element signature="n#!!block;n#onPlayMoveClick#0" expanded="false" />
-                <element signature="e#16324#17208#0" expanded="false" />
-                <element signature="e#16515#16743#0" expanded="false" />
-                <element signature="e#16863#17192#0" expanded="false" />
-                <element signature="e#16933#17105#0" expanded="false" />
-                <element signature="n#!!block;n#setPerfectRows#0" expanded="false" />
-                <element signature="n#!!block;n#setPerfectCols#0" expanded="false" />
-                <element signature="e#17854#17877#0" expanded="false" />
-                <element signature="e#17924#18336#0" expanded="false" />
-                <element signature="e#17982#18330#0" expanded="false" />
-                <element signature="e#18144#18209#0" expanded="false" />
-                <element signature="e#18258#18320#0" expanded="false" />
-                <element signature="n#!!block;n#removeClass#0" expanded="false" />
-                <element signature="e#18419#18468#0" expanded="false" />
-                <element signature="e#18522#18571#0" expanded="false" />
-                <element signature="n#!!block;n#getChooserColor#0" expanded="false" />
-                <element signature="e#18676#18709#0" expanded="false" />
-                <element signature="e#18765#18796#0" expanded="false" />
-                <element signature="e#18856#18887#0" expanded="false" />
-                <element signature="e#18951#18986#0" expanded="false" />
-                <element signature="e#19000#19033#0" expanded="false" />
-                <element signature="n#!!block;n#onEndMoveClick#0" expanded="false" />
-                <element signature="e#19126#19306#0" expanded="false" />
-                <element signature="e#19184#19233#0" expanded="false" />
-                <element signature="n#!!block;n#onUndoClick#0" expanded="false" />
-                <element signature="e#19366#19573#0" expanded="false" />
-                <element signature="e#19450#19500#0" expanded="false" />
-                <element signature="n#!!block;n#onMoveListClick#0" expanded="false" />
-                <element signature="e#19637#19826#0" expanded="false" />
-                <element signature="e#19695#19745#0" expanded="false" />
-                <element signature="n#!!block;n#onMoveListClickCallback#0" expanded="false" />
-                <element signature="e#20098#20240#0" expanded="false" />
-                <element signature="e#20286#20410#0" expanded="false" />
-                <element signature="n#!!block;n#removeDialog#0" expanded="false" />
-                <element signature="e#20716#20756#0" expanded="false" />
-                <element signature="n#!!block;n#playComputerTurn#0" expanded="false" />
-                <element signature="e#20815#21026#0" expanded="false" />
-                <element signature="e#20899#20953#0" expanded="false" />
-                <element signature="n#!!block;n#onReplayClick#0" expanded="false" />
-                <element signature="e#21204#21408#0" expanded="false" />
-                <element signature="e#21288#21336#0" expanded="false" />
-                <element signature="n#!!block;n#onReplayClose#0" expanded="false" />
-                <element signature="n#!!block;n#replayCallback#0" expanded="false" />
-                <element signature="n#!!block;n#resetBoard#0" expanded="false" />
-                <element signature="e#22241#22582#0" expanded="false" />
-                <element signature="e#22314#22368#0" expanded="false" />
-                <element signature="e#22415#22469#0" expanded="false" />
-                <element signature="e#22519#22576#0" expanded="false" />
-                <element signature="e#22660#22716#0" expanded="false" />
-                <element signature="n#!!block;n#onNextClick#0" expanded="false" />
-                <element signature="e#22775#23314#0" expanded="false" />
-                <element signature="e#22921#23236#0" expanded="false" />
-                <element signature="e#23166#23226#0" expanded="false" />
-                <element signature="n#!!block;n#onPrevClick#0" expanded="false" />
-                <element signature="e#23366#23922#0" expanded="false" />
-                <element signature="e#23537#23915#0" expanded="false" />
-                <element signature="e#23845#23905#0" expanded="false" />
-                <marker date="1487958394758" expanded="false" signature="10199:11526" ph="{...}" />
-              </folding>
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="374">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-=======
-            <state relative-caret-position="50">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+            <state relative-caret-position="165">
+              <caret line="386" column="70" selection-start-line="386" selection-start-column="70" selection-end-line="386" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="UsersListServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/UsersListServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-=======
-      <file leaf-file-name="GamesServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="99" column="29" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="29" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
       <file leaf-file-name="lobby.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/lobby/lobby.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="299" column="0" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
+            <state relative-caret-position="-97">
+              <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gameRoom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-319">
+              <caret line="327" column="34" selection-start-line="327" selection-start-column="34" selection-end-line="327" selection-end-column="34" />
               <folding>
-                <element signature="e#208#384#0" expanded="false" />
-                <element signature="n#!!block;n#refreshUserList#0" expanded="false" />
-                <element signature="e#436#619#0" expanded="false" />
-                <element signature="e#487#538#0" expanded="false" />
-                <element signature="n#!!block;n#refreshUserListCallback#0" expanded="false" />
-                <element signature="e#789#978#0" expanded="false" />
-                <element signature="n#!!block;n#refreshLoginStatus#0" expanded="false" />
-                <element signature="e#1032#1184#0" expanded="false" />
-                <element signature="e#1075#1124#0" expanded="false" />
+                <element signature="e#291#318#0" expanded="false" />
+                <element signature="n#!!block;n#checkLoginStatus#0" expanded="false" />
+                <element signature="e#367#519#0" expanded="false" />
+                <element signature="e#410#459#0" expanded="false" />
                 <element signature="n#!!block;n#statusCallback#0" expanded="false" />
-                <element signature="n#!!block;n#getUserName#0" expanded="false" />
-                <element signature="e#1328#1520#0" expanded="false" />
-                <element signature="e#1371#1420#0" expanded="false" />
-                <element signature="e#1476#1514#0" expanded="false" />
-                <element signature="n#!!block;n#loadGameClicked#0" expanded="false" />
-                <element signature="e#1721#2082#0" expanded="false" />
-                <element signature="e#1788#2065#0" expanded="false" />
-                <element signature="e#1843#1978#0" expanded="false" />
-                <element signature="e#2128#2362#0" expanded="false" />
-                <element signature="e#2171#2220#0" expanded="false" />
-                <element signature="e#2276#2356#0" expanded="false" />
-                <element signature="n#!!block;n#loadGameCallback#0" expanded="false" />
-                <element signature="e#2424#2524#0" expanded="false" />
-                <element signature="e#2534#2601#0" expanded="false" />
-                <element signature="n#!!block;n#refreshGamesList#0" expanded="false" />
-                <element signature="e#2660#2840#0" expanded="false" />
-                <element signature="e#2707#2758#0" expanded="false" />
-                <element signature="n#!!block;n#refreshGamesListCallback#0" expanded="false" />
-                <element signature="e#3071#3799#0" expanded="false" />
-                <element signature="e#3876#3925#0" expanded="false" />
-                <element signature="n#!!block;n#createGameDialog#0" expanded="false" />
-                <element signature="e#4066#4277#0" expanded="false" />
-                <element signature="e#4113#4195#0" expanded="false" />
-                <element signature="n#!!block;n#createGameDialogCallback#0" expanded="false" />
-                <element signature="e#5021#5400#0" expanded="false" />
-                <element signature="n#!!block;n#removeGameDialog#0" expanded="false" />
+                <element signature="e#561#586#0" expanded="false" />
+                <element signature="e#792#856#0" expanded="false" />
+                <element signature="n#!!block;n#initializePage#0" expanded="false" />
+                <element signature="n#!!block;n#getUser#0" expanded="false" />
+                <element signature="e#1421#1466#0" expanded="false" />
+                <element signature="e#1521#1559#0" expanded="false" />
+                <element signature="e#1589#2192#0" expanded="false" />
+                <element signature="n#!!block;n#loadWindowDetails#0" expanded="false" />
+                <element signature="n#!!block;n#loadGameDetails#0" expanded="false" />
+                <element signature="e#2386#2630#0" expanded="false" />
+                <element signature="e#2471#2549#0" expanded="false" />
+                <element signature="n#!!block;n#loadGameDetailsCallback#0" expanded="false" />
+                <element signature="e#2684#2706#0" expanded="false" />
+                <element signature="e#2878#2921#0" expanded="false" />
+                <element signature="e#3500#6025#0" expanded="false" />
                 <element signature="n#!!block;n#createBoard#0" expanded="false" />
-                <element signature="e#5736#6435#0" expanded="false" />
-                <element signature="e#5893#6397#0" expanded="false" />
-                <element signature="e#6179#6347#0" expanded="false" />
-                <element signature="n#!!block;n#isUserComputer#0" expanded="false" />
-                <element signature="e#6500#6724#0" expanded="false" />
-                <element signature="e#6564#6613#0" expanded="false" />
-                <element signature="e#6669#6718#0" expanded="false" />
-                <element signature="n#!!block;n#getGameId#0" expanded="false" />
-                <element signature="e#7894#7978#0" expanded="false" />
-                <element signature="n#!!block;n#clearFileInput#0" expanded="false" />
+                <element signature="e#6891#6908#0" expanded="false" />
+                <element signature="n#!!block;n#updatePlayersDetails#0" expanded="false" />
+                <element signature="e#6990#7188#0" expanded="false" />
+                <element signature="e#7049#7102#0" expanded="false" />
+                <element signature="n#!!block;n#gameStatusCallBack#0" expanded="false" />
+                <element signature="e#9892#9910#0" expanded="false" />
+                <element signature="e#10111#10164#0" expanded="false" />
+                <element signature="e#10242#10686#0" expanded="false" />
+                <element signature="e#10293#10375#0" expanded="false" />
+                <element signature="e#10426#10458#0" expanded="false" />
+                <element signature="e#10613#10672#0" expanded="false" />
+                <element signature="e#10752#10886#0" expanded="false" />
+                <element signature="e#11025#11118#0" expanded="false" />
+                <element signature="n#!!block;n#updateGamePage#0" expanded="false" />
+                <element signature="e#11307#11493#0" expanded="false" />
+                <element signature="e#11366#11419#0" expanded="false" />
+                <element signature="n#!!block;n#turnPlayCallback#0" expanded="false" />
+                <element signature="e#11574#11624#0" expanded="false" />
+                <element signature="e#11738#11783#0" expanded="false" />
+                <element signature="e#11938#11954#0" expanded="false" />
+                <element signature="e#12230#12746#0" expanded="false" />
+                <element signature="e#12282#12740#0" expanded="false" />
+                <element signature="e#12481#12543#0" expanded="false" />
+                <element signature="e#12595#12657#0" expanded="false" />
+                <element signature="e#12687#12730#0" expanded="false" />
+                <element signature="e#12769#12860#0" expanded="false" />
+                <element signature="n#!!block;n#clickHandler#0" expanded="false" />
+                <element signature="e#12981#13045#0" expanded="false" />
+                <element signature="n#!!block;n#isButtonAvailable#0" expanded="false" />
+                <element signature="e#13255#13284#0" expanded="false" />
+                <element signature="e#13470#13498#0" expanded="false" />
+                <element signature="e#13522#13688#0" expanded="false" />
+                <element signature="e#13562#13598#0" expanded="false" />
+                <element signature="e#13645#13682#0" expanded="false" />
+                <element signature="e#13717#14020#0" expanded="false" />
+                <element signature="e#13757#13930#0" expanded="false" />
+                <element signature="e#13876#13920#0" expanded="false" />
+                <element signature="e#13977#14014#0" expanded="false" />
+                <element signature="n#!!block;n#showEndGameDiaglog#0" expanded="false" />
+                <element signature="e#14141#14332#0" expanded="false" />
+                <element signature="e#14199#14248#0" expanded="false" />
+                <element signature="n#!!block;n#showEndGameDiaglogCallback#0" expanded="false" />
+                <element signature="e#14589#14828#0" expanded="false" />
+                <element signature="n#!!block;n#createBoardForEndDialog#0" expanded="false" />
+                <element signature="e#15102#15876#0" expanded="false" />
+                <element signature="e#15384#15833#0" expanded="false" />
+                <element signature="e#15651#15711#0" expanded="false" />
+                <element signature="e#15763#15823#0" expanded="false" />
+                <element signature="n#!!block;n#setReason#0" expanded="false" />
+                <element signature="e#15913#16374#0" expanded="false" />
+                <element signature="n#!!block;n#onSquareClick#0" expanded="false" />
+                <element signature="e#16468#16525#0" expanded="false" />
+                <element signature="e#16539#16594#0" expanded="false" />
+                <element signature="n#!!block;n#onColorChooserClick#0" expanded="false" />
+                <element signature="e#16698#16761#0" expanded="false" />
+                <element signature="e#16775#17130#0" expanded="false" />
+                <element signature="e#16894#17071#0" expanded="false" />
+                <element signature="e#16978#17061#0" expanded="false" />
+                <element signature="n#!!block;n#onLeaveGameClick#0" expanded="false" />
+                <element signature="e#17180#17399#0" expanded="false" />
+                <element signature="e#17240#17283#0" expanded="false" />
+                <element signature="e#17334#17393#0" expanded="false" />
+                <element signature="n#!!block;n#onPlayMoveClick#0" expanded="false" />
+                <element signature="e#17660#18544#0" expanded="false" />
+                <element signature="e#17851#18079#0" expanded="false" />
+                <element signature="e#18199#18528#0" expanded="false" />
+                <element signature="e#18269#18441#0" expanded="false" />
+                <element signature="n#!!block;n#setPerfectRows#0" expanded="false" />
+                <element signature="e#18626#18649#0" expanded="false" />
+                <element signature="e#18696#19108#0" expanded="false" />
+                <element signature="e#18754#19102#0" expanded="false" />
+                <element signature="e#18916#18981#0" expanded="false" />
+                <element signature="e#19030#19092#0" expanded="false" />
+                <element signature="n#!!block;n#setPerfectCols#0" expanded="false" />
+                <element signature="e#19190#19213#0" expanded="false" />
+                <element signature="e#19260#19672#0" expanded="false" />
+                <element signature="e#19318#19666#0" expanded="false" />
+                <element signature="e#19480#19545#0" expanded="false" />
+                <element signature="e#19594#19656#0" expanded="false" />
+                <element signature="n#!!block;n#removeClass#0" expanded="false" />
+                <element signature="e#19755#19804#0" expanded="false" />
+                <element signature="e#19858#19907#0" expanded="false" />
+                <element signature="n#!!block;n#getChooserColor#0" expanded="false" />
+                <element signature="e#20012#20045#0" expanded="false" />
+                <element signature="e#20101#20132#0" expanded="false" />
+                <element signature="e#20192#20223#0" expanded="false" />
+                <element signature="e#20287#20322#0" expanded="false" />
+                <element signature="e#20336#20369#0" expanded="false" />
+                <element signature="n#!!block;n#onEndMoveClick#0" expanded="false" />
+                <element signature="e#20462#20642#0" expanded="false" />
+                <element signature="e#20520#20569#0" expanded="false" />
+                <element signature="n#!!block;n#onUndoClick#0" expanded="false" />
+                <element signature="e#20702#20909#0" expanded="false" />
+                <element signature="e#20786#20836#0" expanded="false" />
+                <element signature="n#!!block;n#onMoveListClick#0" expanded="false" />
+                <element signature="e#20973#21162#0" expanded="false" />
+                <element signature="e#21031#21081#0" expanded="false" />
+                <element signature="n#!!block;n#onMoveListClickCallback#0" expanded="false" />
+                <element signature="e#21434#21576#0" expanded="false" />
+                <element signature="e#21622#21746#0" expanded="false" />
+                <element signature="n#!!block;n#removeDialog#0" expanded="false" />
+                <element signature="e#22052#22092#0" expanded="false" />
+                <element signature="n#!!block;n#playComputerTurn#0" expanded="false" />
+                <element signature="e#22151#22362#0" expanded="false" />
+                <element signature="e#22235#22289#0" expanded="false" />
+                <element signature="n#!!block;n#onReplayClick#0" expanded="false" />
+                <element signature="e#22540#22744#0" expanded="false" />
+                <element signature="e#22624#22672#0" expanded="false" />
+                <element signature="n#!!block;n#onReplayClose#0" expanded="false" />
+                <element signature="n#!!block;n#replayCallback#0" expanded="false" />
+                <element signature="n#!!block;n#resetBoard#0" expanded="false" />
+                <element signature="e#23577#23918#0" expanded="false" />
+                <element signature="e#23650#23704#0" expanded="false" />
+                <element signature="e#23751#23805#0" expanded="false" />
+                <element signature="e#23855#23912#0" expanded="false" />
+                <element signature="e#23996#24052#0" expanded="false" />
+                <element signature="n#!!block;n#onNextClick#0" expanded="false" />
+                <element signature="e#24111#24650#0" expanded="false" />
+                <element signature="e#24257#24572#0" expanded="false" />
+                <element signature="e#24502#24562#0" expanded="false" />
+                <element signature="n#!!block;n#onPrevClick#0" expanded="false" />
+                <element signature="e#24702#25258#0" expanded="false" />
+                <element signature="e#24873#25251#0" expanded="false" />
+                <element signature="e#25181#25241#0" expanded="false" />
+                <marker date="1487967320012" expanded="false" signature="3557:6022" ph="{...}" />
+                <marker date="1487967320012" expanded="false" signature="6167:6886" ph="{...}" />
+                <marker date="1487967320012" expanded="false" signature="6324:6848" ph="{...}" />
+                <marker date="1487967320012" expanded="false" signature="6610:6798" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GamesServlet.class" pinned="false" current-in-tab="false">
-        <entry file="file://C:/tomcat/apache-tomcat-7.0.40/webapps/Griddler/WEB-INF/classes/GamesServlet.class">
+      <file leaf-file-name="GamesServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="343" column="8" selection-start-line="343" selection-start-column="8" selection-end-line="357" selection-end-column="9" />
-=======
-      <file leaf-file-name="GameEngine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="186" column="16" selection-start-line="186" selection-start-column="16" selection-end-line="186" selection-end-column="16" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+            <state relative-caret-position="62">
+              <caret line="105" column="2" selection-start-line="105" selection-start-column="2" selection-end-line="107" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="LoginManager.class" pinned="false" current-in-tab="false">
-        <entry file="file://C:/tomcat/apache-tomcat-7.0.40/webapps/Griddler/WEB-INF/classes/LoginManager.class">
+      <file leaf-file-name="UtilsServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/UtilsServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
-=======
-      <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/gamesManager/GameObject.java">
+            <state relative-caret-position="125">
+              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+              <folding>
+                <element signature="e#903#1022#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="colors.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NA_Logic/src/resources/colors.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GamesServlet.class" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Tomcat/webapps/Griddler/WEB-INF/classes/GamesServlet.class">
+      <file leaf-file-name="Colors.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/Colors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="187" column="4" selection-start-line="187" selection-start-column="4" selection-end-line="197" selection-end-column="5" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+            <state relative-caret-position="100">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/users/User.java">
+      <file leaf-file-name="AdvancedGameEngine.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/AdvancedGameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-=======
-      <file leaf-file-name="GameController.class" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Tomcat/webapps/Griddler/WEB-INF/classes/models/GameController.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="133" column="50" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="50" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+            <state relative-caret-position="140">
+              <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="gameRoom.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-=======
       <file leaf-file-name="gameRoom.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2033">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+            <state relative-caret-position="-208">
+              <caret line="105" column="14" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gameRoom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="262" column="15" selection-start-line="262" selection-start-column="15" selection-end-line="262" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -369,14 +291,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java" />
+        <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html" />
+        <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css" />
         <option value="$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java" />
+        <option value="$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/UtilsServlet.java" />
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/lobby/lobby.js" />
-=======
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js" />
-        <option value="$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
       </list>
     </option>
   </component>
@@ -386,7 +306,6 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-<<<<<<< HEAD
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -394,8 +313,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-=======
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
@@ -427,6 +344,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -445,8 +364,6 @@
               <option name="myItemId" value="NA_webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-<<<<<<< HEAD
-=======
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -459,25 +376,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Numberiada NA Web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -498,15 +396,32 @@
               <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-<<<<<<< HEAD
+              <option name="myItemId" value="Numberiada NA Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NA_webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="lobby" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -522,9 +437,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-=======
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
               <option name="myItemId" value="gameroom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Numberiada NA Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NA_webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Numberiada NA Web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NA_webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -545,21 +498,10 @@
               <option name="myItemId" value="game_backend" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-<<<<<<< HEAD
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-=======
           </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="Numberiada NA Web" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -581,31 +523,10 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-<<<<<<< HEAD
-              <option name="myItemId" value="NA_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-=======
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
               <option name="myItemId" value="NA_Logic" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -623,10 +544,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -642,83 +559,25 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gamesManager" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-<<<<<<< HEAD
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_Logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-=======
-              <option name="myItemId" value="Numberiada NA Web" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_Logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_Logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
-<<<<<<< HEAD
-  <component name="RunManager" selected="Tomcat Server.Unnamed">
-=======
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alfav\IdeaProjects\Numberiada NA Web\NA_webapp\web\common\images" />
+    </key>
+  </component>
   <component name="RunManager" selected="Tomcat Server.NA Tomcat">
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
@@ -1137,7 +996,7 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-    <configuration default="false" name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="NA Tomcat" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration default="false" name="NA Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="NA Tomcat" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="NA_webapp:war exploded">
@@ -1147,11 +1006,7 @@
         </artifact>
       </deployment>
       <server-settings>
-<<<<<<< HEAD
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_NA_web_2" />
-=======
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Numberiada_NA_Web_2" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Numberiada_NA_Web_4" />
       </server-settings>
       <predefined_log_file id="Tomcat" enabled="true" />
       <predefined_log_file id="Tomcat Catalina" enabled="true" />
@@ -1160,11 +1015,7 @@
       <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <RunnerSettings RunnerId="Debug">
-<<<<<<< HEAD
-        <option name="DEBUG_PORT" value="51845" />
-=======
-        <option name="DEBUG_PORT" value="57707" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+        <option name="DEBUG_PORT" value="57804" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -1218,7 +1069,7 @@
       </method>
     </configuration>
     <list size="1">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.NA Tomcat" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -1226,91 +1077,90 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-<<<<<<< HEAD
-      <changelist id="8fd79f17-daa6-48f0-a167-2a97715c073c" name="Default" comment="" />
-      <created>1487955458104</created>
+      <changelist id="ea0114d9-051d-4c49-b5bb-9657db5dbe9c" name="Default" comment="" />
+      <created>1487959822061</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1487955458104</updated>
-      <workItem from="1487955459434" duration="3580000" />
-=======
-      <changelist id="cd39b837-c3d1-4616-91e9-a62917b61aa5" name="Default" comment="" />
-      <created>1487955268650</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1487955268650</updated>
-      <workItem from="1487955269994" duration="17000" />
-      <workItem from="1487955356190" duration="3712000" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+      <updated>1487959822061</updated>
+      <workItem from="1487959823265" duration="8670000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="3580000" />
-=======
-    <option name="totallyTimeSpent" value="3729000" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+    <option name="totallyTimeSpent" value="8670000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46324787" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24886535" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-=======
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-<<<<<<< HEAD
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-=======
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24972972" sideWeight="0.5" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1324,347 +1174,259 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-<<<<<<< HEAD
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java</url>
-          <line>396</line>
-          <properties />
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java</url>
-          <line>386</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="5" />
-    </breakpoint-manager>
-=======
     <breakpoint-manager />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/UsersListServlet.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" column="24" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
-=======
-    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2033">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Tomcat/webapps/Griddler/WEB-INF/classes/models/GameController.class">
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/lobby/lobby.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="133" column="50" selection-start-line="133" selection-start-column="33" selection-end-line="133" selection-end-column="50" />
+        <state relative-caret-position="147">
+          <caret line="171" column="4" selection-start-line="171" selection-start-column="4" selection-end-line="177" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/Player.java">
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="265">
+          <caret line="262" column="15" selection-start-line="262" selection-start-column="15" selection-end-line="262" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/gamesManager/GameObject.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="79" column="24" selection-start-line="79" selection-start-column="24" selection-end-line="79" selection-end-column="24" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/tomcat/apache-tomcat-7.0.40/webapps/Griddler/WEB-INF/classes/models/User.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-28">
-          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
-          <folding>
-            <element signature="e#588#589#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#729#730#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/tomcat/apache-tomcat-7.0.40/webapps/Griddler/WEB-INF/classes/LoginManager.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
-=======
     <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="186" column="16" selection-start-line="186" selection-start-column="16" selection-end-line="186" selection-end-column="16" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+        <state relative-caret-position="165">
+          <caret line="386" column="70" selection-start-line="386" selection-start-column="70" selection-end-line="386" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://C:/tomcat/apache-tomcat-7.0.40/webapps/Griddler/WEB-INF/classes/GamesServlet.class">
+    <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/AdvancedGameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="343" column="8" selection-start-line="343" selection-start-column="8" selection-end-line="357" selection-end-column="9" />
-=======
-    <entry file="file://C:/Tomcat/webapps/Griddler/WEB-INF/classes/GamesServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="187" column="4" selection-start-line="187" selection-start-column="4" selection-end-line="197" selection-end-column="5" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+        <state relative-caret-position="140">
+          <caret line="174" column="17" selection-start-line="174" selection-start-column="17" selection-end-line="174" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/UtilsServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding>
+            <element signature="e#903#1022#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="117">
-          <caret line="127" column="40" selection-start-line="127" selection-start-column="40" selection-end-line="127" selection-end-column="40" />
+        <state relative-caret-position="62">
+          <caret line="105" column="2" selection-start-line="105" selection-start-column="2" selection-end-line="107" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/Player.java">
+    <entry file="file://$PROJECT_DIR$/NA_Logic/src/resources/colors.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-=======
-        <state relative-caret-position="150">
-          <caret line="99" column="29" selection-start-line="99" selection-start-column="18" selection-end-line="99" selection-end-column="29" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java">
+    <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/Colors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="190" column="34" selection-start-line="190" selection-start-column="34" selection-end-line="190" selection-end-column="34" />
+        <state relative-caret-position="100">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-208">
+          <caret line="105" column="14" selection-start-line="105" selection-start-column="14" selection-end-line="105" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-319">
+          <caret line="327" column="34" selection-start-line="327" selection-start-column="34" selection-end-line="327" selection-end-column="34" />
+          <folding>
+            <element signature="e#291#318#0" expanded="false" />
+            <element signature="n#!!block;n#checkLoginStatus#0" expanded="false" />
+            <element signature="e#367#519#0" expanded="false" />
+            <element signature="e#410#459#0" expanded="false" />
+            <element signature="n#!!block;n#statusCallback#0" expanded="false" />
+            <element signature="e#561#586#0" expanded="false" />
+            <element signature="e#792#856#0" expanded="false" />
+            <element signature="n#!!block;n#initializePage#0" expanded="false" />
+            <element signature="n#!!block;n#getUser#0" expanded="false" />
+            <element signature="e#1421#1466#0" expanded="false" />
+            <element signature="e#1521#1559#0" expanded="false" />
+            <element signature="e#1589#2192#0" expanded="false" />
+            <element signature="n#!!block;n#loadWindowDetails#0" expanded="false" />
+            <element signature="n#!!block;n#loadGameDetails#0" expanded="false" />
+            <element signature="e#2386#2630#0" expanded="false" />
+            <element signature="e#2471#2549#0" expanded="false" />
+            <element signature="n#!!block;n#loadGameDetailsCallback#0" expanded="false" />
+            <element signature="e#2684#2706#0" expanded="false" />
+            <element signature="e#2878#2921#0" expanded="false" />
+            <element signature="e#3500#6025#0" expanded="false" />
+            <element signature="n#!!block;n#createBoard#0" expanded="false" />
+            <element signature="e#6891#6908#0" expanded="false" />
+            <element signature="n#!!block;n#updatePlayersDetails#0" expanded="false" />
+            <element signature="e#6990#7188#0" expanded="false" />
+            <element signature="e#7049#7102#0" expanded="false" />
+            <element signature="n#!!block;n#gameStatusCallBack#0" expanded="false" />
+            <element signature="e#9892#9910#0" expanded="false" />
+            <element signature="e#10111#10164#0" expanded="false" />
+            <element signature="e#10242#10686#0" expanded="false" />
+            <element signature="e#10293#10375#0" expanded="false" />
+            <element signature="e#10426#10458#0" expanded="false" />
+            <element signature="e#10613#10672#0" expanded="false" />
+            <element signature="e#10752#10886#0" expanded="false" />
+            <element signature="e#11025#11118#0" expanded="false" />
+            <element signature="n#!!block;n#updateGamePage#0" expanded="false" />
+            <element signature="e#11307#11493#0" expanded="false" />
+            <element signature="e#11366#11419#0" expanded="false" />
+            <element signature="n#!!block;n#turnPlayCallback#0" expanded="false" />
+            <element signature="e#11574#11624#0" expanded="false" />
+            <element signature="e#11738#11783#0" expanded="false" />
+            <element signature="e#11938#11954#0" expanded="false" />
+            <element signature="e#12230#12746#0" expanded="false" />
+            <element signature="e#12282#12740#0" expanded="false" />
+            <element signature="e#12481#12543#0" expanded="false" />
+            <element signature="e#12595#12657#0" expanded="false" />
+            <element signature="e#12687#12730#0" expanded="false" />
+            <element signature="e#12769#12860#0" expanded="false" />
+            <element signature="n#!!block;n#clickHandler#0" expanded="false" />
+            <element signature="e#12981#13045#0" expanded="false" />
+            <element signature="n#!!block;n#isButtonAvailable#0" expanded="false" />
+            <element signature="e#13255#13284#0" expanded="false" />
+            <element signature="e#13470#13498#0" expanded="false" />
+            <element signature="e#13522#13688#0" expanded="false" />
+            <element signature="e#13562#13598#0" expanded="false" />
+            <element signature="e#13645#13682#0" expanded="false" />
+            <element signature="e#13717#14020#0" expanded="false" />
+            <element signature="e#13757#13930#0" expanded="false" />
+            <element signature="e#13876#13920#0" expanded="false" />
+            <element signature="e#13977#14014#0" expanded="false" />
+            <element signature="n#!!block;n#showEndGameDiaglog#0" expanded="false" />
+            <element signature="e#14141#14332#0" expanded="false" />
+            <element signature="e#14199#14248#0" expanded="false" />
+            <element signature="n#!!block;n#showEndGameDiaglogCallback#0" expanded="false" />
+            <element signature="e#14589#14828#0" expanded="false" />
+            <element signature="n#!!block;n#createBoardForEndDialog#0" expanded="false" />
+            <element signature="e#15102#15876#0" expanded="false" />
+            <element signature="e#15384#15833#0" expanded="false" />
+            <element signature="e#15651#15711#0" expanded="false" />
+            <element signature="e#15763#15823#0" expanded="false" />
+            <element signature="n#!!block;n#setReason#0" expanded="false" />
+            <element signature="e#15913#16374#0" expanded="false" />
+            <element signature="n#!!block;n#onSquareClick#0" expanded="false" />
+            <element signature="e#16468#16525#0" expanded="false" />
+            <element signature="e#16539#16594#0" expanded="false" />
+            <element signature="n#!!block;n#onColorChooserClick#0" expanded="false" />
+            <element signature="e#16698#16761#0" expanded="false" />
+            <element signature="e#16775#17130#0" expanded="false" />
+            <element signature="e#16894#17071#0" expanded="false" />
+            <element signature="e#16978#17061#0" expanded="false" />
+            <element signature="n#!!block;n#onLeaveGameClick#0" expanded="false" />
+            <element signature="e#17180#17399#0" expanded="false" />
+            <element signature="e#17240#17283#0" expanded="false" />
+            <element signature="e#17334#17393#0" expanded="false" />
+            <element signature="n#!!block;n#onPlayMoveClick#0" expanded="false" />
+            <element signature="e#17660#18544#0" expanded="false" />
+            <element signature="e#17851#18079#0" expanded="false" />
+            <element signature="e#18199#18528#0" expanded="false" />
+            <element signature="e#18269#18441#0" expanded="false" />
+            <element signature="n#!!block;n#setPerfectRows#0" expanded="false" />
+            <element signature="e#18626#18649#0" expanded="false" />
+            <element signature="e#18696#19108#0" expanded="false" />
+            <element signature="e#18754#19102#0" expanded="false" />
+            <element signature="e#18916#18981#0" expanded="false" />
+            <element signature="e#19030#19092#0" expanded="false" />
+            <element signature="n#!!block;n#setPerfectCols#0" expanded="false" />
+            <element signature="e#19190#19213#0" expanded="false" />
+            <element signature="e#19260#19672#0" expanded="false" />
+            <element signature="e#19318#19666#0" expanded="false" />
+            <element signature="e#19480#19545#0" expanded="false" />
+            <element signature="e#19594#19656#0" expanded="false" />
+            <element signature="n#!!block;n#removeClass#0" expanded="false" />
+            <element signature="e#19755#19804#0" expanded="false" />
+            <element signature="e#19858#19907#0" expanded="false" />
+            <element signature="n#!!block;n#getChooserColor#0" expanded="false" />
+            <element signature="e#20012#20045#0" expanded="false" />
+            <element signature="e#20101#20132#0" expanded="false" />
+            <element signature="e#20192#20223#0" expanded="false" />
+            <element signature="e#20287#20322#0" expanded="false" />
+            <element signature="e#20336#20369#0" expanded="false" />
+            <element signature="n#!!block;n#onEndMoveClick#0" expanded="false" />
+            <element signature="e#20462#20642#0" expanded="false" />
+            <element signature="e#20520#20569#0" expanded="false" />
+            <element signature="n#!!block;n#onUndoClick#0" expanded="false" />
+            <element signature="e#20702#20909#0" expanded="false" />
+            <element signature="e#20786#20836#0" expanded="false" />
+            <element signature="n#!!block;n#onMoveListClick#0" expanded="false" />
+            <element signature="e#20973#21162#0" expanded="false" />
+            <element signature="e#21031#21081#0" expanded="false" />
+            <element signature="n#!!block;n#onMoveListClickCallback#0" expanded="false" />
+            <element signature="e#21434#21576#0" expanded="false" />
+            <element signature="e#21622#21746#0" expanded="false" />
+            <element signature="n#!!block;n#removeDialog#0" expanded="false" />
+            <element signature="e#22052#22092#0" expanded="false" />
+            <element signature="n#!!block;n#playComputerTurn#0" expanded="false" />
+            <element signature="e#22151#22362#0" expanded="false" />
+            <element signature="e#22235#22289#0" expanded="false" />
+            <element signature="n#!!block;n#onReplayClick#0" expanded="false" />
+            <element signature="e#22540#22744#0" expanded="false" />
+            <element signature="e#22624#22672#0" expanded="false" />
+            <element signature="n#!!block;n#onReplayClose#0" expanded="false" />
+            <element signature="n#!!block;n#replayCallback#0" expanded="false" />
+            <element signature="n#!!block;n#resetBoard#0" expanded="false" />
+            <element signature="e#23577#23918#0" expanded="false" />
+            <element signature="e#23650#23704#0" expanded="false" />
+            <element signature="e#23751#23805#0" expanded="false" />
+            <element signature="e#23855#23912#0" expanded="false" />
+            <element signature="e#23996#24052#0" expanded="false" />
+            <element signature="n#!!block;n#onNextClick#0" expanded="false" />
+            <element signature="e#24111#24650#0" expanded="false" />
+            <element signature="e#24257#24572#0" expanded="false" />
+            <element signature="e#24502#24562#0" expanded="false" />
+            <element signature="n#!!block;n#onPrevClick#0" expanded="false" />
+            <element signature="e#24702#25258#0" expanded="false" />
+            <element signature="e#24873#25251#0" expanded="false" />
+            <element signature="e#25181#25241#0" expanded="false" />
+            <marker date="1487967320012" expanded="false" signature="3557:6022" ph="{...}" />
+            <marker date="1487967320012" expanded="false" signature="6167:6886" ph="{...}" />
+            <marker date="1487967320012" expanded="false" signature="6324:6848" ph="{...}" />
+            <marker date="1487967320012" expanded="false" signature="6610:6798" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/lobby/lobby.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="299" column="0" selection-start-line="299" selection-start-column="0" selection-end-line="299" selection-end-column="0" />
-          <folding>
-            <element signature="e#208#384#0" expanded="false" />
-            <element signature="n#!!block;n#refreshUserList#0" expanded="false" />
-            <element signature="e#436#619#0" expanded="false" />
-            <element signature="e#487#538#0" expanded="false" />
-            <element signature="n#!!block;n#refreshUserListCallback#0" expanded="false" />
-            <element signature="e#789#978#0" expanded="false" />
-            <element signature="n#!!block;n#refreshLoginStatus#0" expanded="false" />
-            <element signature="e#1032#1184#0" expanded="false" />
-            <element signature="e#1075#1124#0" expanded="false" />
-            <element signature="n#!!block;n#statusCallback#0" expanded="false" />
-            <element signature="n#!!block;n#getUserName#0" expanded="false" />
-            <element signature="e#1328#1520#0" expanded="false" />
-            <element signature="e#1371#1420#0" expanded="false" />
-            <element signature="e#1476#1514#0" expanded="false" />
-            <element signature="n#!!block;n#loadGameClicked#0" expanded="false" />
-            <element signature="e#1721#2082#0" expanded="false" />
-            <element signature="e#1788#2065#0" expanded="false" />
-            <element signature="e#1843#1978#0" expanded="false" />
-            <element signature="e#2128#2362#0" expanded="false" />
-            <element signature="e#2171#2220#0" expanded="false" />
-            <element signature="e#2276#2356#0" expanded="false" />
-            <element signature="n#!!block;n#loadGameCallback#0" expanded="false" />
-            <element signature="e#2424#2524#0" expanded="false" />
-            <element signature="e#2534#2601#0" expanded="false" />
-            <element signature="n#!!block;n#refreshGamesList#0" expanded="false" />
-            <element signature="e#2660#2840#0" expanded="false" />
-            <element signature="e#2707#2758#0" expanded="false" />
-            <element signature="n#!!block;n#refreshGamesListCallback#0" expanded="false" />
-            <element signature="e#3071#3799#0" expanded="false" />
-            <element signature="e#3876#3925#0" expanded="false" />
-            <element signature="n#!!block;n#createGameDialog#0" expanded="false" />
-            <element signature="e#4066#4277#0" expanded="false" />
-            <element signature="e#4113#4195#0" expanded="false" />
-            <element signature="n#!!block;n#createGameDialogCallback#0" expanded="false" />
-            <element signature="e#5021#5400#0" expanded="false" />
-            <element signature="n#!!block;n#removeGameDialog#0" expanded="false" />
-            <element signature="n#!!block;n#createBoard#0" expanded="false" />
-            <element signature="e#5736#6435#0" expanded="false" />
-            <element signature="e#5893#6397#0" expanded="false" />
-            <element signature="e#6179#6347#0" expanded="false" />
-            <element signature="n#!!block;n#isUserComputer#0" expanded="false" />
-            <element signature="e#6500#6724#0" expanded="false" />
-            <element signature="e#6564#6613#0" expanded="false" />
-            <element signature="e#6669#6718#0" expanded="false" />
-            <element signature="n#!!block;n#getGameId#0" expanded="false" />
-            <element signature="e#7894#7978#0" expanded="false" />
-            <element signature="n#!!block;n#clearFileInput#0" expanded="false" />
-=======
-    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="239" column="32" selection-start-line="239" selection-start-column="32" selection-end-line="239" selection-end-column="32" />
-          <folding>
-            <element signature="e#291#318#0" expanded="false" />
-            <element signature="n#!!block;n#checkLoginStatus#0" expanded="false" />
-            <element signature="e#367#518#0" expanded="false" />
-            <element signature="e#409#458#0" expanded="false" />
-            <element signature="n#!!block;n#statusCallback#0" expanded="false" />
-            <element signature="e#560#585#0" expanded="false" />
-            <element signature="e#791#855#0" expanded="false" />
-            <element signature="n#!!block;n#initializePage#0" expanded="false" />
-            <element signature="n#!!block;n#getUser#0" expanded="false" />
-            <element signature="e#1355#1563#0" expanded="false" />
-            <element signature="e#1419#1464#0" expanded="false" />
-            <element signature="e#1519#1557#0" expanded="false" />
-            <element signature="e#1587#2188#0" expanded="false" />
-            <element signature="n#!!block;n#loadWindowDetails#0" expanded="false" />
-            <element signature="n#!!block;n#loadGameDetails#0" expanded="false" />
-            <element signature="n#!!block;n#loadGameDetailsCallback#0" expanded="false" />
-            <element signature="e#2679#2701#0" expanded="false" />
-            <element signature="e#2873#2916#0" expanded="false" />
-            <element signature="n#!!block;n#createBoard#0" expanded="false" />
-            <element signature="e#3659#4675#0" expanded="false" />
-            <element signature="e#4118#4345#0" expanded="false" />
-            <element signature="e#4385#4636#0" expanded="false" />
-            <element signature="e#4787#5312#0" expanded="false" />
-            <element signature="e#4978#5262#0" expanded="false" />
-            <element signature="e#5395#5606#0" expanded="false" />
-            <element signature="e#5517#5600#0" expanded="false" />
-            <element signature="e#5689#5896#0" expanded="false" />
-            <element signature="e#5807#5890#0" expanded="false" />
-            <element signature="n#!!block;n#updatePlayersDetails#0" expanded="false" />
-            <element signature="n#!!block;n#updatePlayersDetailsCallback#0" expanded="false" />
-            <element signature="n#!!block;n#gameStatus#0" expanded="false" />
-            <element signature="e#8059#8278#0" expanded="false" />
-            <element signature="e#8143#8202#0" expanded="false" />
-            <element signature="n#!!block;n#gameStatusCallBack#0" expanded="false" />
-            <element signature="n#!!block;n#updateGamePage#0" expanded="false" />
-            <element signature="n#!!block;n#clickHandler#0" expanded="false" />
-            <element signature="e#11645#11709#0" expanded="false" />
-            <element signature="n#!!block;n#isButtonAvailable#0" expanded="false" />
-            <element signature="e#11919#11948#0" expanded="false" />
-            <element signature="e#12134#12162#0" expanded="false" />
-            <element signature="e#12186#12352#0" expanded="false" />
-            <element signature="e#12226#12262#0" expanded="false" />
-            <element signature="e#12309#12346#0" expanded="false" />
-            <element signature="e#12381#12684#0" expanded="false" />
-            <element signature="e#12421#12594#0" expanded="false" />
-            <element signature="e#12540#12584#0" expanded="false" />
-            <element signature="e#12641#12678#0" expanded="false" />
-            <element signature="n#!!block;n#showEndGameDiaglog#0" expanded="false" />
-            <element signature="e#12805#12996#0" expanded="false" />
-            <element signature="e#12863#12912#0" expanded="false" />
-            <element signature="n#!!block;n#showEndGameDiaglogCallback#0" expanded="false" />
-            <element signature="e#13253#13492#0" expanded="false" />
-            <element signature="n#!!block;n#createBoardForEndDialog#0" expanded="false" />
-            <element signature="e#13766#14540#0" expanded="false" />
-            <element signature="e#14048#14497#0" expanded="false" />
-            <element signature="e#14315#14375#0" expanded="false" />
-            <element signature="e#14427#14487#0" expanded="false" />
-            <element signature="n#!!block;n#setReason#0" expanded="false" />
-            <element signature="e#14577#15038#0" expanded="false" />
-            <element signature="n#!!block;n#onSquareClick#0" expanded="false" />
-            <element signature="e#15132#15189#0" expanded="false" />
-            <element signature="e#15203#15258#0" expanded="false" />
-            <element signature="n#!!block;n#onColorChooserClick#0" expanded="false" />
-            <element signature="e#15362#15425#0" expanded="false" />
-            <element signature="e#15439#15794#0" expanded="false" />
-            <element signature="e#15558#15735#0" expanded="false" />
-            <element signature="e#15642#15725#0" expanded="false" />
-            <element signature="n#!!block;n#onLeaveGameClick#0" expanded="false" />
-            <element signature="e#15844#16063#0" expanded="false" />
-            <element signature="e#15904#15947#0" expanded="false" />
-            <element signature="e#15998#16057#0" expanded="false" />
-            <element signature="n#!!block;n#onPlayMoveClick#0" expanded="false" />
-            <element signature="e#16324#17208#0" expanded="false" />
-            <element signature="e#16515#16743#0" expanded="false" />
-            <element signature="e#16863#17192#0" expanded="false" />
-            <element signature="e#16933#17105#0" expanded="false" />
-            <element signature="n#!!block;n#setPerfectRows#0" expanded="false" />
-            <element signature="n#!!block;n#setPerfectCols#0" expanded="false" />
-            <element signature="e#17854#17877#0" expanded="false" />
-            <element signature="e#17924#18336#0" expanded="false" />
-            <element signature="e#17982#18330#0" expanded="false" />
-            <element signature="e#18144#18209#0" expanded="false" />
-            <element signature="e#18258#18320#0" expanded="false" />
-            <element signature="n#!!block;n#removeClass#0" expanded="false" />
-            <element signature="e#18419#18468#0" expanded="false" />
-            <element signature="e#18522#18571#0" expanded="false" />
-            <element signature="n#!!block;n#getChooserColor#0" expanded="false" />
-            <element signature="e#18676#18709#0" expanded="false" />
-            <element signature="e#18765#18796#0" expanded="false" />
-            <element signature="e#18856#18887#0" expanded="false" />
-            <element signature="e#18951#18986#0" expanded="false" />
-            <element signature="e#19000#19033#0" expanded="false" />
-            <element signature="n#!!block;n#onEndMoveClick#0" expanded="false" />
-            <element signature="e#19126#19306#0" expanded="false" />
-            <element signature="e#19184#19233#0" expanded="false" />
-            <element signature="n#!!block;n#onUndoClick#0" expanded="false" />
-            <element signature="e#19366#19573#0" expanded="false" />
-            <element signature="e#19450#19500#0" expanded="false" />
-            <element signature="n#!!block;n#onMoveListClick#0" expanded="false" />
-            <element signature="e#19637#19826#0" expanded="false" />
-            <element signature="e#19695#19745#0" expanded="false" />
-            <element signature="n#!!block;n#onMoveListClickCallback#0" expanded="false" />
-            <element signature="e#20098#20240#0" expanded="false" />
-            <element signature="e#20286#20410#0" expanded="false" />
-            <element signature="n#!!block;n#removeDialog#0" expanded="false" />
-            <element signature="e#20716#20756#0" expanded="false" />
-            <element signature="n#!!block;n#playComputerTurn#0" expanded="false" />
-            <element signature="e#20815#21026#0" expanded="false" />
-            <element signature="e#20899#20953#0" expanded="false" />
-            <element signature="n#!!block;n#onReplayClick#0" expanded="false" />
-            <element signature="e#21204#21408#0" expanded="false" />
-            <element signature="e#21288#21336#0" expanded="false" />
-            <element signature="n#!!block;n#onReplayClose#0" expanded="false" />
-            <element signature="n#!!block;n#replayCallback#0" expanded="false" />
-            <element signature="n#!!block;n#resetBoard#0" expanded="false" />
-            <element signature="e#22241#22582#0" expanded="false" />
-            <element signature="e#22314#22368#0" expanded="false" />
-            <element signature="e#22415#22469#0" expanded="false" />
-            <element signature="e#22519#22576#0" expanded="false" />
-            <element signature="e#22660#22716#0" expanded="false" />
-            <element signature="n#!!block;n#onNextClick#0" expanded="false" />
-            <element signature="e#22775#23314#0" expanded="false" />
-            <element signature="e#22921#23236#0" expanded="false" />
-            <element signature="e#23166#23226#0" expanded="false" />
-            <element signature="n#!!block;n#onPrevClick#0" expanded="false" />
-            <element signature="e#23366#23922#0" expanded="false" />
-            <element signature="e#23537#23915#0" expanded="false" />
-            <element signature="e#23845#23905#0" expanded="false" />
-            <marker date="1487958394758" expanded="false" signature="10199:11526" ph="{...}" />
->>>>>>> c6e9881b10d83a423a3b6d3d04a4f2223126faa8
-          </folding>
+        <state relative-caret-position="-97">
+          <caret line="148" column="0" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
