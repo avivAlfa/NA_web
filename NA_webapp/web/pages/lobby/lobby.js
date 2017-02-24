@@ -140,24 +140,46 @@ function refreshGamesListCallback(json) {
         var tdBoardSize = $(document.createElement('td')).text(game.gameEngine.gameBoard.size);
         var tdPlayerNumber = $(document.createElement('td')).text(game.registredNumOfPlayers + " / " + game.requiredNumOfPlayers);
 
+        var divShowGameDialog = $(document.createElement('div')).text("Show preview");
+        divShowGameDialog.addClass('showGameDialogDiv');
+       // divShowGameDialog.onclick = createGameDialog;
+        var tdShowGameDialog = $(document.createElement('td'));
+        divShowGameDialog.appendTo(tdShowGameDialog);
+
+        var divJoinGame = $(document.createElement('div')).text("Join game");
+        divJoinGame.addClass('joinGameDiv');
+        var tdJoinGame = $(document.createElement('td'));
+        //divJoinGame.onclick = joinGameClicked;
+        divJoinGame.appendTo(tdJoinGame);
+        //tdJoinGame.prop('onclick', 'joinGameClicked()');
+
         tdGameNumber.appendTo(tr);
         tdGameName.appendTo(tr);
         tdCreatorName.appendTo(tr);
         tdBoardSize.appendTo(tr);
         tdPlayerNumber.appendTo(tr);
+        tdShowGameDialog.appendTo(tr);
+        tdJoinGame.appendTo(tr);
 
         tr.appendTo(gamesTable);
     });
 
-    var tr = $('.tableBody tr');
-    for (var i = 0; i < tr.length; i++) {
-        tr[i].onclick = createGameDialog;
-    }
+    var tr1 = $('.tableBody .showGameDialogDiv');
+    var tr2 = $('.tableBody .joinGameDiv');
+for (var i = 0; i < tr1.length; i++) {
+
+    tr1[i].onclick = createGameDialog;
+    tr2[i].onclick = joinGameClicked;
+}
+    //for (var i = 0; i < tr.length; i++) {
+       // tr[i].onclick = createGameDialog;
+    //}
 }
 
 function createGameDialog(event) {
-    var td = event.currentTarget.children[0];
-    var number = td.innerText;
+    var current_td = $(event.target).parent();
+    var current_tr = current_td.parent();
+     var number = current_tr.cells[0].innerText;
     $.ajax
     (
         {
