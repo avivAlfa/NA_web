@@ -87,7 +87,7 @@ public class GamesServlet extends HttpServlet{
         //processRequest(request, response);
         String action = request.getParameter("action");
         switch (action) {
-            case "gameDetail":
+            case "gameDetails":
                 getGameDetails(request, response);
                 break;
             case "joinGame":

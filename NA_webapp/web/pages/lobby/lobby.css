@@ -169,10 +169,13 @@ th {
 }
 
 .square{
-    display: inline-block;
     border: 1px black solid;
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
+    font-size: medium;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
 }
 
 .dialogButtons {
@@ -197,18 +200,6 @@ th {
 .dialogButton:hover {
     cursor: pointer;
     background: gainsboro;
-}
-
-.rowBlocks {
-    display: inline-block;
-    position: relative;
-    vertical-align: top;
-    top: 15px;
-}
-
-.colBlocks {
-    display: inline-block;
-    margin-bottom: 5px;
 }
 
 .rowBlock {
