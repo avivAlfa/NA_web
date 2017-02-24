@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="gameRoom.css">
+    <title>Game Room</title>
+</head>
+<body>
+<div class="toolBar">
+    <div class="toolbarContent">
+        <span class="leaveGame" onclick="onLeaveGameClick()">Leave Game</span>
+        <span class="userNameSpan">Hi, </span>
+        <span class="gameStatus">Game status: Waiting for players...</span>
+        <!--<span class="logoSpan">-->
+            <!--<img src="nonogramLogo.JPG" class="image"/>-->
+        <!--</span>-->
+    </div>
+    <div class="mainDiv">
+        <!--
+        <div class="winnerDialog">
+            <div class="closeEnd" onclick="removeDialog(event)">
+                <img class="closeEnd" src="close.JPG"/>
+            </div>
+            <div class="dialogContent">
+                <div class="endDetails">
+                    <h2> Game Over !!</h2>
+                    <div class="statusDiv">
+                        <span>Game finished status: </span>
+                        <span class="finishStatus"></span>
+                    </div>
+                    <div class="winnerDiv">
+                        <span>Winners : </span>
+                    </div>
+                    <div class="endScoreDiv">
+                        <span>Highest Score: </span>
+                        <span class="highestScore"></span>
+                    </div>
+                </div>
+                <div class="completedBoard">
+                    <div class="completedBoardBody">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="close" onclick="removeDialog(event)">
+            <img class="close" src="close.JPG"/>
+        </div>
+        <h2>Displaying Move List:</h2>
+        <div class="moveListBody">
+
+        </div>
+    </div>
+    --> <!--winner dialog-->
+    <!--<div class="replayDialog">
+        <div class="closeReplay" onclick="onReplayClose()">
+            <img class="closeEnd" src="close.JPG"/>
+        </div>
+        <div class="replayDialogContent">
+            <h2>Displaaying replay board: </h2>
+            <div class="replayBoard">
+                <div class="replayBoardBody">
+
+                </div>
+            </div>
+            <div class="replayButtons">
+                <div class="replayButton" onclick="onNextClick()">Next</div>
+                <div class="replayButton" onclick="onPrevClick()">Prev</div>
+                <span>Turn: </span>
+                <span class="currentTurnReplay"></span>
+                <span> / </span>
+                <span class="totalTurnReplay"></span>
+            </div>
+        </div>
+    </div>
+        --><!--replay dialog-->
+    <div class="mainDivBody">
+            <div class="players">
+                <div>
+                    <a class="PlayerTurn">Player Turn: </a>
+                    <a class="currentPlayerName"></a>
+                </div>
+                <br>
+                <div class="playersNames">
+                    <a>Name</a>
+                    <div class="playersNamesBody"></div>
+                </div>
+                <div class="playersTypes">
+                    <a>Type</a>
+                    <div class="playersTypesBody"></div>
+                </div>
+                <div class="playersColor">
+                    <a>Color</a>
+                    <div class="playersColorBody"></div>
+                </div>
+                <div class="playersScore">
+                    <a>Score</a>
+                    <div class="playersScoreBody"></div>
+                </div>
+
+            </div>
+        <div class="actions">
+            <div class="action" onclick="onEndMoveClick()">End Move</div>
+            <div class="action" onclick="onPlayTurnClick()">Play Turn</div>
+            <div class="action" onclick="onUndoClick()">Undo</div>
+            <div class="action moveList" onclick="onMoveListClick()">Watch move list</div>
+        </div>
+
+        </div>
+        <div class="board">
+            <div class="boardBody">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

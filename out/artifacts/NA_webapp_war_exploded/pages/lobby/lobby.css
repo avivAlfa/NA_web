@@ -1,22 +1,26 @@
 body{
     background: aliceblue;
-    margin: 0;
+    /*margin: 0;*/
     min-width: 400px;
 }
 
 .mainDiv{
     margin: 10px 10px 0 10px;
     display: flex;
+    font-size: 14px;
+    font-family: "Century Gothic";
 }
 
 .toolBar{
-    height: 50px;
-    background: gainsboro;
+    height: 80px;
+    background: steelblue;
+    font-family: Tahoma;
+    font-size: 14px;
 }
 
 .toolbarContent {
     position: relative;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
 }
 
@@ -38,15 +42,18 @@ body{
 }
 
 .usersTable{
-    border: black 1px solid;
-    border-radius: 4px;
-    width: 25%;
+    border: 2px;
+    border-style: outset;
+    border-radius: 6px;
+    width: 70%;
+    margin-top: 22px;
 }
 
 .gamesTable {
-    border: 1px black solid;
+    border: 2px outset;
     border-radius: 6px;
-    width: 100%;
+    width: 70%;
+    border-collapse:collapse;
 }
 
 .gamesDiv {
@@ -59,19 +66,22 @@ body{
 }
 
 th {
-    padding: 0% 5% 2% 1%;
+    padding: 1% 0% 1% 0%;
     background: steelblue;
+    font-size: 13px;
+    cursor: default;
 }
 
 .gamesDiv tr {
-    background: gainsboro;
+    background: aliceblue;
     color: black;
     text-align: center;
+    cursor: pointer;
 }
 
 .usersDiv tr{
-    /*background: lightsteelblue;*/
     /*color: navy;*/
+    background: aliceblue;
     height: 20px;
     text-align: center;
 }
@@ -91,7 +101,7 @@ th {
 /*}*/
 
 .gamesDiv tr:hover {
-    background: blanchedalmond;
+    background: lightslategray;
 }
 
 /*.usersDiv tr:hover {*/

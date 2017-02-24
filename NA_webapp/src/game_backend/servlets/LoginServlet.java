@@ -21,7 +21,7 @@ public class LoginServlet extends HttpServlet {
     // ( can be fetched from request.getContextPath() ) and then the 'absolute' path from it.
     // Each method with it's pros and cons...
     private final String CHAT_ROOM_URL = "../chatroom/chatroom.html";
-    private final String SIGN_UP_URL = "../signup/singup.html";
+    private final String SIGN_UP_URL = "../signup/signup.html";
     private final String LOBBY_URL = "../lobby/lobby.html";
     private final String LOGIN_ERROR_URL = "/pages/loginerror/login_attempt_after_error.jsp";  // must start with '/' since will be used in request dispatcher...
     /**
@@ -41,7 +41,8 @@ public class LoginServlet extends HttpServlet {
         if (usernameFromSession == null) {
             //user is not logged in yet
             String usernameFromParameter = request.getParameter(USERNAME);
-            if (usernameFromParameter == null) {
+            System.out.println(usernameFromParameter);
+            if (usernameFromParameter == null || usernameFromParameter=="") {
                 //no username in session and no username in parameter -
                 //redirect back to the index page
                 //this return an HTTP code back to the browser telling it to load
@@ -62,7 +63,7 @@ public class LoginServlet extends HttpServlet {
                 } else {
                     //add the new user to the users list
                     String isComputerString = request.getParameter(COMPUTER_PARAMETER);
-                    boolean isComputer = isComputerString.equals("on")?true:false;
+                    boolean isComputer = isComputerString==null?false:true;
                     userManager.addUser(usernameFromParameter,isComputer);
                     //set the username in a session so it will be available on each request
                     //the true parameter means that if a session object does not exists yet

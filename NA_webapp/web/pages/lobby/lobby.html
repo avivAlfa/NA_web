@@ -2,16 +2,17 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Lobby</title>
+    <title>Games Lobby</title>
     <script src="../../common/jquery-2.0.3.min.js"></script>
     <script src="../../common/context-path-helper.js"></script>
     <script src="lobby.js"></script>
     <!--<link rel="stylesheet" href="../../common/bootstrap.min.css">-->
     <link rel="stylesheet" type="text/css" href="lobby.css">
 </head>
-<body>
+<body background=background="../../common/images/background.jpg">
 <div class="toolBar">
     <div class="toolbarContent">
+        <span class="headLineSpan"><h2>Games Lobby</h2></span>
         <span class="logoutSpan"><form action="../../game_backend/logout">
             <input type="submit" value="Logout" />
         </form></span>
@@ -45,6 +46,15 @@
             <div class="dialogButton" onclick="joinGameClicked()">Join game</div>
         </div>
     </div>
+    <div class="usersDiv"align="left">
+        <table class="usersTable">
+            <thead>
+            <th>Online users:</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
     <div class="gamesDiv">
         <div class="gamesActions">
             <span>Upload Game:</span>
@@ -57,17 +67,14 @@
             <th>Creator's name</th>
             <th>Board size</th>
             <th>Players amount</th>
+            <tr><td>1</td>
+                <td>in code</td>
+                <td>Aviv</td>
+                <td>8</td>
+                <td>0/3</td>
+            </tr>
             </thead>
             <tbody class="tableBody">
-            </tbody>
-        </table>
-    </div>
-    <div class="usersDiv">
-        <table class="usersTable">
-            <thead>
-            <th>Online users:</th>
-            </thead>
-            <tbody>
             </tbody>
         </table>
     </div>
