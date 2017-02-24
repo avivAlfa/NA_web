@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import static game_backend.constants.Constants.COMPUTER_PARAMETER;
 import static game_backend.constants.Constants.USERNAME;
 
 public class LoginServlet extends HttpServlet {
@@ -60,7 +61,9 @@ public class LoginServlet extends HttpServlet {
                     getServletContext().getRequestDispatcher(LOGIN_ERROR_URL).forward(request, response);
                 } else {
                     //add the new user to the users list
-                    userManager.addUser(usernameFromParameter,true);
+                    String isComputerString = request.getParameter(COMPUTER_PARAMETER);
+                    boolean isComputer = isComputerString.equals("on")?true:false;
+                    userManager.addUser(usernameFromParameter,isComputer);
                     //set the username in a session so it will be available on each request
                     //the true parameter means that if a session object does not exists yet
                     //create a new one

@@ -41,7 +41,7 @@ function refreshLoginStatus() {
     ({
         url: "/userslist",
         data: {
-            action: "currentUser"
+            action: "currentUserName"
         },
         type: 'GET',
         success: statusCallback
@@ -58,7 +58,7 @@ function getUserName() {
     ({
         url: "/userslist",
         data: {
-            action: "currentUser"
+            action: "currentUserName"
         },
         type: 'GET',
         success: function (json) {
@@ -92,7 +92,7 @@ function loadGameClicked(event) {
     ({
         url: '/userslist',
         data: {
-            action: "currentUser"
+            action: "currentUserName"
         },
         type: 'GET',
         success: function (json) {
@@ -261,7 +261,7 @@ function isUserComputer() {
         async: false,
         url: 'usersList',
         data: {
-            action: "currentUser"
+            action: "currentUserName"
         },
         type: 'GET',
         success: function (json) {

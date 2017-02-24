@@ -23,8 +23,8 @@ public class UsersListServlet extends HttpServlet {
             case "userslist":
                 getUsersList(request, response);
                 break;
-            case "currentUser":
-                getCurrentUser(request, response);
+            case "currentUserName":
+                getCurrentUserName(request, response);
                 break;
 
         }
@@ -45,7 +45,7 @@ public class UsersListServlet extends HttpServlet {
         }
     }
 
-    private void getCurrentUser(HttpServletRequest request, HttpServletResponse response)
+    private void getCurrentUserName(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         response.setContentType("application/json");

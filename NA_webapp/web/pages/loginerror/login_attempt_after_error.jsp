@@ -29,6 +29,7 @@
             <h4>Please enter a user name:</h4>
             <form method="GET" action="login">
                 <input type="text" name="<%=Constants.USERNAME%>" value="<%=usernameFromParameter%>"/>
+                <div><span>Computer</span><input name="computerCheckBox" type="checkbox" class="ComputerCheckBox"/></div>
                 <input type="submit" value="Login"/>
             </form>
             <% Object errorMessage = request.getAttribute(Constants.USER_NAME_ERROR);%>
