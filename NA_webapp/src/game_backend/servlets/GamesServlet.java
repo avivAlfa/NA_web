@@ -25,6 +25,7 @@ import java.util.Set;
         urlPatterns = {"/games"}
 )
 public class GamesServlet extends HttpServlet{
+    private final String LOBBY_URL = "../lobby/lobby.html";
     GamesManager gamesManager = new GamesManager();
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -197,6 +198,9 @@ public class GamesServlet extends HttpServlet{
             case "loadGame":
                 loadGameAction(request, response);
                 break;
+            case "leaveGame":
+                leaveGameAction(request, response);
+                break;
 //            case "currentUser":
 //                getCurrentUser(request, response);
 //                break;
@@ -254,6 +258,17 @@ public class GamesServlet extends HttpServlet{
 //            out.println(gson.toJson(new LoadGameStatus(false, var8.getMessage())));
 //        }
 
+    }
+
+    private void leaveGameAction(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        String userName = SessionUtils.getUsername(request);
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+        if(game != null) {
+            game.getGameEngine().removePlayer(userName);
+            //response.sendRedirect(LOBBY_URL);
+        }
+
+        //LoginManager.getInstance().userLeaveGame(userName);
     }
 
 

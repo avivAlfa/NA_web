@@ -298,6 +298,22 @@ public abstract class GameEngine {
         return new Board(boardArray, boardSize);
     }
 
+    public void removePlayer(String playerName){
+        int playerIndex = getPlayerIndexByName(playerName);
+
+        if(playerIndex == playerTurnIndex){
+            removeCurrentPlayerFromGame();
+        }
+        else{
+            if(resignedPlayers == null){
+                resignedPlayers = new ArrayList<>();
+            }
+            resignedPlayers.add(players.get(playerIndex));
+            players.remove(playerIndex);
+        }
+
+    }
+
     public void removeCurrentPlayerFromGame(){
         if(resignedPlayers == null){
             resignedPlayers = new ArrayList<>();
@@ -307,7 +323,16 @@ public abstract class GameEngine {
         if(playerTurnIndex == players.size()) {//last player resigned
             playerTurnIndex=0;
         }
+    }
 
+    public int getPlayerIndexByName(String playerName){
+        Player p;
+        for(int i = 0; i < players.size();i++){
+            p = players.get(i);
+            if(p.getName().equals(playerName))
+                return i;
+        }
+        return -1;
     }
 
     public int getNumOfPlayingPlayers(){

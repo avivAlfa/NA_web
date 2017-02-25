@@ -72,7 +72,9 @@ function loadGameClicked(event) {
     var file = event.target.files[0];
     var reader = new FileReader();
     var creatorName = getUserName();
+
     reader.onload = function () {
+
         var content = reader.result;
         $.ajax(
             {
@@ -86,20 +88,8 @@ function loadGameClicked(event) {
                 success: loadGameCallback
             }
         );
-    };
-
-    $.ajax // Getting creator's name.
-    ({
-        url: '/userslist',
-        data: {
-            action: "currentUserName"
-        },
-        type: 'GET',
-        success: function (json) {
-            creatorName = json;
-            reader.readAsText(file);
-        }
-    });
+    }
+    reader.readAsText(file);
 }
 function loadGameCallback(json) {
     if (json.isLoaded) {
