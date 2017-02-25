@@ -166,7 +166,6 @@ function createGameDialog(event) {
         }
     )
 }
-
 function createGameDialogCallback(json) {
     var div = $('.dialogDiv')[0];
     div.style.display = "block";

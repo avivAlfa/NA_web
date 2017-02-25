@@ -166,6 +166,7 @@ function createBoard(json) {
 
 function clickOnCell(event) {
     selectedCell = $(event.target)[0];
+    selectedCell.addClass("selectedSquare");
     selectedRow = parseInt(selectedCell.getAttribute("row"));
     selectedCol = parseInt(selectedCell.getAttribute("col"));
     //selectedCell.addClass('selectedSquare');
@@ -175,22 +176,6 @@ function clickOnCell(event) {
     //cells[i].prop('style', 'border-color: yellow; border-width: medium;');
 }
 
-function isBoardChanged(){
-    var result;
-    $.ajax
-    (
-        {
-            url: '/games',
-            data:
-            {
-                action: 'boardChange'
-            },
-            type: 'GET',
-            success: function(json){ result = json}
-        }
-    )
-    return result
-}
 
 //Refresh methods
 function updatePlayersDetails() {
@@ -279,7 +264,7 @@ function gameStatus() { //this function refresh all game details(except players 
 }
 function gameStatusCallBack(json) {
     newStatus = json.status;
-    newCurrentPlayerName = json.currentPlayerTurnName;
+    newCurrentPlayerName = json.currentPlayerName;
 
     switch(newStatus)
     {
@@ -317,7 +302,7 @@ function gameStatusCallBack(json) {
                 }
             }
 
-            if (isMyTurn && playerTurn != userName)
+            if (isMyTurn && newCurrentPlayerName     != userName)
             {
                 alert('It is your turn, but server says its someone else turn ...');
                 isMyTurn = false;
@@ -371,14 +356,14 @@ function onPlayMoveClick() {
     var selectedCell;
     var cursorCell;
 
-    if(selectedCell !== null){
-        cursorCell = $('.square').has('img');
-        var selectedRow = selectedCell.getAttribute('row');
-        var selectedCol = selectedCell.getAttribute('col');
+    if(selectedRow !== -1 && selectedCol !== -1){
+        cursorCell = $('.cursor')
 
         playMove(selectedRow, selectedCol);
 
-        selectedCell.style.background="";
+        //selectedCell.classList.remove("selectedSquare")
+        selectedRow=-1;
+        selectedCol=-1;
         imgElem = $(document.createElement('img'));
         imgElem.prop('src', "../../common/images/marker.png");
         selectedCell.append(imgElem)
@@ -443,7 +428,30 @@ function playMove(selectedRow, selectedCol){
     );
 }
 
+function playComputerMove() {
+    var chosenCellByComputer = getComputerChoice();
+    playMove(chosenCellByComputer.x, chosenCellByComputer.y);
+}
 
+function getComputerChoice() {
+    var result;
+    $.ajax
+    (
+        {
+            async: false,
+            url: '/games',
+            data:
+            {
+                action: 'computerChoice'
+            },
+            type: 'GET',
+            success: function (json) {
+                result = json;
+            }
+        }
+    )
+    return result;
+}
 
 function updateGamePage() {
     user = getUser();
@@ -847,22 +855,6 @@ function removeDialog(event) {
     }
 }
 
-function playComputerTurn() {
-    $.ajax
-    (
-        {
-            async: false,
-            url: 'games',
-            data:
-            {
-                action: 'computerTurn'
-            },
-            type: 'POST',
-            success: updateGamePage
-        }
-    );
-    onEndMoveClick();
-}
 
 function onReplayClick() {
     isReplayOn = true;
