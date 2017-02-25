@@ -141,16 +141,13 @@ function refreshGamesListCallback(json) {
 
         var divShowGameDialog = $(document.createElement('div')).text("Show preview");
         divShowGameDialog.addClass('showGameDialogDiv');
-       // divShowGameDialog.onclick = createGameDialog;
         var tdShowGameDialog = $(document.createElement('td'));
         divShowGameDialog.appendTo(tdShowGameDialog);
 
         var divJoinGame = $(document.createElement('div')).text("Join game");
         divJoinGame.addClass('joinGameDiv');
         var tdJoinGame = $(document.createElement('td'));
-        //divJoinGame.onclick = joinGameClicked;
         divJoinGame.appendTo(tdJoinGame);
-        //tdJoinGame.prop('onclick', 'joinGameClicked()');
 
         tdGameNumber.appendTo(tr);
         tdGameName.appendTo(tr);
@@ -169,13 +166,10 @@ function refreshGamesListCallback(json) {
 
     for (var i = 0; i < tr1.length; i++) {
 
-    tr1[i].onclick = createGameDialog;
-    tr2[i].onclick = joinGameClicked;
-}
-    // var tr = $('.tableBody tr');
-    // for (var i = 0; i < tr.length; i++) {
-    //     tr[i].onclick = createGameDialog;
-    // }
+        tr1[i].onclick = createGameDialog;
+        tr2[i].onclick = joinFromTable;
+    }
+
 }
 
 function createGameDialog(event) {
@@ -301,10 +295,23 @@ function getUser() {
     return result;
 }
 
-function joinGameClicked() {
+function joinFromDialog() {
+    var gameId = getGameId();
+    joinGameClicked(gameId);
+}
+
+function joinFromTable(event) {
+
+    var row = $(event.target).parent().parent();
+    var number = $($(row).find("td:eq(0)")).html();
+
+    joinGameClicked(number);
+}
+
+function joinGameClicked(gameId) {
     var user = getUser();
     //var isComputer = isUserComputer();
-    var gameId = getGameId();
+    //var gameId = getGameId();
     $.ajax
     (
         {
