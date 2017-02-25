@@ -103,6 +103,10 @@ public class GamesServlet extends HttpServlet{
                 break;
             case "pageDetails":
                 getBoardDetails(request, response);
+                break;
+            case "computerChoice":
+                getComputerChoice(request, response);
+                break;
         }
 
     }
@@ -187,6 +191,18 @@ public class GamesServlet extends HttpServlet{
             GameBoard board = currentPlayer.getM_Board();*/
 
             out.println(gson.toJson(list));
+        }
+
+    }
+
+    private void getComputerChoice(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String userName = SessionUtils.getUsername(request);
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        if(game != null) {
+            out.println(gson.toJson(game.getGameEngine().getComputerChosenCellIndexes()));
         }
 
     }

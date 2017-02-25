@@ -246,7 +246,7 @@ function gameStatus() { //this function refresh all game details(except players 
 }
 function gameStatusCallBack(json) {
     newStatus = json.status;
-    newCurrentPlayerName = json.currentPlayerTurnName;
+    newCurrentPlayerName = json.currentPlayerName;
 
     switch(newStatus)
     {
@@ -345,7 +345,9 @@ function onPlayMoveClick() {
 
         playMove(selectedRow, selectedCol);
 
-        selectedCell.style.background="";
+        //selectedCell.classList.remove("selectedSquare")
+        selectedRow=-1;
+        selectedCol=-1;
         imgElem = $(document.createElement('img'));
         imgElem.prop('src', "../../common/images/marker.png");
         selectedCell.append(imgElem)
@@ -410,7 +412,30 @@ function playMove(selectedRow, selectedCol){
     );
 }
 
+function playComputerMove() {
+    var chosenCellByComputer = getComputerChoice();
+    playMove(chosenCellByComputer.x, chosenCellByComputer.y);
+}
 
+function getComputerChoice() {
+    var result;
+    $.ajax
+    (
+        {
+            async: false,
+            url: '/games',
+            data:
+            {
+                action: 'computerChoice'
+            },
+            type: 'GET',
+            success: function (json) {
+                result = json;
+            }
+        }
+    )
+    return result;
+}
 
 function updateGamePage() {
     $.ajax
@@ -812,22 +837,6 @@ function removeDialog(event) {
     }
 }
 
-function playComputerTurn() {
-    $.ajax
-    (
-        {
-            async: false,
-            url: 'games',
-            data:
-            {
-                action: 'computerTurn'
-            },
-            type: 'POST',
-            success: updateGamePage
-        }
-    );
-    onEndMoveClick();
-}
 
 function onReplayClick() {
     isReplayOn = true;
