@@ -38,6 +38,10 @@ public class GameObject {
         this.gameStatus = gameStatus;
     }
 
+    public int getRequiredNumOfPlayers() {
+        return requiredNumOfPlayers;
+    }
+
     public String initGame(String xmlDescription, String creatorName, int key) throws Exception {
         this.key = key;
         this.creatorName = creatorName;
