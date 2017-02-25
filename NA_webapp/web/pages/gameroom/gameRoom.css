@@ -283,14 +283,6 @@ body{
     position: relative;
 }
 
-.playerDiv:hover {
-    background: black;
-    cursor: pointer;
-    overflow: visible;
-    width: fit-content;
-    min-width: 100px;
-}
-
 .playersNames {
     display: inline-block;
     border-radius: inherit;

@@ -329,28 +329,10 @@ function updatePlayersDetailsCallback(json) {
             typeDivs[i].innerHTML = "Human";
 
         var colorsList = getColorsList();
-        colorDivs[i].innerHTML = colorsList[json[i].color]; //TODO:change to color name
+        colorDivs[i].innerHTML = colorsList[json[i].color];
         scoreDivs[i].innerHTML = json[i].score;
     }
 }
-
-function getColorsList(){
-    var result;
-    $.ajax
-    ({
-        async: false,
-        url: '/utils',
-        data: {
-            action: "colors"
-        },
-        type: 'GET',
-        success: function(json) {
-            result = json;
-        }
-    });
-    return result;
-}
-
 
 
 function gameStatus() { //this function refresh all game details(except players details), kind of game loop
@@ -427,6 +409,36 @@ function gameStatusCallBack(json) {
     $('.gameStatus').text('Game status: ' + status);
 }
 //-------------------
+
+function getColorsList(){
+    var result;
+    $.ajax
+    ({
+        async: false,
+        url: '/utils',
+        data: {
+            action: "colors"
+        },
+        type: 'GET',
+        success: function(json) {
+            result = json;
+        }
+    });
+    return result;
+}
+
+function onLeaveGameClick() {
+    $.ajax(
+        {
+            url: '/games',
+            data: {
+                action: "leaveGame",
+            },
+            type: 'POST',
+            success: function() {window.location = "../lobby/lobby.html"}
+        }
+    );
+}
 
 function updateGamePage() {
     $.ajax
@@ -661,21 +673,6 @@ function onColorChooserClick(event) {
         }
         event.target.classList.add('colorSelected');
     }
-}
-
-function onLeaveGameClick() {
-    $.ajax
-    ({
-        async: false,
-        url: 'games',
-        data: {
-            action: "leaveGame"
-        },
-        type: 'GET',
-        success: function() {
-            window.location = "LobbyPage.html";
-        }
-    });
 }
 
 function onPlayMoveClick() {
