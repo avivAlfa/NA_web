@@ -327,6 +327,7 @@ public class GamesServlet extends HttpServlet{
         GameObject game = this.gamesManager.getGameByUserName(userName);
         if(game != null) {
             game.getGameEngine().playMove(Integer.parseInt(selectedRow) , Integer.parseInt(selectedCol));
+            game.getGameEngine().changeTurn();
         }
     }
 

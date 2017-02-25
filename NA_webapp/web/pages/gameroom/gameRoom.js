@@ -175,22 +175,6 @@ function clickOnCell(event) {
     //cells[i].prop('style', 'border-color: yellow; border-width: medium;');
 }
 
-function isBoardChanged(){
-    var result;
-    $.ajax
-    (
-        {
-            url: '/games',
-            data:
-            {
-                action: 'boardChange'
-            },
-            type: 'GET',
-            success: function(json){ result = json}
-        }
-    )
-    return result
-}
 
 //Refresh methods
 function updatePlayersDetails() {
@@ -317,7 +301,7 @@ function gameStatusCallBack(json) {
                 }
             }
 
-            if (isMyTurn && playerTurn != userName)
+            if (isMyTurn && newCurrentPlayerName     != userName)
             {
                 alert('It is your turn, but server says its someone else turn ...');
                 isMyTurn = false;
@@ -371,10 +355,8 @@ function onPlayMoveClick() {
     var selectedCell;
     var cursorCell;
 
-    if(selectedCell !== null){
-        cursorCell = $('.square').has('img');
-        var selectedRow = selectedCell.getAttribute('row');
-        var selectedCol = selectedCell.getAttribute('col');
+    if(selectedRow !== -1 && selectedCol !== -1){
+        cursorCell = $('.cursor')
 
         playMove(selectedRow, selectedCol);
 
