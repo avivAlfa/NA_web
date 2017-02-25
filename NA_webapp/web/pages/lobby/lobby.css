@@ -76,7 +76,6 @@ th {
     background: aliceblue;
     color: black;
     text-align: center;
-    cursor: pointer;
 }
 
 .usersDiv tr{
@@ -102,11 +101,20 @@ th {
 
 .gamesDiv tr:hover {
     background: lightslategray;
+    cursor: default;
 }
 
 /*.usersDiv tr:hover {*/
     /*background: blanchedalmond;*/
 /*}*/
+
+.showGameDialogDiv:hover{
+    cursor: pointer;
+}
+
+.joinGameDiv:hover{
+    cursor: pointer;
+}
 
 .dialogDiv {
     position: absolute;

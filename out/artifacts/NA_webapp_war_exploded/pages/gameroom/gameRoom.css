@@ -77,16 +77,6 @@ body{
     display: table-row;
 }
 
-.square{
-    border: 1px black solid;
-    width: 50px;
-    height: 50px;
-    font-size: medium;
-    vertical-align: middle;
-    display: table-cell;
-    text-align: center;
-}
-
 .square:hover {
     background: antiquewhite;
     cursor: pointer;
@@ -107,27 +97,11 @@ body{
 }
 
 .mainDivBody {
+    margin-top: 3.5%;
     margin-bottom: 5px;
     min-width: 1050px;
 }
 
-.board {
-    /*vertical-align: top;*/
-    /*display: inline-block;*/
-    /*white-space: nowrap;*/
-    /*line-height: 0;*/
-    /*margin-left: 1%;*/
-    /*margin-right: 1%;*/
-    /*width: 45vw;*/
-    /*height: 65vh;*/
-    /*min-width: 400px;*/
-    /*overflow: auto;*/
-    display: inline-block;
-    vertical-align: top;
-    white-space: nowrap;
-    line-height: 0;
-    margin-left: 40px;
-}
 
 .completedBoard{
     vertical-align: top;
@@ -142,12 +116,6 @@ body{
 .completedBoardBody{
     display: table;
     margin: 0 auto;
-}
-
-.boardBody {
-    margin-top: 2%;
-    float:right;
-    display: table;
 }
 
 .replayBoard{
@@ -226,7 +194,7 @@ body{
 .playersAndActions{
     margin-left: 1%;
     margin-right: 1%;
-    margin-top:3.5%;
+    /*margin-top:3.5%;*/
     margin-bottom: 1%;
 
     text-align: left;
@@ -238,7 +206,7 @@ body{
 }
 
 .players {
-    margin-bottom: 1%;
+    margin-bottom: 2%;
     display: inline-block;
     height: 300px;
     width: 300px;
@@ -254,6 +222,15 @@ body{
     /*float:left;*/
 }
 
+
+
+.actions > div {
+    width:300px;
+    height: 20px;
+    font-size: 14px;
+    font-family: "Century Gothic";
+}
+
 .action{
     border: 1px solid black;
     border-radius: 8px;
@@ -263,17 +240,43 @@ body{
     color: black;
 }
 
-.actions > div {
-    /*margin-bottom: 6px;*/
-    width:300px;
-    height: 20px;
-    font-size: 14px;
-    font-family: "Century Gothic";
-}
-
 .action:hover {
     background: aliceblue;
     cursor: pointer;
+}
+
+
+.boardBody {
+    float:right;
+    display: table;
+}
+
+.board {
+    /*vertical-align: top;*/
+    /*display: inline-block;*/
+    /*white-space: nowrap;*/
+    /*line-height: 0;*/
+    /*margin-left: 1%;*/
+    /*margin-right: 1%;*/
+    /*width: 45vw;*/
+    /*height: 65vh;*/
+    /*min-width: 400px;*/
+    /*overflow: auto;*/
+    display: inline-block;
+    vertical-align: top;
+    white-space: nowrap;
+    line-height: 0;
+    margin-left: 40px;
+}
+
+.square{
+    border: 1px black solid;
+    width: 50px;
+    height: 50px;
+    font-size: medium;
+    vertical-align: middle;
+    display: table-cell;
+    text-align: center;
 }
 
 .playerContainerDiv {

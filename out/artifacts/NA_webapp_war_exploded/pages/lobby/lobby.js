@@ -141,16 +141,13 @@ function refreshGamesListCallback(json) {
 
         var divShowGameDialog = $(document.createElement('div')).text("Show preview");
         divShowGameDialog.addClass('showGameDialogDiv');
-       // divShowGameDialog.onclick = createGameDialog;
         var tdShowGameDialog = $(document.createElement('td'));
         divShowGameDialog.appendTo(tdShowGameDialog);
 
         var divJoinGame = $(document.createElement('div')).text("Join game");
         divJoinGame.addClass('joinGameDiv');
         var tdJoinGame = $(document.createElement('td'));
-        //divJoinGame.onclick = joinGameClicked;
         divJoinGame.appendTo(tdJoinGame);
-        //tdJoinGame.prop('onclick', 'joinGameClicked()');
 
         tdGameNumber.appendTo(tr);
         tdGameName.appendTo(tr);
@@ -165,33 +162,16 @@ function refreshGamesListCallback(json) {
 
     var tr1 = $('.showGameDialogDiv');
     var tr2 = $('.joinGameDiv');
-
-
     for (var i = 0; i < tr1.length; i++) {
 
-    tr1[i].onclick = createGameDialog;
-    tr2[i].onclick = joinFromTable;
-}
-    // var tr = $('.tableBody tr');
-    // for (var i = 0; i < tr.length; i++) {
-    //     tr[i].onclick = createGameDialog;
-    // }
+        tr1[i].onclick = createGameDialog;
+        tr2[i].onclick = joinFromTable;
+    }
 }
 
 function createGameDialog(event) {
     var row = $(event.target).parent().parent();
     var number = $($(row).find("td:eq(0)")).html();
-
-    // var tdClicked = $(event.target).parent();
-    // var row = tdClicked.parent();
-    // // var number = row.cells[0].innerHTML;
-    //
-    // var col0 = $(row).find("td:eq(0)");
-    // var numberEl = $(col0);
-    // var number = numberEl.html();
-
-    // var td = event.currentTarget.children[0];
-    // var number = td.innerText;
 
     $.ajax
     (
