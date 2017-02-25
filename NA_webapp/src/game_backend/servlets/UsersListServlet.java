@@ -52,8 +52,8 @@ public class UsersListServlet extends HttpServlet {
         response.setContentType("application/json");
         try (PrintWriter out = response.getWriter()) {
             Gson gson = new Gson();
-            String currentUser = SessionUtils.getUsername(request);
-            String json = gson.toJson(currentUser);
+            String currentUserName = SessionUtils.getUsername(request);
+            String json = gson.toJson(currentUserName);
             out.println(json);
             out.flush();
         }

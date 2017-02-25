@@ -37,35 +37,25 @@ function refreshUserListCallback(json) {
 }
 
 function refreshLoginStatus() {
-    $.ajax
-    ({
-        url: "/userslist",
-        data: {
-            action: "currentUserName"
-        },
-        type: 'GET',
-        success: statusCallback
-    });
-}
-function statusCallback(json) {
-    $('.userNameSpan').text("Hello " + json);
-
+    var userName = getUserName();
+    $('.userNameSpan').text("Hello " + userName);
 }
 
 function getUserName() {
-    var result;
-    $.ajax
-    ({
-        url: "/userslist",
-        data: {
-            action: "currentUserName"
-        },
-        type: 'GET',
-        success: function (json) {
-            result = json;
-        }
-    });
-    return result;
+        var result;
+        $.ajax
+        ({
+            async: false,
+            url: '/userslist',
+            data: {
+                action: "currentUserName"
+            },
+            type: 'GET',
+            success: function(json) {
+                result = json;
+            }
+        });
+        return result;
 }
 
 function loadGameClicked(event) {
@@ -237,7 +227,7 @@ function isUserComputer() {
         async: false,
         url: 'usersList',
         data: {
-            action: "currentUserName"
+            action: "currentUser"
         },
         type: 'GET',
         success: function (json) {
@@ -291,23 +281,24 @@ function joinGameClicked(gameId) {
                 isComputer: user.isComputer,
                 gameId: gameId
             },
-            type: 'GET',
-            success: joinGameClickedCallback
+            type: 'POST',
+            success: function() {window.location = "../gameroom/gameRoom.html"}
+            //success: joinGameClickedCallback
         }
     );
 }
 
-function joinGameClickedCallback(json) {
+//function joinGameClickedCallback(json) {
 
-    if (json.isLoaded)
-    {
-        didUserCloseWindow = false;
-        window.location = "/pages/gameroom/gameRoom.html";
-    }
-    else {
-        alert(json.errorMessage);
-    }
-}
+    // if (json.isLoaded)
+    // {
+    //     didUserCloseWindow = false;
+    //     window.location = "/pages/gameroom/gameRoom.html";
+    // }
+    // else {
+    //     alert(json.errorMessage);
+    // }
+//}
 
 function getGameId() {
     var string = $('.key').text();
@@ -322,8 +313,6 @@ function getGameId() {
     }
     return result;
 }
-
-
 
 function clearFileInput() {
     document.getElementById("fileInput").value = "";

@@ -92,9 +92,6 @@ public class GamesServlet extends HttpServlet{
             case "gameDetails":
                 getGameDetails(request, response);
                 break;
-            case "joinGame":
-                joinGame(request, response);
-                break;
             case "gamesList":
                 getGamesList(request, response);
                 break;
@@ -121,26 +118,7 @@ public class GamesServlet extends HttpServlet{
         //return GamesManager.getGamesList();
     }
 
-    private void joinGame(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
 
-        String userName = request.getParameter("user");
-        boolean isComputer = request.getParameter("isComputer").equals("true");
-        int gameId = Integer.parseInt(request.getParameter("gameId"));
-        GameObject currentGame = this.gamesManager.getGameByKey(gameId);
-      //  LoginManager loginManager = LoginManager.getInstance();
-        PrintWriter out = response.getWriter();
-        Gson gson = new Gson();
-        response.setContentType("application/json");
-      //  if(loginManager.canUserJoinGame(userName) && currentGame.getStatus().equals(GameStatus.WaitingForPlayers)) {
-       //     loginManager.userJoinGame(userName, gameId);
-            currentGame.getGameEngine().addPlayer(userName, isComputer);
-            out.print(gson.toJson(new LoadGameStatus(true, "")));
-       // } else {
-       //     out.print(gson.toJson(new LoadGameStatus(false, "Couldn\'t join game.")));
-       // }
-
-    }
 
     private void getGameDetails(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -229,8 +207,14 @@ public class GamesServlet extends HttpServlet{
             case "loadGame":
                 loadGameAction(request, response);
                 break;
+            case "joinGame":
+                joinGameAction(request, response);
+                break;
             case "leaveGame":
                 leaveGameAction(request, response);
+                break;
+            case "playMove":
+                playMoveAction(request, response);
                 break;
 //            case "currentUser":
 //                getCurrentUser(request, response);
@@ -291,6 +275,31 @@ public class GamesServlet extends HttpServlet{
 
     }
 
+    private void joinGameAction(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        String userName = request.getParameter("user");
+        boolean isComputer = request.getParameter("isComputer").equals("true");
+        int gameId = Integer.parseInt(request.getParameter("gameId"));
+        GameObject currentGame = this.gamesManager.getGameByKey(gameId);
+        //  LoginManager loginManager = LoginManager.getInstance();
+        //PrintWriter out = response.getWriter();
+        //Gson gson = new Gson();
+        //response.setContentType("application/json");
+        //  if(loginManager.canUserJoinGame(userName) && currentGame.getStatus().equals(GameStatus.WaitingForPlayers)) {
+        //     loginManager.userJoinGame(userName, gameId);
+        currentGame.getGameEngine().addPlayer(userName, isComputer);
+
+        if(currentGame.getGameEngine().getPlayers().size() == currentGame.getRequiredNumOfPlayers())//if room is full
+            currentGame.setGameStatus(GameStatus.Running);
+
+        //out.print(gson.toJson(new LoadGameStatus(true, "")));
+        // } else {
+        //     out.print(gson.toJson(new LoadGameStatus(false, "Couldn\'t join game.")));
+        // }
+
+    }
+
     private void leaveGameAction(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
         String userName = SessionUtils.getUsername(request);
         GameObject game = this.gamesManager.getGameByUserName(userName);
@@ -301,6 +310,17 @@ public class GamesServlet extends HttpServlet{
 
         //LoginManager.getInstance().userLeaveGame(userName);
     }
+
+    private void playMoveAction(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        String selectedRow = request.getParameter("row");
+        String selectedCol = request.getParameter("col");
+        String userName = SessionUtils.getUsername(request);
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+        if(game != null) {
+            game.getGameEngine().playMove(Integer.parseInt(selectedRow) , Integer.parseInt(selectedCol));
+        }
+    }
+
 
 
     /**

@@ -59,7 +59,7 @@ function initializePage() {
     loadGameDetails();
     gameStatus();
 
-   // setInterval(checkLoginStatus, refreshRate);
+    // setInterval(checkLoginStatus, refreshRate);
     setInterval(updatePlayersDetails, refreshRate);
     setInterval(gameStatus, refreshRate);
 }
@@ -122,12 +122,18 @@ function createBoard(rows, cols, boardArr) {
             if(!boardArr[i][j].isEmpty && !boardArr[i][j].isCursor) {
                 squareDiv.append(boardArr[i][j].value);
                 squareDiv.prop('style', "color: "+ colors[boardArr[i][j].color]);
+<<<<<<< HEAD
                 squareDiv.attr('hasValue', 'true');
+=======
+                squareDiv.setAttribute('row','i');
+                squareDiv.setAttribute('col','j');
+>>>>>>> 0352dfdea8d16d7a5f89664012c3ab194de50243
             }
             if(boardArr[i][j].isCursor) {
                 imgElem = $(document.createElement('img'));
                 imgElem.prop('src', "../../common/images/marker.png");
                 squareDiv.append(imgElem)
+                squareDiv.addClass('cursor');
             }
             squareDiv.appendTo(rowDiv);
         }
@@ -154,7 +160,6 @@ function clickOnCell(event) {
 }
 
 //Refresh methods
-//-------------------
 function updatePlayersDetails() {
     $.ajax
     (
@@ -212,17 +217,17 @@ function updatePlayersDetailsCallback(json) {
     for (i=0; i<json.length; i++)
     {
         playerDivs[i].innerHTML = json[i].name// + ' #' + json[i].id;
-        if(json[i].type)
-            typeDivs[i].innerHTML = "Computer";
-        else
-            typeDivs[i].innerHTML = "Human";
+        typeDivs[i].innerHTML = (json[i].isHuman?"Human":"Computer");
+        // if(json[i].type)
+        //     typeDivs[i].innerHTML = "Computer";
+        // else
+        //     typeDivs[i].innerHTML = "Human";
 
         var colorsList = getColorsList();
         colorDivs[i].innerHTML = colorsList[json[i].color];
         scoreDivs[i].innerHTML = json[i].score;
     }
 }
-
 
 function gameStatus() { //this function refresh all game details(except players details), kind of game loop
     $.ajax
@@ -246,7 +251,7 @@ function gameStatusCallBack(json) {
     switch(newStatus)
     {
         case 'WaitingForPlayers':
-            status = newStatus;
+            //status = newStatus;
             break;
         case 'Running':
             //if (!isReplayOn)
@@ -329,6 +334,84 @@ function onLeaveGameClick() {
     );
 }
 
+function onPlayMoveClick() {
+    var selectedCell;
+    var cursorCell;
+
+    if(selectedCell !== null){
+        cursorCell = $('.square').has('img');
+        var selectedRow = selectedCell.getAttribute('row');
+        var selectedCol = selectedCell.getAttribute('col');
+
+        playMove(selectedRow, selectedCol);
+
+        selectedCell.style.background="";
+        imgElem = $(document.createElement('img'));
+        imgElem.prop('src', "../../common/images/marker.png");
+        selectedCell.append(imgElem)
+        selectedCell.addClass('cursor');
+
+        $($('.cursorCell')).attr('src', '');
+        cursorCell.classList.remove('cursor');
+    }else{
+        alert("Please choose a cell first");
+    }
+    // var selectedSquares = $('.selected');
+    // var row;
+    // var col;
+    // var color = getChooserColor();
+    // var decription = $('.textInput')[0].value;
+    //
+    // if (selectedSquares.length != 0 && color != undefined && turn < 2)
+    // {
+    //     $('.colorSelected')[0].classList.remove('colorSelected');
+    //     $('.textInput')[0].value = "";
+    //     var pairList = [];
+    //     for (i=0; i<selectedSquares.length; i++)
+    //     {
+    //         row = selectedSquares[i].getAttribute('row');
+    //         col = selectedSquares[i].getAttribute('col');
+    //         //  pairList.push({row,col});
+    //         selectedSquares[i].classList.remove('selected');
+    //     }
+    //
+    //     var list = {cells: pairList};
+    //     var toSend = JSON.stringify(list);
+    //     $.ajax
+    //     (
+    //         {
+    //             url: 'games',
+    //             data:
+    //             {
+    //                 action: 'turnPlay',
+    //                 cells: toSend,
+    //                 color: color,
+    //                 description: decription
+    //             },
+    //             type: 'POST',
+    //             success: turnPlayCallback
+    //         }
+    //     )
+    // }
+}
+
+function playMove(selectedRow, selectedCol){
+    $.ajax(
+        {
+            url: '/games',
+            data: {
+                action: "playMove",
+                row: selectedRow,
+                col: selectedCol
+            },
+            type: 'POST',
+            success: function() {}
+        }
+    );
+}
+
+
+
 function updateGamePage() {
     $.ajax
     (
@@ -398,8 +481,11 @@ function turnPlayCallback(json) {
     }
 }
 
+<<<<<<< HEAD
 //document.addEventListener("click",clickHandler,true);
 
+=======
+>>>>>>> 0352dfdea8d16d7a5f89664012c3ab194de50243
 function clickHandler(e) {
     if (!isButtonAvailable(e))
     {
@@ -564,45 +650,6 @@ function onColorChooserClick(event) {
     }
 }
 
-function onPlayMoveClick() {
-    var selectedSquares = $('.selected');
-    var row;
-    var col;
-    var color = getChooserColor();
-    var decription = $('.textInput')[0].value;
-
-    if (selectedSquares.length != 0 && color != undefined && turn < 2)
-    {
-        $('.colorSelected')[0].classList.remove('colorSelected');
-        $('.textInput')[0].value = "";
-        var pairList = [];
-        for (i=0; i<selectedSquares.length; i++)
-        {
-            row = selectedSquares[i].getAttribute('row');
-            col = selectedSquares[i].getAttribute('col');
-          //  pairList.push({row,col});
-            selectedSquares[i].classList.remove('selected');
-        }
-
-        var list = {cells: pairList};
-        var toSend = JSON.stringify(list);
-        $.ajax
-        (
-            {
-                url: 'games',
-                data:
-                {
-                    action: 'turnPlay',
-                    cells: toSend,
-                    color: color,
-                    description: decription
-                },
-                type: 'POST',
-                success: turnPlayCallback
-            }
-        )
-    }
-}
 
 function setPerfectRows(perfectRows) {
     if (perfectRows === undefined)
