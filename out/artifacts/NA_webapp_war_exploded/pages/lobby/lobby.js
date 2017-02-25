@@ -136,8 +136,8 @@ function refreshGamesListCallback(json) {
         var tdGameNumber = $(document.createElement('td')).text(game.key);
         var tdGameName = $(document.createElement('td')).text(game.title);
         var tdCreatorName = $(document.createElement('td')).text(game.creatorName);
-        var tdBoardSize = $(document.createElement('td')).text(game.gameEngine.gameBoard.size);
-        var tdPlayerNumber = $(document.createElement('td')).text(game.registredNumOfPlayers + " / " + game.requiredNumOfPlayers);
+        var tdBoardSize = $(document.createElement('td')).text(game.gameEngine.gameBoard.size + "x" + game.gameEngine.gameBoard.size);
+        var tdPlayerNumber = $(document.createElement('td')).text(Object.keys(game.gameEngine.players).length + " / " + game.requiredNumOfPlayers);
 
         var divShowGameDialog = $(document.createElement('div')).text("Show preview");
         divShowGameDialog.addClass('showGameDialogDiv');
@@ -163,22 +163,36 @@ function refreshGamesListCallback(json) {
         tr.appendTo(gamesTable);
     });
 
-    var tr1 = $('.tableBody .showGameDialogDiv');
-    var tr2 = $('.tableBody .joinGameDiv');
-for (var i = 0; i < tr1.length; i++) {
+    var tr1 = $('.showGameDialogDiv');
+    var tr2 = $('.joinGameDiv');
+
+
+    for (var i = 0; i < tr1.length; i++) {
 
     tr1[i].onclick = createGameDialog;
     tr2[i].onclick = joinGameClicked;
 }
-    //for (var i = 0; i < tr.length; i++) {
-       // tr[i].onclick = createGameDialog;
-    //}
+    // var tr = $('.tableBody tr');
+    // for (var i = 0; i < tr.length; i++) {
+    //     tr[i].onclick = createGameDialog;
+    // }
 }
 
 function createGameDialog(event) {
-    var current_td = $(event.target).parent();
-    var current_tr = current_td.parent();
-     var number = current_tr.cells[0].innerText;
+    var row = $(event.target).parent().parent();
+    var number = $($(row).find("td:eq(0)")).html();
+
+    // var tdClicked = $(event.target).parent();
+    // var row = tdClicked.parent();
+    // // var number = row.cells[0].innerHTML;
+    //
+    // var col0 = $(row).find("td:eq(0)");
+    // var numberEl = $(col0);
+    // var number = numberEl.html();
+
+    // var td = event.currentTarget.children[0];
+    // var number = td.innerText;
+
     $.ajax
     (
         {
@@ -202,7 +216,7 @@ function createGameDialogCallback(json) {
     var creatorName = json.creatorName;
     var gameName = json.title;
     var boardSize = json.gameEngine.gameBoard.size + " X " + json.gameEngine.gameBoard.size;
-    var playerNumber = json.registredNumOfPlayers + " / " + json.requiredNumOfPlayers
+    var playerNumber = Object.keys(json.gameEngine.players).length + " / " + json.requiredNumOfPlayers;
 
     console.log(json);
     $('.key').text("Game id: " + key + ".");

@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="gameRoom.css">
     <title>Game Room</title>
 </head>
-<body>
+<body background="../../common/images/background.jpg">
 <div class="toolBar">
     <div class="toolbarContent">
         <span class="leaveGame" onclick="onLeaveGameClick()">Leave Game</span>
@@ -76,6 +76,7 @@
     </div>
         --><!--replay dialog-->
     <div class="mainDivBody">
+        <div class="playersAndActions">
             <div class="players">
                 <div>
                     <a class="PlayerTurn">Player Turn: </a>
@@ -100,16 +101,18 @@
                 </div>
 
             </div>
+            <div class="actions">
+                <div class="action" onclick="onPlayMoveClick()">Play Move</div>
+                <!--<div class="action" onclick="onQuitGameClick()">Reserved</div>-->
+                <!--<div class="action" onclick="onUndoClick()">reserved</div>-->
+                <!--<div class="action moveList" onclick="onMoveListClick()">reserved move list</div>-->
+            </div>
+        </div>
         <div class="board">
             <div class="boardBody">
             </div>
         </div>
-        <div class="actions">
-            <div class="action" onclick="onPlayMoveClick()">Play Move</div>
-            <!--<div class="action" onclick="onQuitGameClick()">Reserved</div>-->
-            <!--<div class="action" onclick="onUndoClick()">reserved</div>-->
-            <!--<div class="action moveList" onclick="onMoveListClick()">reserved move list</div>-->
-        </div>
+
 
         </div>
 

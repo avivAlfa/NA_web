@@ -197,7 +197,6 @@ public abstract class GameEngine {
             //List<GameDescriptor.Players.Player> players = (gd.getPlayers()!=null)?gd.getPlayers().getPlayer():null;
             //gameBoard = buildRandomBoard(gd.getBoard().getSize().intValue(), gd.getBoard().getStructure().getRange().getFrom(), gd.getBoard().getStructure().getRange().getTo(), players);
             int numOfPlayers = gd.getDynamicPlayers().getTotalPlayers();
-            System.out.println("before buildRandomBoard");
             gameBoard = buildRandomBoard(gd.getBoard().getSize().intValue(), gd.getBoard().getStructure().getRange().getFrom(), gd.getBoard().getStructure().getRange().getTo(),numOfPlayers);
 
         } else {
@@ -296,7 +295,6 @@ public abstract class GameEngine {
                 index++;
             }
         }
-        System.out.println("finished building");
         return new Board(boardArray, boardSize);
     }
 
@@ -394,7 +392,6 @@ public abstract class GameEngine {
         else
             player.setAsHuman();
 */
-        System.out.println(players);
         players.add(player);
     }
 

@@ -41,7 +41,6 @@ public class LoginServlet extends HttpServlet {
         if (usernameFromSession == null) {
             //user is not logged in yet
             String usernameFromParameter = request.getParameter(USERNAME);
-            System.out.println(usernameFromParameter);
             if (usernameFromParameter == null || usernameFromParameter=="") {
                 //no username in session and no username in parameter -
                 //redirect back to the index page
@@ -71,7 +70,7 @@ public class LoginServlet extends HttpServlet {
                     request.getSession(true).setAttribute(Constants.USERNAME, usernameFromParameter);
 
                     //redirect the request to the game_backend room - in order to actually change the URL
-                    System.out.println("On login, request URI is: " + request.getRequestURI());
+                    //System.out.println("On login, request URI is: " + request.getRequestURI());
                     response.sendRedirect(LOBBY_URL);
                 }
             }

@@ -19,7 +19,7 @@
 <!--        <script src="script/jquery-2.0.3.min.js"></script>-->
 <!--        and\or any other scripts you might need to operate the JSP file behind the scene once it arrives to the client-->
     </head>
-    <body>
+    <body background="../../common/images/background.jpg">
         <div class="container" align="center">
             <% String usernameFromSession = SessionUtils.getUsername(request);%>
             <% String usernameFromParameter = request.getParameter(Constants.USERNAME) != null ? request.getParameter(Constants.USERNAME) : "";%>

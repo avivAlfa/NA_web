@@ -18,7 +18,6 @@ public class GameObject {
     private String title;
     private String creatorName;
     private int requiredNumOfPlayers;
-    private int registredNumOfPlayers;
     private GameStatus gameStatus;
 
     public GameEngine getGameEngine() {
@@ -42,7 +41,6 @@ public class GameObject {
     public String initGame(String xmlDescription, String creatorName, int key) throws Exception {
         this.key = key;
         this.creatorName = creatorName;
-        this.registredNumOfPlayers = 0;
 
         loadGame(xmlDescription);
         gameStatus = GameStatus.WaitingForPlayers;
@@ -58,7 +56,6 @@ public class GameObject {
 
         gameDescriptor = game.XML_Handler.getGameDescriptorFromXml(inputStream);
         game.XML_Handler.validate(gameDescriptor);
-        System.out.println("after validating");
         this.title = gameDescriptor.getDynamicPlayers().getGameTitle();
         this.requiredNumOfPlayers = gameDescriptor.getDynamicPlayers().getTotalPlayers();
         if (gameDescriptor != null) {
