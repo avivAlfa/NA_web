@@ -7,6 +7,7 @@ var refreshRate = 2000;
 var isMyTurn = false;
 var isButtonsEnabled = true;
 var isEnabledSaver = true;
+var selectedCell;
 var showScoreBoard;
 var myTurnSaver = false;
 var isFirstStatus = true;
@@ -79,40 +80,6 @@ function getUser() {
     });
     return result;
 }
-/*
-function getUserName() {
-    var result;
-    $.ajax
-    ({
-        async: false,
-        url: '/userslist',
-        data: {
-            action: "currentUserName"
-        },
-        type: 'GET',
-        success: function(json) {
-            result = json;
-        }
-    });
-    return result;
-}
-function isUserComputer() {
-    var result;
-    $.ajax
-    ({
-        async: false,
-        url: '/usersList',
-        data: {
-            action: "currentUser"
-        },
-        type: 'GET',
-        success: function(json) {
-            result = json.isComputer;
-        }
-    });
-    return result;
-}
-*/
 
 function loadWindowDetails() {
     $('.userNameSpan').text('Hello, '+ userName + " playing as "+ (isComputer ? "computer" : "human"));
@@ -135,107 +102,11 @@ function loadGameDetails() {
     )
 }
 function loadGameDetailsCallback(json) {
-    // var key = json.key;
-    // var creatorName = json.creatorName;
-    // var gameName = json.gameTitle;
-    // var moves = json.moves;
-    // var boardSize = json.rows + " X " + json.cols;
 
-    // $('.key').text("Game id: " + key + ".");
-    // $('.creatorName').text("Game Creator: " + creatorName + ".");
-    // $('.gameName').text("Game Title: " + gameName);
-    // $('.boardSize').text("Board size: " + boardSize);
-    // $('.moves').text("Moves number: " + moves);
-    // $('.registeredPlayers').text(json.registeredPlayers);
-    // $('.requiredPlayers').text(json.requiredPlayers);
-    // $('.totalMoves').text(moves);
-
-    //createBoard(json.rows, json.cols, json.rowBlocks, json.colBlocks);
     createBoard(json.gameEngine.gameBoard.size, json.gameEngine.gameBoard.size, json.gameEngine.gameBoard.board);
 
 }
-/*
-function createBoard(rows,cols, rowBlocks, colBlocks) {
-    var board = $('.boardBody');
-    board.contents().remove();
-    colBlocksDiv = $(document.createElement('div'));
-    colBlocksDiv.addClass('colBlocks');
-    colBlocksDiv.appendTo(board);
 
-
-    for (i=0; i<rows; i++)
-    { // creates squares + row blocks.
-        rowDiv = $(document.createElement('div'));
-        rowDiv.addClass('rowDiv');
-        rowSquares = $(document.createElement('div'));
-        rowSquares.addClass('rowSquares');
-        rowBlocksDiv = $(document.createElement('div'));
-        rowBlocksDiv.addClass('rowBlocks');
-        rowSquares.appendTo(rowDiv);
-        rowBlocksDiv.appendTo(rowDiv);
-
-        for (hint=0; hint<rowBlocks[i].length;hint++)
-        {
-            rowHint = $(document.createElement('div'));
-            rowHint.addClass('rowHint');
-            rowHint.attr('row', i);
-            rowHint.attr('col', hint);
-            rowHint.appendTo(rowBlocksDiv);
-        }
-
-        for (j=0; j<cols;j++)
-        { // add the squares.
-            squareDiv = $(document.createElement('div'));
-            squareDiv.addClass('square');
-            squareDiv.attr('row', i);
-            squareDiv.attr('col', j);
-            squareDiv.appendTo(rowSquares);
-        }
-
-        rowDiv.appendTo(board);
-    }
-
-    $('.square').each(function(i,sqr) { sqr.onclick = onSquareClick;});
-
-    for (col=0; col<cols; col++)
-    { // creates column blocks.
-        colBlockDiv = $(document.createElement('div'));
-        colBlockDiv.addClass('colBlock');
-        for (hint=0; hint<colBlocks[col].length; hint++)
-        {
-            hintDiv = $(document.createElement('div'));
-            hintDiv.addClass('colHint');
-            hintDiv.appendTo(colBlockDiv);
-            hintDiv.attr('row', hint);
-            hintDiv.attr('col', col);
-            //hintDiv.innerHTML = colBlocks[col][hint];
-        }
-        colBlockDiv.appendTo(colBlocksDiv);
-    }
-
-    var hints = $('.colHint');
-    var i=0;
-    for (col=0; col<cols; col++)
-    { //add columns block numbers (the text inside the divs)
-        for (hint=0; hint<colBlocks[col].length; hint++)
-        {
-            hints[i].innerHTML = colBlocks[col][hint];
-            i++;
-        }
-    }
-
-    var hints = $('.rowHint');
-    var i=0;
-    for (row=0; row<rows; row++)
-    { //add row block numbers (the text inside the divs)
-        for (hint=0; hint<rowBlocks[row].length; hint++)
-        {
-            hints[i].innerHTML = rowBlocks[row][hint];
-            i++;
-        }
-    }
-}
-*/
 function createBoard(rows, cols, boardArr) {
     var board = $('.boardBody');
     var colors = getColorsList();
@@ -251,6 +122,7 @@ function createBoard(rows, cols, boardArr) {
             if(!boardArr[i][j].isEmpty && !boardArr[i][j].isCursor) {
                 squareDiv.append(boardArr[i][j].value);
                 squareDiv.prop('style', "color: "+ colors[boardArr[i][j].color]);
+                squareDiv.attr('hasValue', 'true');
             }
             if(boardArr[i][j].isCursor) {
                 imgElem = $(document.createElement('img'));
@@ -262,6 +134,23 @@ function createBoard(rows, cols, boardArr) {
         rowDiv.appendTo(board);
     }
 
+    /*var fullSquares = $(".square[hasValue=true]");
+    for(var i = 0; i< fullSquares.length; i++) {
+        fullSquares[i].onclick = clickOnCell;
+    }*/
+
+
+}
+
+function clickOnCell(event) {
+
+
+    selectedCell = $(event.target);
+    selectedCell.prop('style', 'background:red;');
+
+    //all possible:
+
+    //cells[i].prop('style', 'border-color: yellow; border-width: medium;');
 }
 
 //Refresh methods
@@ -447,7 +336,7 @@ function updateGamePage() {
             url: '/games',
             data:
             {
-                action: 'pageDetails'
+                action: 'boardDetails'
             },
             type: 'GET',
             success: turnPlayCallback
@@ -509,7 +398,7 @@ function turnPlayCallback(json) {
     }
 }
 
-document.addEventListener("click",clickHandler,true);
+//document.addEventListener("click",clickHandler,true);
 
 function clickHandler(e) {
     if (!isButtonAvailable(e))

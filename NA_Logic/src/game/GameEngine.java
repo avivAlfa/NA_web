@@ -412,4 +412,7 @@ public abstract class GameEngine {
         players.add(player);
     }
 
+    public Player getCurrentPlayer() {
+        return getPlayerByIndex(playerTurnIndex);
+    }
 }

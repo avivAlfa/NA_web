@@ -3,6 +3,8 @@ package game_backend.servlets;
 import Exceptions.CellOutOfBoundsException;
 import com.google.gson.Gson;
 
+import game.Board;
+import game.Player;
 import game_backend.utils.SessionUtils;
 import webEngine.gamesManager.*;
 
@@ -13,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.bind.JAXBException;
+import java.awt.*;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -100,6 +103,9 @@ public class GamesServlet extends HttpServlet{
                 break;
             case "gamePlayers":
                 getGamePlayersList(request, response);
+                break;
+            case "pageDetails":
+                getBoardDetails(request, response);
         }
 
     }
@@ -178,6 +184,31 @@ public class GamesServlet extends HttpServlet{
         response.setContentType("application/json");
         if(game != null) {
             out.println(gson.toJson(game.getGameEngine().getPlayers()));
+        }
+
+    }
+
+    private void getBoardDetails(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+        String userName = SessionUtils.getUsername((HttpServletRequest) request.getSession());
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        if(game != null) {
+            Board board = game.getGameEngine().getGameBoard();
+            List<Point> possibleCells = game.getGameEngine().getAllPossibleCells();
+            List<Object> list = new ArrayList<>();
+            list.add(board);
+            list.add(possibleCells);
+/*            Player currentPlayer = game.getGameEngine().getCurrentPlayer();
+            int move = currentPlayer.getM_CurrentMove();
+            int turn = game.getCurrentTurn();
+            int score = game.getGameEngine().getCurrentPlayer().getScore();
+            //int undo = currentPlayer.getM_UndoCounter();
+            GameBoard board = currentPlayer.getM_Board();*/
+
+            out.println(gson.toJson(list));
         }
 
     }
