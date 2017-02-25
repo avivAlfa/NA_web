@@ -24,12 +24,23 @@ body{
     transform: translateY(-50%);
 }
 
+.headLineSpan{
+    text-align: center;
+    position: static;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 .logoutSpan{
     position: relative;
+    text-align: left;
 }
 
 .userNameSpan {
     margin: 20px;
+    font-family: "Century Gothic";
+    font-weight: bold;
+    font-size: 25px;
 }
 
 .emptySpan {

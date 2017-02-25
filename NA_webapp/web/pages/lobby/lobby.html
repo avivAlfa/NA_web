@@ -9,15 +9,16 @@
     <!--<link rel="stylesheet" href="../../common/bootstrap.min.css">-->
     <link rel="stylesheet" type="text/css" href="lobby.css">
 </head>
-<body background=background="../../common/images/background.jpg">
+<body background="../../common/images/background.jpg">
 <div class="toolBar">
     <div class="toolbarContent">
-        <span class="headLineSpan"><h2>Games Lobby</h2></span>
+        <span class="headLineSpan"><a>Games Lobby</a></span>
         <span class="logoutSpan"><form action="../../game_backend/logout">
+            <span class="userNameSpan"></span>
             <input type="submit" value="Logout" />
         </form></span>
 
-        <span class="userNameSpan"></span>
+
         <span class="emptySpan"></span>
        <!-- <span class="logoSpan"><img src="nonogramLogo.JPG" class="image"/></span>-->
     </div>
@@ -25,7 +26,7 @@
 <div class="mainDiv">
     <div class="dialogDiv">
         <div class="close" onclick="removeGameDialog()">
-            <img src="close.JPG"/>
+            <img src="../../common/images/close.JPG"/>
         </div>
         <div class="dialogContent">
             <div class="details">

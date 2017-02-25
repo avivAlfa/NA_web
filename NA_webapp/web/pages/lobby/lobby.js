@@ -204,16 +204,6 @@ function createGameDialogCallback(json) {
     $('.gameName').text("Game Title: " + gameName);
     $('.boardSize').text("Board size: " + boardSize);
     $('.playerNumber').text("Players : " + playerNumber);
-   /* for (i = 0; i < json.registeredPlayers; i++) {
-        var playerDiv = $(document.createElement('div'));
-        playerDiv.addClass('playerDiv');
-        playerDiv.appendTo(playersNamesDiv);
-    }
-
-    var playerDivs = $('.playerDiv');
-    for (i = 0; i < json.registeredPlayers; i++) {
-        playerDivs[i].innerHTML = (+i + 1) + '. ' + json.players[i].m_Name + '.';
-    }*/
 
     createBoard(json.gameEngine.gameBoard.size, json.gameEngine.gameBoard.size, json.gameEngine.gameBoard.board);
 }
@@ -224,17 +214,20 @@ function removeGameDialog() {
 
 function createBoard(rows, cols, boardArr) {
     var board = $('.board');
+    var colors = getColorsList();
     board.contents().remove();
 
-    for (i = 0; i < rows; i++) { // creates squares + row blocks.
+    for (i = 0; i < rows; i++) {
         rowDiv = $(document.createElement('div'));
         rowDiv.addClass('rowDiv');
 
         for (j = 0; j < cols; j++) { // add the squares.
             squareDiv = $(document.createElement('div'));
             squareDiv.addClass('square');
-            if(!boardArr[i][j].isEmpty && !boardArr[i][j].isCursor)
+            if(!boardArr[i][j].isEmpty && !boardArr[i][j].isCursor) {
                 squareDiv.append(boardArr[i][j].value);
+                squareDiv.prop('style', "color: "+ colors[boardArr[i][j].color]);
+            }
             if(boardArr[i][j].isCursor) {
                 imgElem = $(document.createElement('img'));
                 imgElem.prop('src', "../../common/images/marker.png");
@@ -344,4 +337,21 @@ function getGameId() {
 
 function clearFileInput() {
     document.getElementById("fileInput").value = "";
+}
+
+function getColorsList(){
+    var result;
+    $.ajax
+    ({
+        async: false,
+        url: '/utils',
+        data: {
+            action: "colors"
+        },
+        type: 'GET',
+        success: function(json) {
+            result = json;
+        }
+    });
+    return result;
 }

@@ -238,6 +238,7 @@ function createBoard(rows,cols, rowBlocks, colBlocks) {
 */
 function createBoard(rows, cols, boardArr) {
     var board = $('.boardBody');
+    var colors = getColorsList();
     board.contents().remove();
 
     for (i = 0; i < rows; i++) { // creates squares + row blocks.
@@ -247,8 +248,10 @@ function createBoard(rows, cols, boardArr) {
         for (j = 0; j < cols; j++) { // add the squares.
             squareDiv = $(document.createElement('div'));
             squareDiv.addClass('square');
-            if(!boardArr[i][j].isEmpty && !boardArr[i][j].isCursor)
+            if(!boardArr[i][j].isEmpty && !boardArr[i][j].isCursor) {
                 squareDiv.append(boardArr[i][j].value);
+                squareDiv.prop('style', "color: "+ colors[boardArr[i][j].color]);
+            }
             if(boardArr[i][j].isCursor) {
                 imgElem = $(document.createElement('img'));
                 imgElem.prop('src', "../../common/images/marker.png");

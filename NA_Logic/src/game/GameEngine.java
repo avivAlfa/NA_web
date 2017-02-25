@@ -383,15 +383,7 @@ public abstract class GameEngine {
 
     public void addPlayer(String userName, boolean isComputer) {
         Player player = new Player(userName, 0, 0 , players.size() + 1, !isComputer);
-       /* player.setName(userName);
-        player.setId(0);
-        player.setColor(players.size() - 1);
 
-        if(isComputer)
-            player.setAsComputer();
-        else
-            player.setAsHuman();
-*/
         players.add(player);
     }
 
