@@ -7,7 +7,10 @@ var refreshRate = 2000;
 var isMyTurn = false;
 var isButtonsEnabled = true;
 var isEnabledSaver = true;
-var selectedCell;
+// var selectedCell;
+var selectedRow;
+var selectedCol;
+
 var showScoreBoard;
 var myTurnSaver = false;
 var isFirstStatus = true;
@@ -93,11 +96,13 @@ function loadGameDetails() {
             url: '/games',
             data:
             {
-                action: 'gameDetails',
+              //  action: 'gameDetails',
+                action: 'boardDetails',
                 key: -1
             },
             type: 'GET',
-            success: loadGameDetailsCallback
+           // success: loadGameDetailsCallback
+            success: createBoard
         }
     )
 }
@@ -107,27 +112,33 @@ function loadGameDetailsCallback(json) {
 
 }
 
-function createBoard(rows, cols, boardArr) {
+function createBoard(json) {
     var board = $('.boardBody');
     var colors = getColorsList();
     board.contents().remove();
+    rows = json[0].size;
+    cols = json[0].size;
+    boardArr = json[0].board;
+    possibleCells = json[1]
 
-    for (i = 0; i < rows; i++) { // creates squares + row blocks.
+    for (i = 0; i < rows; i++) {
         rowDiv = $(document.createElement('div'));
         rowDiv.addClass('rowDiv');
 
         for (j = 0; j < cols; j++) { // add the squares.
             squareDiv = $(document.createElement('div'));
             squareDiv.addClass('square');
+            if(i===selectedRow && j===selectedCol)
+                squareDiv.addClass(("selectedSquare"));
             if(!boardArr[i][j].isEmpty && !boardArr[i][j].isCursor) {
                 squareDiv.append(boardArr[i][j].value);
                 squareDiv.prop('style', "color: "+ colors[boardArr[i][j].color]);
-<<<<<<< HEAD
+
                 squareDiv.attr('hasValue', 'true');
-=======
-                squareDiv.setAttribute('row','i');
-                squareDiv.setAttribute('col','j');
->>>>>>> 0352dfdea8d16d7a5f89664012c3ab194de50243
+
+                squareDiv.attr('row',i);
+                squareDiv.attr('col',j);
+
             }
             if(boardArr[i][j].isCursor) {
                 imgElem = $(document.createElement('img'));
@@ -140,23 +151,45 @@ function createBoard(rows, cols, boardArr) {
         rowDiv.appendTo(board);
     }
 
+
     /*var fullSquares = $(".square[hasValue=true]");
     for(var i = 0; i< fullSquares.length; i++) {
         fullSquares[i].onclick = clickOnCell;
     }*/
-
+    for(var i = 0; i< possibleCells.length; i++) {
+        var cell = $(".square[row="+ possibleCells[i].x + "][col=" + possibleCells[i].y +"]");
+        $(cell).click(clickOnCell);
+       // possibleCells[i].onclick = clickOnCell;
+    }
 
 }
 
 function clickOnCell(event) {
-
-
-    selectedCell = $(event.target);
-    selectedCell.prop('style', 'background:red;');
+    selectedCell = $(event.target)[0];
+    selectedRow = parseInt(selectedCell.getAttribute("row"));
+    selectedCol = parseInt(selectedCell.getAttribute("col"));
+    //selectedCell.addClass('selectedSquare');
 
     //all possible:
 
     //cells[i].prop('style', 'border-color: yellow; border-width: medium;');
+}
+
+function isBoardChanged(){
+    var result;
+    $.ajax
+    (
+        {
+            url: '/games',
+            data:
+            {
+                action: 'boardChange'
+            },
+            type: 'GET',
+            success: function(json){ result = json}
+        }
+    )
+    return result
 }
 
 //Refresh methods
@@ -413,16 +446,18 @@ function playMove(selectedRow, selectedCol){
 
 
 function updateGamePage() {
+    user = getUser();
     $.ajax
     (
         {
             url: '/games',
             data:
             {
-                action: 'boardDetails'
+                action: 'boardDetails',
+                username: user.userName
             },
             type: 'GET',
-            success: turnPlayCallback
+            success: createBoard
         }
     )
 }
@@ -450,7 +485,7 @@ function turnPlayCallback(json) {
     // }
 
     var color;
-    var board = json.board.m_Board;
+ //   var board = json.board.m_Board;
     var square;
     turn = json.turn;
     for (i=0; i<board.length; i++)
@@ -481,11 +516,7 @@ function turnPlayCallback(json) {
     }
 }
 
-<<<<<<< HEAD
-//document.addEventListener("click",clickHandler,true);
 
-=======
->>>>>>> 0352dfdea8d16d7a5f89664012c3ab194de50243
 function clickHandler(e) {
     if (!isButtonAvailable(e))
     {

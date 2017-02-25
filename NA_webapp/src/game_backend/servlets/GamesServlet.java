@@ -101,7 +101,7 @@ public class GamesServlet extends HttpServlet{
             case "gamePlayers":
                 getGamePlayersList(request, response);
                 break;
-            case "pageDetails":
+            case "boardDetails":
                 getBoardDetails(request, response);
         }
 
@@ -167,25 +167,18 @@ public class GamesServlet extends HttpServlet{
     }
 
     private void getBoardDetails(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String userName = SessionUtils.getUsername(request);
 
-        String userName = SessionUtils.getUsername((HttpServletRequest) request.getSession());
         GameObject game = this.gamesManager.getGameByUserName(userName);
         Gson gson = new Gson();
         PrintWriter out = response.getWriter();
         response.setContentType("application/json");
         if(game != null) {
             Board board = game.getGameEngine().getGameBoard();
-            List<Point> possibleCells = game.getGameEngine().getAllPossibleCells();
+            List<Point> possibleCells = game.getGameEngine().getPossibleCells();
             List<Object> list = new ArrayList<>();
             list.add(board);
             list.add(possibleCells);
-/*            Player currentPlayer = game.getGameEngine().getCurrentPlayer();
-            int move = currentPlayer.getM_CurrentMove();
-            int turn = game.getCurrentTurn();
-            int score = game.getGameEngine().getCurrentPlayer().getScore();
-            //int undo = currentPlayer.getM_UndoCounter();
-            GameBoard board = currentPlayer.getM_Board();*/
-
             out.println(gson.toJson(list));
         }
 
