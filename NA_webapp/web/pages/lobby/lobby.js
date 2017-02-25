@@ -165,33 +165,15 @@ function refreshGamesListCallback(json) {
 
     var tr1 = $('.showGameDialogDiv');
     var tr2 = $('.joinGameDiv');
-
-
     for (var i = 0; i < tr1.length; i++) {
-
-    tr1[i].onclick = createGameDialog;
-    tr2[i].onclick = joinGameClicked;
-}
-    // var tr = $('.tableBody tr');
-    // for (var i = 0; i < tr.length; i++) {
-    //     tr[i].onclick = createGameDialog;
-    // }
+        tr1[i].onclick = createGameDialog;
+        tr2[i].onclick = joinGameClicked;
+    }
 }
 
 function createGameDialog(event) {
     var row = $(event.target).parent().parent();
     var number = $($(row).find("td:eq(0)")).html();
-
-    // var tdClicked = $(event.target).parent();
-    // var row = tdClicked.parent();
-    // // var number = row.cells[0].innerHTML;
-    //
-    // var col0 = $(row).find("td:eq(0)");
-    // var numberEl = $(col0);
-    // var number = numberEl.html();
-
-    // var td = event.currentTarget.children[0];
-    // var number = td.innerText;
 
     $.ajax
     (
