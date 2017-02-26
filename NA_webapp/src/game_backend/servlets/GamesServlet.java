@@ -5,6 +5,7 @@ import com.google.gson.Gson;
 
 import game.Board;
 import game.Cell;
+import game.Colors;
 import game.Player;
 import game_backend.utils.SessionUtils;
 import webEngine.gamesManager.*;
@@ -113,6 +114,7 @@ public class GamesServlet extends HttpServlet{
                 break;
             case "positions":
                 getPositions(request, response);
+                break;
             case "endGameMessage":
                 getEndGameMessage(request, response);
                 break;
@@ -187,6 +189,7 @@ public class GamesServlet extends HttpServlet{
         Gson gson = new Gson();
         PrintWriter out = response.getWriter();
         response.setContentType("application/json");
+
         if(game != null) {
             out.println(gson.toJson(game.getGameEngine().getGamePositions()));
         }

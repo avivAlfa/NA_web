@@ -285,7 +285,7 @@ function getGamePositions() {
         success: function(json) {
             result = json;
         }
-    });
+    })
     return result;
 }
 
@@ -662,12 +662,91 @@ function resetBoard() {
 }
 
 function onNextClick() {
+    if(gamePositionIndex < gamePositions.size() - 1) {
+        gamePositionIndex++;
 
+        // if(gamePositionIndex == gamePositions.size() - 1 || gamePositionIndex == 0) {
+        //     isNextDisabled.setValue(true);
+        //     isPrevDisabled.setValue(false);
+        // } else {
+        //     isPrevDisabled.setValue(false);
+        //     isNextDisabled.setValue(false);
+        // }
+        //showGamePosition();
+
+        var position = gamePositions.get(gamePositionIndex - 1);
+
+        if(gamePositions.get(gamePositionIndex).getResinedPoints() != null) {
+
+            for(var point in gamePositions.get(gamePositionIndex).getResinedPoints()) {
+                gameEngine.setCellValue(point, new Cell(-999, 0, true, false));
+                gameBoardUI.getCell((point.getX(), point.getY()).updateValues());
+            }
+
+
+        } else {
+
+            gameEngine.setCellValue(position.getSelectedPoint(), new Cell(-999, 0, true, false));
+            gameBoardUI.getCell(position.getSelectedPoint().getX(), position.getSelectedPoint().getY()).updateValues();
+
+            gameEngine.setCellValue(gamePositions.get(gamePositionIndex).getSelectedPoint(),
+                new Cell(999, 0, false, true));
+            gameBoardUI.getCell(gamePositions.get(gamePositionIndex).getSelectedPoint().getX(),
+                 gamePositions.get(gamePositionIndex).getSelectedPoint().getY()).updateValues();
+        }
+        showGamePosition(gamePositions.get(gamePositionIndex));
+    }
 }
 
 function onPrevClick() {
+    if(gamePositionIndex != 0) {
+        gamePositionIndex--;
 
+        // if(gamePositionIndex == gamePositions.size() - 1 || gamePositionIndex == 0) {
+        //     isPrevDisabled.setValue(true);
+        //     isNextDisabled.setValue(false);
+        //
+        // } else {
+        //     isPrevDisabled.setValue(false);
+        //     isNextDisabled.setValue(false);
+        // }
+
+
+
+        var position = gamePositions.get(gamePositionIndex + 1);
+
+        if(position.getResinedPoints() != null) {
+
+            var resinedIndex = 0;
+            for(var point in position.getResinedPoints()) {
+
+                gameEngine.setCellValue(point, new Cell
+                (position.getResinedCells().get(resinedIndex).getValue(),
+                    position.getResinedCells().get(resinedIndex).getColor(), true, false));
+                gameBoardUI.getCell(point.getX(), point.getY()).updateValues();
+                resinedIndex++;
+            }
+
+
+        } else {
+
+            gameEngine.setCellValue(position.getSelectedPoint(), position.getSelectedCell());
+            gameBoardUI.getCell( position.getSelectedPoint().getX(), position.getSelectedPoint().getY()).updateValues();
+
+            gameEngine.setCellValue(gamePositions.get(gamePositionIndex).getSelectedPoint(),
+                new Cell(999, 0, false, true));
+            gameBoardUI.getCell(gamePositions.get(gamePositionIndex).getSelectedPoint().getX(),
+                gamePositions.get(gamePositionIndex).getSelectedPoint().getY()).updateValues();
+        }
+        showGamePosition(gamePositions.get(gamePositionIndex));
+    }
 }
+
+function showGamePosition(gamePosition) {
+    $('.currentPlayerName').text(gamePosition.getCurrPlayer().getName());
+}
+
+
 
 /*function onNextClick() {
     if (index < maxIndex)
