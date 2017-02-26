@@ -248,12 +248,21 @@ function gameStatusCallBack(json) {
             isMyTurn = false;
 
             if(status !== "Finished") {
+<<<<<<< HEAD
                 //handleEndGame();
                 alert("Game Over");
                 gamePositions = getGamePositions();
                 gamePositionIndex = gamePositions.length - 1;
                 var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
                 nextPrevElements.attr('style', "visibility: visible;");
+=======
+                handleEndGame();
+                // alert(endGameMessage);
+                // gamePositions = getGamePositions();
+                // gamePositionIndex = gamePositions.length - 1;
+                // var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
+                // nextPrevElements.attr('style', "visibility: visible;");
+>>>>>>> 2c1be1e0ac9e8a52dd973607d335f51f971a08a9
             }
 
 
@@ -445,9 +454,9 @@ function onPlayMoveClick() {
 
         selectedCell.classList.remove("selectedSquare")
 
-        imgElem = $(document.createElement('img'));
-        imgElem.prop('src', "../../common/images/marker.png");
-        selectedCell.append(imgElem)
+        // imgElem = $(document.createElement('img'));
+        // imgElem.prop('src', "../../common/images/marker.png");
+        // selectedCell.append(imgElem)
         selectedCell.classList.add('cursor'); //TODO: add img to class cursor on css
 
         $(cursorCell).attr('src','');
