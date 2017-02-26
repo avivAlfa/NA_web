@@ -246,12 +246,19 @@ function gameStatusCallBack(json) {
             break;
         case "Finished":
             isMyTurn = false;
+<<<<<<< HEAD
             var endGameMessage = getEndGameMessage();
             alert(endGameMessage);
             gamePositions = getGamePositions();
             gamePositionIndex = gamePositions.length - 1;
             var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
             nextPrevElements.attr('style', "visibility: visible;");
+=======
+            if(status !== "Finished") //already finished
+            //handleEndGame();
+                alert(endGameMessage);
+
+>>>>>>> 8b671a9e1df27a75986a4e4f821526cc02d71073
             // if (showScoreBoard) {
             //     showEndGameDiaglog();
             //     showScoreBoard = false;
@@ -533,7 +540,7 @@ function getComputerChoice() {
     return result;
 }
 
-function getEndGameMessage(){
+function handleEndGame(){
     var result;
     $.ajax
     (
@@ -545,14 +552,27 @@ function getEndGameMessage(){
                 action: 'endGameMessage'
             },
             type: 'GET',
-            success: function (json) {
-                result = json;
-            }
+            success: showEndGameDialog
         }
     )
     return result;
 }
 
+function showEndGameDialog(json) {
+    var div = $('.dialogDiv')[0];
+    div.style.display = "block";
+    // var playersNamesDiv = $('.playersNames');
+
+    $('.endGameMessage').text(json);
+}
+
+function removeGameDialog() {
+    $('.dialogDiv')[0].style.display = "none";
+}
+
+function redirectToLobby(){
+    window.location = "../lobby/lobby.html"
+}
 
 function clickHandler(e) {
     if (!isButtonAvailable(e))
@@ -602,38 +622,38 @@ function isButtonAvailable(e) {
 
 
 
-function showEndGameDiaglog() {
-    $('.winnerDialog')[0].style.display = "inline-block";
-    $.ajax
-    (
-        {
-            url: 'games',
-            data:
-            {
-                action: 'gameEnd'
-            },
-            type: 'GET',
-            success: showEndGameDiaglogCallback
-        }
-    )
-}
-function showEndGameDiaglogCallback(json) {
-    setReason(json.reason);
-    var board = json.board;
-    $('.highestScore')[0].innerHTML = json.winnersScore;
-    var winnerDiv = $('.winnerDiv')[0];
-
-    for (i = 0; i < json.winners.length; i++)
-    {
-        var winnerSpan = document.createElement('span');
-        winnerSpan.classList.add('winnerName');
-        winnerDiv.appendChild(winnerSpan);
-        winnerSpan.innerHTML = winnerSpan.innerHTML + json.winners[i].m_Name + " ";
-    }
-    winnerSpan.innerHTML = winnerSpan.innerHTML + '.';
-
-   // createBoardForEndDialog(board);
-}
+// function showEndGameDiaglog() {
+//     $('.winnerDialog')[0].style.display = "inline-block";
+//     $.ajax
+//     (
+//         {
+//             url: 'games',
+//             data:
+//             {
+//                 action: 'gameEnd'
+//             },
+//             type: 'GET',
+//             success: showEndGameDiaglogCallback
+//         }
+//     )
+// }
+// function showEndGameDiaglogCallback(json) {
+//     setReason(json.reason);
+//     var board = json.board;
+//     $('.highestScore')[0].innerHTML = json.winnersScore;
+//     var winnerDiv = $('.winnerDiv')[0];
+//
+//     for (i = 0; i < json.winners.length; i++)
+//     {
+//         var winnerSpan = document.createElement('span');
+//         winnerSpan.classList.add('winnerName');
+//         winnerDiv.appendChild(winnerSpan);
+//         winnerSpan.innerHTML = winnerSpan.innerHTML + json.winners[i].m_Name + " ";
+//     }
+//     winnerSpan.innerHTML = winnerSpan.innerHTML + '.';
+//
+//    // createBoardForEndDialog(board);
+// }
 
 
 function setReason(reason) {

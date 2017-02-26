@@ -113,6 +113,9 @@ public class GamesServlet extends HttpServlet{
                 break;
             case "positions":
                 getPositions(request, response);
+            case "endGameMessage":
+                getEndGameMessage(request, response);
+                break;
         }
 
     }
@@ -227,6 +230,18 @@ public class GamesServlet extends HttpServlet{
         response.setContentType("application/json");
         if(game != null) {
             out.println(gson.toJson(game.getGameEngine().getComputerChosenCellIndexes()));
+        }
+
+    }
+
+    private void getEndGameMessage(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String userName = SessionUtils.getUsername(request);
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        if(game != null) {
+            out.println(gson.toJson(game.getGameEngine().createEndGameMessage()));
         }
 
     }

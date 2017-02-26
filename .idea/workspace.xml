@@ -94,9 +94,54 @@
       <file leaf-file-name="gameRoom.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="274" column="31" selection-start-line="274" selection-start-column="27" selection-end-line="274" selection-end-column="31" />
-              <folding />
+            <state relative-caret-position="355">
+              <caret line="281" column="31" selection-start-line="281" selection-start-column="31" selection-end-line="281" selection-end-column="31" />
+              <folding>
+                <marker date="1488126643284" expanded="true" signature="365:392" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="423:597" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="441:593" ph="{&quot;url&quot;: '/userslist'...}" />
+                <marker date="1488126643284" expanded="true" signature="484:533" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
+                <marker date="1488126643284" expanded="true" signature="629:932" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="635:838" ph="//..." />
+                <marker date="1488126643284" expanded="true" signature="866:930" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="960:1376" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="1397:1663" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="1431:1640" ph="{&quot;url&quot;: '/userslist'...}" />
+                <marker date="1488126643284" expanded="true" signature="1496:1541" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
+                <marker date="1488126643284" expanded="true" signature="1596:1634" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="1694:1801" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="1830:2186" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="1857:2178" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488126643284" expanded="true" signature="1942:2062" ph="{&quot;action&quot;: 'boardDetails'...}" />
+                <marker date="1488126643284" expanded="true" signature="2226:2345" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="2397:2630" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="2424:2622" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488126643284" expanded="true" signature="2483:2536" ph="{&quot;action&quot;: 'gamePlayers'...}" />
+                <marker date="1488126643284" expanded="true" signature="2675:4461" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="3080:3833" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="4018:4459" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="4168:4302" ph="//..." />
+                <marker date="1488126643284" expanded="true" signature="4485:4824" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="4596:4816" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488126643284" expanded="true" signature="4681:4740" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
+                <marker date="1488126643284" expanded="true" signature="4859:6410" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="4968:6410" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="5541:6134" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="5639:5948" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="5715:5805" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="5863:5930" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="5969:6120" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="6198:6334" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="16844:16845" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="16875:17344" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="16900:17342" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="17409:17961" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="17484:17825" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="17557:17611" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="17658:17712" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="17762:17819" ph="{...}" />
+                <marker date="1488126643284" expanded="true" signature="17903:17959" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,8 +149,8 @@
       <file leaf-file-name="GamesServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="111" column="37" selection-start-line="111" selection-start-column="37" selection-end-line="111" selection-end-column="37" />
+            <state relative-caret-position="70">
+              <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -114,9 +159,12 @@
       <file leaf-file-name="gameRoom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3468">
-              <caret line="253" column="10" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="1428">
+              <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
+              <folding>
+                <marker date="1488126642573" expanded="true" signature="5268:5269" ph="{...}" />
+                <marker date="1488126642573" expanded="true" signature="5268:5271" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -125,7 +173,7 @@
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="129">
-              <caret line="107" column="74" selection-start-line="107" selection-start-column="74" selection-end-line="107" selection-end-column="74" />
+              <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -154,8 +202,8 @@
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html" />
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css" />
         <option value="$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java" />
-        <option value="$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java" />
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js" />
+        <option value="$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java" />
       </list>
     </option>
   </component>
@@ -1014,12 +1062,12 @@
       <option name="presentableId" value="Default" />
       <updated>1487969728522</updated>
       <workItem from="1487969729741" duration="9897000" />
-      <workItem from="1488015529975" duration="46912000" />
+      <workItem from="1488015529975" duration="47429000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56809000" />
+    <option name="totallyTimeSpent" value="57326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1076,7 +1124,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java</url>
-          <line>221</line>
+          <line>222</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -1174,7 +1222,52 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6273">
           <caret line="369" column="24" selection-start-line="369" selection-start-column="4" selection-end-line="369" selection-end-column="24" />
-          <folding />
+          <folding>
+            <marker date="1488126643284" expanded="true" signature="365:392" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="423:597" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="441:593" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488126643284" expanded="true" signature="484:533" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
+            <marker date="1488126643284" expanded="true" signature="629:932" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="635:838" ph="//..." />
+            <marker date="1488126643284" expanded="true" signature="866:930" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="960:1376" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1397:1663" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1431:1640" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488126643284" expanded="true" signature="1496:1541" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
+            <marker date="1488126643284" expanded="true" signature="1596:1634" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1694:1801" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1830:2186" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1857:2178" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488126643284" expanded="true" signature="1942:2062" ph="{&quot;action&quot;: 'boardDetails'...}" />
+            <marker date="1488126643284" expanded="true" signature="2226:2345" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="2397:2630" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="2424:2622" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488126643284" expanded="true" signature="2483:2536" ph="{&quot;action&quot;: 'gamePlayers'...}" />
+            <marker date="1488126643284" expanded="true" signature="2675:4461" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="3080:3833" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="4018:4459" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="4168:4302" ph="//..." />
+            <marker date="1488126643284" expanded="true" signature="4485:4824" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="4596:4816" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488126643284" expanded="true" signature="4681:4740" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
+            <marker date="1488126643284" expanded="true" signature="4859:6410" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="4968:6410" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5541:6134" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5639:5948" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5715:5805" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5863:5930" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5969:6120" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="6198:6334" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="16844:16845" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="16875:17344" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="16900:17342" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17409:17961" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17484:17825" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17557:17611" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17658:17712" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17762:17819" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17903:17959" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1264,14 +1357,6 @@
             <element signature="e#5881#5882#0" expanded="false" />
             <element signature="e#5923#5924#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1376,16 +1461,19 @@
     <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
-          <caret line="107" column="74" selection-start-line="107" selection-start-column="74" selection-end-line="107" selection-end-column="74" />
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3468">
-          <caret line="253" column="10" selection-start-line="253" selection-start-column="4" selection-end-line="253" selection-end-column="10" />
-          <folding />
+        <state relative-caret-position="1428">
+          <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
+          <folding>
+            <marker date="1488126642573" expanded="true" signature="5268:5269" ph="{...}" />
+            <marker date="1488126642573" expanded="true" signature="5268:5271" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1436,16 +1524,69 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="274" column="31" selection-start-line="274" selection-start-column="27" selection-end-line="274" selection-end-column="31" />
+        <state relative-caret-position="355">
+          <caret line="281" column="31" selection-start-line="281" selection-start-column="31" selection-end-line="281" selection-end-column="31" />
+          <folding>
+            <marker date="1488126643284" expanded="true" signature="365:392" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="423:597" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="441:593" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488126643284" expanded="true" signature="484:533" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
+            <marker date="1488126643284" expanded="true" signature="629:932" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="635:838" ph="//..." />
+            <marker date="1488126643284" expanded="true" signature="866:930" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="960:1376" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1397:1663" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1431:1640" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488126643284" expanded="true" signature="1496:1541" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
+            <marker date="1488126643284" expanded="true" signature="1596:1634" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1694:1801" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1830:2186" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="1857:2178" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488126643284" expanded="true" signature="1942:2062" ph="{&quot;action&quot;: 'boardDetails'...}" />
+            <marker date="1488126643284" expanded="true" signature="2226:2345" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="2397:2630" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="2424:2622" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488126643284" expanded="true" signature="2483:2536" ph="{&quot;action&quot;: 'gamePlayers'...}" />
+            <marker date="1488126643284" expanded="true" signature="2675:4461" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="3080:3833" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="4018:4459" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="4168:4302" ph="//..." />
+            <marker date="1488126643284" expanded="true" signature="4485:4824" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="4596:4816" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488126643284" expanded="true" signature="4681:4740" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
+            <marker date="1488126643284" expanded="true" signature="4859:6410" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="4968:6410" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5541:6134" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5639:5948" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5715:5805" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5863:5930" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="5969:6120" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="6198:6334" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="16844:16845" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="16875:17344" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="16900:17342" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17409:17961" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17484:17825" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17557:17611" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17658:17712" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17762:17819" ph="{...}" />
+            <marker date="1488126643284" expanded="true" signature="17903:17959" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="111" column="37" selection-start-line="111" selection-start-column="37" selection-end-line="111" selection-end-column="37" />
+        <state relative-caret-position="70">
+          <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
           <folding />
         </state>
       </provider>
