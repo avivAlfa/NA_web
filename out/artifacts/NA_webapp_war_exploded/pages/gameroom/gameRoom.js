@@ -638,6 +638,14 @@ function resetBoard() {
 }
 
 function onNextClick() {
+
+}
+
+function onPrevClick() {
+
+}
+
+/*function onNextClick() {
     if (index < maxIndex)
     {
         color = actions[index].m_State.toLowerCase();
@@ -678,6 +686,6 @@ function onPrevClick() {
         }
 
     }
-}
+}*/
 
 

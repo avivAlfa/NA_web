@@ -86,6 +86,17 @@ body{
     background-color: red;
 }
 
+.prevNexDiv {
+    float: left;
+    width: 100%;
+    visibility: hidden;
+}
+
+div.prevNexDiv > div:nth-child(1) {
+    width: 50%;
+}
+
+
 .colorChooserDiv > div {
     width: 75px;
     height: 75px;
