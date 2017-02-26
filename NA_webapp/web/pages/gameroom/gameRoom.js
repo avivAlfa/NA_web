@@ -7,6 +7,8 @@ var isComputer;
 var isMyTurn = false;
 var isButtonsEnabled = true;
 var isEnabledSaver = true;
+var gamePositionIndex;
+var gamePositions;
 // var selectedCell = null;
 
 
@@ -246,7 +248,10 @@ function gameStatusCallBack(json) {
             isMyTurn = false;
             var endGameMessage = getEndGameMessage();
             alert(endGameMessage);
-
+            gamePositions = getGamePositions();
+            gamePositionIndex = gamePositions.length - 1;
+            var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
+            nextPrevElements.attr('style', "visibility: visible;");
             // if (showScoreBoard) {
             //     showEndGameDiaglog();
             //     showScoreBoard = false;
@@ -257,6 +262,25 @@ function gameStatusCallBack(json) {
     $('.gameStatus').text('Game status: ' + status);
 }
 //-------------------
+
+function getGamePositions() {
+    var result;
+    var user = getUser();
+    $.ajax
+    ({
+        async: false,
+        url: '/games',
+        data: {
+            action: "positions",
+            username: user.userName
+        },
+        type: 'GET',
+        success: function(json) {
+            result = json;
+        }
+    });
+    return result;
+}
 
 function updateBoard() {
     user = getUser();
@@ -419,10 +443,14 @@ function onPlayMoveClick() {
         imgElem = $(document.createElement('img'));
         imgElem.prop('src', "../../common/images/marker.png");
         selectedCell.append(imgElem)
-        selectedCell.addClass('cursor'); //TODO: add img to class cursor on css
+        selectedCell.classList.add('cursor'); //TODO: add img to class cursor on css
 
-        $($('.cursorCell')).attr('src', '');
-        cursorCell.classList.remove('cursor');
+        $(cursorCell).attr('src','');
+        $(cursorCell).removeClass("cursor");
+        //$($('.cursor')).attr('src', '');
+       // var cursor = $($('.cursor'))
+      //  if (cursor != null)
+        //    cursor  .classList.remove('cursor');
     }else{
         alert("Please choose a cell first");
     }

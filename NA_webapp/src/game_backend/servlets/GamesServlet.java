@@ -4,6 +4,7 @@ import Exceptions.CellOutOfBoundsException;
 import com.google.gson.Gson;
 
 import game.Board;
+import game.Cell;
 import game.Player;
 import game_backend.utils.SessionUtils;
 import webEngine.gamesManager.*;
@@ -110,6 +111,8 @@ public class GamesServlet extends HttpServlet{
             case "computerChoice":
                 getComputerChoice(request, response);
                 break;
+            case "positions":
+                getPositions(request, response);
         }
 
     }
@@ -170,7 +173,18 @@ public class GamesServlet extends HttpServlet{
         if(game != null) {
             out.println(gson.toJson(game.getGameEngine().getPlayers()));
         }
+    }
 
+    private void getPositions(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String userName = SessionUtils.getUsername(request);
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        if(game != null) {
+            out.println(gson.toJson(game.getGameEngine().getGamePositions()));
+        }
     }
 
     private void getBoardDetails(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -348,7 +362,11 @@ public class GamesServlet extends HttpServlet{
         String selectedCol = request.getParameter("col");
         String userName = SessionUtils.getUsername(request);
         GameObject game = this.gamesManager.getGameByUserName(userName);
+
         if(game != null) {
+            game.getGameEngine().addCurrentPosition(Integer.parseInt(selectedRow), Integer.parseInt(selectedCol),
+                game.getGameEngine().getGameBoard().getCell(Integer.parseInt(selectedRow), Integer.parseInt(selectedCol)));
+
             game.getGameEngine().playMove(Integer.parseInt(selectedRow) , Integer.parseInt(selectedCol));
             game.getGameEngine().changeTurn();
 

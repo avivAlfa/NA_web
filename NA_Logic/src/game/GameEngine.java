@@ -5,6 +5,7 @@ import Exceptions.CursorCellException;
 import Exceptions.EmptyCellException;
 import Exceptions.InvalidPlayerTypeException;
 import generated.GameDescriptor;
+import javafx.scene.layout.GridPane;
 
 
 import java.awt.*;
@@ -20,6 +21,7 @@ public abstract class GameEngine {
     protected int cursorCol;
     protected int movesCnt = 0;
     protected long startingTime;
+    List<GamePosition> gamePositions = new ArrayList<>();
 
     public abstract List<Point> getPossibleCells();
     public abstract boolean endGame();
@@ -416,5 +418,26 @@ public abstract class GameEngine {
 
     public Player getCurrentPlayer() {
         return getPlayerByIndex(playerTurnIndex);
+    }
+
+    public void addCurrentPosition(int row, int col, Cell cellContent) {
+        GamePosition gamePosition;
+        //int row = GridPane.getRowIndex(cell);
+        //int col = GridPane.getColumnIndex(cell);
+
+        if(cellContent != null)
+            gamePosition = new GamePosition(getPlayerByIndex(getNextPlayerIndex()).clonePlayer(),
+                    cloneCurrPlayerList(), new Point(row, col), cellContent, getMovesCnt());
+        else
+            gamePosition = new GamePosition(getPlayerByIndex(getNextPlayerIndex()).clonePlayer(),
+                    cloneCurrPlayerList(), new Point(row, col), null, getMovesCnt());
+
+
+        gamePositions.add(gamePosition);
+    }
+
+    public List<GamePosition> getGamePositions() {
+
+        return gamePositions;
     }
 }
