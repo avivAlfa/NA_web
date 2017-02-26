@@ -246,19 +246,16 @@ function gameStatusCallBack(json) {
             break;
         case "Finished":
             isMyTurn = false;
-<<<<<<< HEAD
             var endGameMessage = getEndGameMessage();
             alert(endGameMessage);
             gamePositions = getGamePositions();
             gamePositionIndex = gamePositions.length - 1;
             var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
             nextPrevElements.attr('style', "visibility: visible;");
-=======
             if(status !== "Finished") //already finished
             //handleEndGame();
                 alert(endGameMessage);
 
->>>>>>> 8b671a9e1df27a75986a4e4f821526cc02d71073
             // if (showScoreBoard) {
             //     showEndGameDiaglog();
             //     showScoreBoard = false;

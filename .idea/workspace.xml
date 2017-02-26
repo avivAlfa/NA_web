@@ -25,7 +25,7 @@
       <file leaf-file-name="GameEngine.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
+            <state relative-caret-position="10600">
               <caret line="436" column="5" selection-start-line="436" selection-start-column="5" selection-end-line="436" selection-end-column="5" />
               <folding>
                 <element signature="e#1670#1671#0" expanded="true" />
@@ -44,13 +44,8 @@
                 <element signature="e#4189#4190#0" expanded="true" />
                 <element signature="e#4765#4766#0" expanded="true" />
                 <element signature="e#4815#4816#0" expanded="true" />
-                <element signature="e#5064#5072#0" expanded="true" />
-                <element signature="e#7392#7400#0" expanded="true" />
                 <element signature="e#14632#14633#0" expanded="true" />
                 <element signature="e#14688#14689#0" expanded="true" />
-                <marker date="1488126080313" expanded="false" signature="439:447" ph="&lt;~&gt;" />
-                <marker date="1488126080313" expanded="false" signature="11982:11992" ph=" { " />
-                <marker date="1488126080313" expanded="false" signature="12014:12020" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -59,7 +54,7 @@
       <file leaf-file-name="Cell.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
+            <state relative-caret-position="50">
               <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
               <folding />
             </state>
@@ -69,7 +64,7 @@
       <file leaf-file-name="GameObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/gamesManager/GameObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
+            <state relative-caret-position="325">
               <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="e#542#543#0" expanded="true" />
@@ -84,69 +79,24 @@
       <file leaf-file-name="GamesManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/gamesManager/GamesManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="225">
               <caret line="16" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gameRoom.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gameRoom.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="281" column="31" selection-start-line="281" selection-start-column="31" selection-end-line="281" selection-end-column="31" />
-              <folding>
-                <marker date="1488126643284" expanded="true" signature="365:392" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="423:597" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="441:593" ph="{&quot;url&quot;: '/userslist'...}" />
-                <marker date="1488126643284" expanded="true" signature="484:533" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
-                <marker date="1488126643284" expanded="true" signature="629:932" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="635:838" ph="//..." />
-                <marker date="1488126643284" expanded="true" signature="866:930" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="960:1376" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="1397:1663" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="1431:1640" ph="{&quot;url&quot;: '/userslist'...}" />
-                <marker date="1488126643284" expanded="true" signature="1496:1541" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
-                <marker date="1488126643284" expanded="true" signature="1596:1634" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="1694:1801" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="1830:2186" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="1857:2178" ph="{&quot;url&quot;: '/games'...}" />
-                <marker date="1488126643284" expanded="true" signature="1942:2062" ph="{&quot;action&quot;: 'boardDetails'...}" />
-                <marker date="1488126643284" expanded="true" signature="2226:2345" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="2397:2630" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="2424:2622" ph="{&quot;url&quot;: '/games'...}" />
-                <marker date="1488126643284" expanded="true" signature="2483:2536" ph="{&quot;action&quot;: 'gamePlayers'...}" />
-                <marker date="1488126643284" expanded="true" signature="2675:4461" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="3080:3833" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="4018:4459" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="4168:4302" ph="//..." />
-                <marker date="1488126643284" expanded="true" signature="4485:4824" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="4596:4816" ph="{&quot;url&quot;: '/games'...}" />
-                <marker date="1488126643284" expanded="true" signature="4681:4740" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
-                <marker date="1488126643284" expanded="true" signature="4859:6410" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="4968:6410" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="5541:6134" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="5639:5948" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="5715:5805" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="5863:5930" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="5969:6120" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="6198:6334" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="16844:16845" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="16875:17344" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="16900:17342" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="17409:17961" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="17484:17825" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="17557:17611" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="17658:17712" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="17762:17819" ph="{...}" />
-                <marker date="1488126643284" expanded="true" signature="17903:17959" ph="{...}" />
-              </folding>
+            <state relative-caret-position="150">
+              <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GamesServlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GamesServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="70">
@@ -159,12 +109,9 @@
       <file leaf-file-name="gameRoom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1428">
+            <state relative-caret-position="682">
               <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
-              <folding>
-                <marker date="1488126642573" expanded="true" signature="5268:5269" ph="{...}" />
-                <marker date="1488126642573" expanded="true" signature="5268:5271" ph="..." />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -202,8 +149,8 @@
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html" />
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css" />
         <option value="$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java" />
-        <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js" />
         <option value="$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java" />
+        <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js" />
       </list>
     </option>
   </component>
@@ -228,10 +175,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1942" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -258,42 +205,29 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="NA_webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -304,18 +238,10 @@
               <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="signup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -333,29 +259,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lobby" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -377,91 +281,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="utils" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game_backend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="servlets" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -479,7 +299,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -489,7 +309,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
+              <option name="myItemId" value="Numberiada NA Web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -498,49 +318,12 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webEngine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_Logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="NA_Logic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -792,6 +575,7 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
@@ -957,6 +741,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -1063,14 +853,15 @@
       <updated>1487969728522</updated>
       <workItem from="1487969729741" duration="9897000" />
       <workItem from="1488015529975" duration="47429000" />
+      <workItem from="1488126902097" duration="484000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57326000" />
+    <option name="totallyTimeSpent" value="57810000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1082,15 +873,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3025641" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30148885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700454" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26108107" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1101,6 +891,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1145,6 +936,94 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10600">
+          <caret line="436" column="5" selection-start-line="436" selection-start-column="5" selection-end-line="436" selection-end-column="5" />
+          <folding>
+            <element signature="e#1670#1671#0" expanded="true" />
+            <element signature="e#1711#1712#0" expanded="true" />
+            <element signature="e#1920#1921#0" expanded="true" />
+            <element signature="e#1958#1959#0" expanded="true" />
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2071#2072#0" expanded="true" />
+            <element signature="e#2289#2290#0" expanded="true" />
+            <element signature="e#2321#2322#0" expanded="true" />
+            <element signature="e#2353#2354#0" expanded="true" />
+            <element signature="e#2386#2387#0" expanded="true" />
+            <element signature="e#2546#2547#0" expanded="true" />
+            <element signature="e#2607#2608#0" expanded="true" />
+            <element signature="e#4119#4120#0" expanded="true" />
+            <element signature="e#4189#4190#0" expanded="true" />
+            <element signature="e#4765#4766#0" expanded="true" />
+            <element signature="e#4815#4816#0" expanded="true" />
+            <element signature="e#14632#14633#0" expanded="true" />
+            <element signature="e#14688#14689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/gamesManager/GameObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#575#576#0" expanded="true" />
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/gamesManager/GamesManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="16" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7025">
+          <caret line="281" column="31" selection-start-line="281" selection-start-column="31" selection-end-line="281" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3325">
+          <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2950">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -1187,13 +1066,8 @@
             <element signature="e#4189#4190#0" expanded="true" />
             <element signature="e#4765#4766#0" expanded="true" />
             <element signature="e#4815#4816#0" expanded="true" />
-            <element signature="e#5064#5072#0" expanded="true" />
-            <element signature="e#7392#7400#0" expanded="true" />
             <element signature="e#14632#14633#0" expanded="true" />
             <element signature="e#14688#14689#0" expanded="true" />
-            <marker date="1488126080313" expanded="false" signature="439:447" ph="&lt;~&gt;" />
-            <marker date="1488126080313" expanded="false" signature="11982:11992" ph=" { " />
-            <marker date="1488126080313" expanded="false" signature="12014:12020" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -1203,17 +1077,10 @@
         <state relative-caret-position="697">
           <caret line="60" column="37" selection-start-line="60" selection-start-column="37" selection-end-line="60" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="false" />
             <element signature="e#542#543#0" expanded="true" />
             <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="false" />
-            <element signature="e#628#629#0" expanded="false" />
-            <element signature="e#662#663#0" expanded="false" />
-            <element signature="e#692#693#0" expanded="false" />
-            <element signature="e#733#734#0" expanded="false" />
-            <element signature="e#766#767#0" expanded="false" />
-            <element signature="e#821#822#0" expanded="false" />
-            <element signature="e#865#866#0" expanded="false" />
+            <element signature="e#909#910#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1222,52 +1089,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6273">
           <caret line="369" column="24" selection-start-line="369" selection-start-column="4" selection-end-line="369" selection-end-column="24" />
-          <folding>
-            <marker date="1488126643284" expanded="true" signature="365:392" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="423:597" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="441:593" ph="{&quot;url&quot;: '/userslist'...}" />
-            <marker date="1488126643284" expanded="true" signature="484:533" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
-            <marker date="1488126643284" expanded="true" signature="629:932" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="635:838" ph="//..." />
-            <marker date="1488126643284" expanded="true" signature="866:930" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="960:1376" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1397:1663" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1431:1640" ph="{&quot;url&quot;: '/userslist'...}" />
-            <marker date="1488126643284" expanded="true" signature="1496:1541" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
-            <marker date="1488126643284" expanded="true" signature="1596:1634" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1694:1801" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1830:2186" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1857:2178" ph="{&quot;url&quot;: '/games'...}" />
-            <marker date="1488126643284" expanded="true" signature="1942:2062" ph="{&quot;action&quot;: 'boardDetails'...}" />
-            <marker date="1488126643284" expanded="true" signature="2226:2345" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="2397:2630" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="2424:2622" ph="{&quot;url&quot;: '/games'...}" />
-            <marker date="1488126643284" expanded="true" signature="2483:2536" ph="{&quot;action&quot;: 'gamePlayers'...}" />
-            <marker date="1488126643284" expanded="true" signature="2675:4461" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="3080:3833" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="4018:4459" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="4168:4302" ph="//..." />
-            <marker date="1488126643284" expanded="true" signature="4485:4824" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="4596:4816" ph="{&quot;url&quot;: '/games'...}" />
-            <marker date="1488126643284" expanded="true" signature="4681:4740" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
-            <marker date="1488126643284" expanded="true" signature="4859:6410" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="4968:6410" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5541:6134" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5639:5948" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5715:5805" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5863:5930" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5969:6120" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="6198:6334" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="16844:16845" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="16875:17344" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="16900:17342" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17409:17961" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17484:17825" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17557:17611" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17658:17712" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17762:17819" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17903:17959" ph="{...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1292,9 +1114,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2533">
           <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1326,7 +1146,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1377,7 +1196,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
           <caret line="20" column="101" selection-start-line="20" selection-start-column="101" selection-end-line="20" selection-end-column="101" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1394,14 +1212,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://C:/tomcat/apache-tomcat-7.0.40/webapps/Griddler/WEB-INF/classes/GamesServlet.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="301" column="8" selection-start-line="301" selection-start-column="8" selection-end-line="314" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/tomcat/apache-tomcat-7.0.40/webapps/Griddler/WEB-INF/classes/GamesServlet.class" />
     <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/lobby/lobby.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -1426,17 +1237,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Numberiada/src/javafxUI/CellUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Numberiada/src/javafxUI/CellUI.java" />
     <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/Cell.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
+        <state relative-caret-position="50">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
@@ -1444,42 +1248,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/gamesManager/GamesManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="225">
           <caret line="16" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Numberiada/src/javafxUI/GameController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-667">
-          <caret line="226" column="40" selection-start-line="226" selection-start-column="40" selection-end-line="226" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1428">
-          <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
-          <folding>
-            <marker date="1488126642573" expanded="true" signature="5268:5269" ph="{...}" />
-            <marker date="1488126642573" expanded="true" signature="5268:5271" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../Numberiada/src/javafxUI/GameController.java" />
     <entry file="file://$PROJECT_DIR$/NA_Logic/src/webEngine/gamesManager/GameObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
+        <state relative-caret-position="325">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
             <element signature="e#542#543#0" expanded="true" />
@@ -1492,7 +1270,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
+        <state relative-caret-position="10600">
           <caret line="436" column="5" selection-start-line="436" selection-start-column="5" selection-end-line="436" selection-end-column="5" />
           <folding>
             <element signature="e#1670#1671#0" expanded="true" />
@@ -1511,66 +1289,8 @@
             <element signature="e#4189#4190#0" expanded="true" />
             <element signature="e#4765#4766#0" expanded="true" />
             <element signature="e#4815#4816#0" expanded="true" />
-            <element signature="e#5064#5072#0" expanded="true" />
-            <element signature="e#7392#7400#0" expanded="true" />
             <element signature="e#14632#14633#0" expanded="true" />
             <element signature="e#14688#14689#0" expanded="true" />
-            <marker date="1488126080313" expanded="false" signature="439:447" ph="&lt;~&gt;" />
-            <marker date="1488126080313" expanded="false" signature="11982:11992" ph=" { " />
-            <marker date="1488126080313" expanded="false" signature="12014:12020" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="281" column="31" selection-start-line="281" selection-start-column="31" selection-end-line="281" selection-end-column="31" />
-          <folding>
-            <marker date="1488126643284" expanded="true" signature="365:392" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="423:597" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="441:593" ph="{&quot;url&quot;: '/userslist'...}" />
-            <marker date="1488126643284" expanded="true" signature="484:533" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
-            <marker date="1488126643284" expanded="true" signature="629:932" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="635:838" ph="//..." />
-            <marker date="1488126643284" expanded="true" signature="866:930" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="960:1376" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1397:1663" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1431:1640" ph="{&quot;url&quot;: '/userslist'...}" />
-            <marker date="1488126643284" expanded="true" signature="1496:1541" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
-            <marker date="1488126643284" expanded="true" signature="1596:1634" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1694:1801" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1830:2186" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="1857:2178" ph="{&quot;url&quot;: '/games'...}" />
-            <marker date="1488126643284" expanded="true" signature="1942:2062" ph="{&quot;action&quot;: 'boardDetails'...}" />
-            <marker date="1488126643284" expanded="true" signature="2226:2345" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="2397:2630" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="2424:2622" ph="{&quot;url&quot;: '/games'...}" />
-            <marker date="1488126643284" expanded="true" signature="2483:2536" ph="{&quot;action&quot;: 'gamePlayers'...}" />
-            <marker date="1488126643284" expanded="true" signature="2675:4461" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="3080:3833" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="4018:4459" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="4168:4302" ph="//..." />
-            <marker date="1488126643284" expanded="true" signature="4485:4824" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="4596:4816" ph="{&quot;url&quot;: '/games'...}" />
-            <marker date="1488126643284" expanded="true" signature="4681:4740" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
-            <marker date="1488126643284" expanded="true" signature="4859:6410" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="4968:6410" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5541:6134" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5639:5948" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5715:5805" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5863:5930" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="5969:6120" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="6198:6334" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="16844:16845" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="16875:17344" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="16900:17342" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17409:17961" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17484:17825" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17557:17611" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17658:17712" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17762:17819" ph="{...}" />
-            <marker date="1488126643284" expanded="true" signature="17903:17959" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1579,7 +1299,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1587,6 +1306,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="117" column="22" selection-start-line="117" selection-start-column="22" selection-end-line="117" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
           <folding />
         </state>
       </provider>
