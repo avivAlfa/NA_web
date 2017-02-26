@@ -104,6 +104,9 @@ public class GamesServlet extends HttpServlet{
             case "boardDetails":
                 getBoardDetails(request, response);
                 break;
+            case "possibleCellsFlag":
+                getPossibleCellsFlag(request,response);
+                break;
             case "computerChoice":
                 getComputerChoice(request, response);
                 break;
@@ -188,6 +191,20 @@ public class GamesServlet extends HttpServlet{
 
     }
 
+    private void getPossibleCellsFlag(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String userName = SessionUtils.getUsername(request);
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        if(game != null) {
+            List<Point> possibleCells = game.getGameEngine().getPossibleCells();
+            boolean hasPossibleCells = !(possibleCells.isEmpty());
+            out.println(gson.toJson(hasPossibleCells));
+        }
+
+    }
+
     private void getComputerChoice(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String userName = SessionUtils.getUsername(request);
         GameObject game = this.gamesManager.getGameByUserName(userName);
@@ -224,6 +241,9 @@ public class GamesServlet extends HttpServlet{
                 break;
             case "playMove":
                 playMoveAction(request, response);
+                break;
+            case "changeTurn":
+                changeTurnAction(request,response);
                 break;
 //            case "currentUser":
 //                getCurrentUser(request, response);
@@ -328,10 +348,21 @@ public class GamesServlet extends HttpServlet{
         if(game != null) {
             game.getGameEngine().playMove(Integer.parseInt(selectedRow) , Integer.parseInt(selectedCol));
             game.getGameEngine().changeTurn();
+
+            if(game.getGameEngine().endGame()){
+                game.setGameStatus(GameStatus.Finished);
+            }
         }
+
     }
 
-
+    private void changeTurnAction(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+        String userName = SessionUtils.getUsername(request);
+        GameObject game = this.gamesManager.getGameByUserName(userName);
+        if(game != null) {
+            game.getGameEngine().changeTurn();
+        }
+    }
 
     /**
      * Returns a short description of the servlet.

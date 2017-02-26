@@ -1,15 +1,14 @@
+var refreshRate = 2000;
 var status;
 var user;
 var userName;
 var isComputer;
-var turn = 0;
-var refreshRate = 2000;
+//var turn = 0;
 var isMyTurn = false;
 var isButtonsEnabled = true;
 var isEnabledSaver = true;
-// var selectedCell;
-var selectedRow;
-var selectedCol;
+// var selectedCell = null;
+
 
 var showScoreBoard;
 var myTurnSaver = false;
@@ -112,70 +111,6 @@ function loadGameDetailsCallback(json) {
 
 }
 
-function createBoard(json) {
-    var board = $('.boardBody');
-    var colors = getColorsList();
-    board.contents().remove();
-    rows = json[0].size;
-    cols = json[0].size;
-    boardArr = json[0].board;
-    possibleCells = json[1]
-
-    for (i = 0; i < rows; i++) {
-        rowDiv = $(document.createElement('div'));
-        rowDiv.addClass('rowDiv');
-
-        for (j = 0; j < cols; j++) { // add the squares.
-            squareDiv = $(document.createElement('div'));
-            squareDiv.addClass('square');
-            if(i===selectedRow && j===selectedCol)
-                squareDiv.addClass(("selectedSquare"));
-            if(!boardArr[i][j].isEmpty && !boardArr[i][j].isCursor) {
-                squareDiv.append(boardArr[i][j].value);
-                squareDiv.prop('style', "color: "+ colors[boardArr[i][j].color]);
-
-                squareDiv.attr('hasValue', 'true');
-
-                squareDiv.attr('row',i);
-                squareDiv.attr('col',j);
-
-            }
-            if(boardArr[i][j].isCursor) {
-                imgElem = $(document.createElement('img'));
-                imgElem.prop('src', "../../common/images/marker.png");
-                squareDiv.append(imgElem)
-                squareDiv.addClass('cursor');
-            }
-            squareDiv.appendTo(rowDiv);
-        }
-        rowDiv.appendTo(board);
-    }
-
-
-    /*var fullSquares = $(".square[hasValue=true]");
-    for(var i = 0; i< fullSquares.length; i++) {
-        fullSquares[i].onclick = clickOnCell;
-    }*/
-    for(var i = 0; i< possibleCells.length; i++) {
-        var cell = $(".square[row="+ possibleCells[i].x + "][col=" + possibleCells[i].y +"]");
-        $(cell).click(clickOnCell);
-       // possibleCells[i].onclick = clickOnCell;
-    }
-
-}
-
-function clickOnCell(event) {
-    selectedCell = $(event.target)[0];
-    selectedRow = parseInt(selectedCell.getAttribute("row"));
-    selectedCol = parseInt(selectedCell.getAttribute("col"));
-    //selectedCell.addClass('selectedSquare');
-
-    //all possible:
-
-    //cells[i].prop('style', 'border-color: yellow; border-width: medium;');
-}
-
-
 //Refresh methods
 function updatePlayersDetails() {
     $.ajax
@@ -268,58 +203,173 @@ function gameStatusCallBack(json) {
     switch(newStatus)
     {
         case 'WaitingForPlayers':
-            //status = newStatus;
             break;
         case 'Running':
-            //if (!isReplayOn)
-            //{
-                updateGamePage();
-           // }
-
-            $('.currentPlayerName')[0].innerHTML = newCurrentPlayerName;
-            if (status === 'WaitingForPlayers')
-            {
+            if (status === 'WaitingForPlayers') {
                 alert('Game is on!');
             }
 
-            if (!isMyTurn && newCurrentPlayerName === userName)
-            {
-                if (!isComputer)
-                {
-                    alert('Hey Buddy! it is now your turn !');
-                }
+            //if now changed to my turn, or not my turn then update board
+            if((!isMyTurn && newCurrentPlayerName === userName) || newCurrentPlayerName !== userName) {
+                updateBoard();
+            }
 
-                isMyTurn = true;
-                // if (isComputer && isReplayOn)
-                // {
-                //     isMyTurn = false;
-                // }
-                //else
-                if (isComputer)
-                {
-                    playComputerTurn();
+            $('.currentPlayerName')[0].innerHTML = newCurrentPlayerName;
+
+            if (!isMyTurn && newCurrentPlayerName === userName) //if its my turn
+            {
+                var possibleCellFlag = hasPossibleCells();
+                if(possibleCellFlag) {
+                    isMyTurn = true;
+                    if (!isComputer) {
+                        alert('Hey Buddy! it is now your turn !');
+                    }
+
+                    if (isComputer)
+                    {
+                        playComputerMove();
+                    }
+                }
+                else{
+                    alert(userName + ", Unavailable numbers for you\nSkipping to the next player");
+                    skipTurn();
                 }
             }
 
-            if (isMyTurn && newCurrentPlayerName     != userName)
-            {
-                alert('It is your turn, but server says its someone else turn ...');
+            if (isMyTurn && newCurrentPlayerName != userName) {
+           //     alert('It is your turn, but server says its someone else turn ...');
                 isMyTurn = false;
             }
-            status = newStatus;
+
             break;
         case "Finished":
             isMyTurn = false;
-            if (showScoreBoard) {
-                showEndGameDiaglog();
-                showScoreBoard = false;
-            }
-            status = newStatus;
+            alert("Game Over");
+            // if (showScoreBoard) {
+            //     showEndGameDiaglog();
+            //     showScoreBoard = false;
+            // }
             break;
     }
+    status = newStatus;
     $('.gameStatus').text('Game status: ' + status);
 }
 //-------------------
+
+function updateBoard() {
+    user = getUser();
+    $.ajax
+    (
+        {
+            url: '/games',
+            data:
+            {
+                action: 'boardDetails',
+                username: user.userName
+            },
+            type: 'GET',
+            success: createBoard
+        }
+    )
+}
+
+function createBoard(json) {
+    var board = $('.boardBody');
+    var colors = getColorsList();
+    board.contents().remove();
+    rows = json[0].size;
+    cols = json[0].size;
+    boardArr = json[0].board;
+    possibleCells = json[1]
+
+    for (i = 0; i < rows; i++) {
+        rowDiv = $(document.createElement('div'));
+        rowDiv.addClass('rowDiv');
+
+        for (j = 0; j < cols; j++) { // add the squares.
+            squareDiv = $(document.createElement('div'));
+            squareDiv.addClass('square');
+            // if(i===selectedRow && j===selectedCol)
+            //     squareDiv.addClass(("selectedSquare"));
+            if(!boardArr[i][j].isEmpty && !boardArr[i][j].isCursor) {
+                squareDiv.append(boardArr[i][j].value);
+                squareDiv.prop('style', "color: "+ colors[boardArr[i][j].color]);
+
+                squareDiv.attr('hasValue', 'true');
+
+                squareDiv.attr('row',i);
+                squareDiv.attr('col',j);
+
+            }
+            if(boardArr[i][j].isCursor) {
+                imgElem = $(document.createElement('img'));
+                imgElem.prop('src', "../../common/images/marker.png");
+                squareDiv.append(imgElem)
+                squareDiv.addClass('cursor');
+            }
+            squareDiv.appendTo(rowDiv);
+        }
+        rowDiv.appendTo(board);
+    }
+
+
+    /*var fullSquares = $(".square[hasValue=true]");
+     for(var i = 0; i< fullSquares.length; i++) {
+     fullSquares[i].onclick = clickOnCell;
+     }*/
+    for(var i = 0; i< possibleCells.length; i++) {
+        var cell = $(".square[row="+ possibleCells[i].x + "][col=" + possibleCells[i].y +"]");
+        $(cell).click(clickOnCell);
+        // possibleCells[i].onclick = clickOnCell;
+    }
+
+}
+
+function hasPossibleCells(){
+    var result;
+    $.ajax
+    (
+        {
+            async: false,
+            url: '/games',
+            data:
+            {
+                action: 'possibleCellsFlag',
+            },
+            type: 'GET',
+            success: function (json) {
+                console.log(json);
+                result = json;
+            }
+        }
+    )
+    return result;
+}
+
+function skipTurn(){
+    $.ajax(
+        {
+            url: '/games',
+            data: {
+                action: "changeTurn",
+            },
+            type: 'POST',
+            success: function() {}
+        }
+    );
+}
+
+function clickOnCell(event) {
+    //remove previus selected
+    var selectedCell = $('.selectedSquare')[0];
+    if(selectedCell != null) {
+        selectedCell.classList.remove('selectedSquare');
+    }
+
+    //set new selected
+    selectedCell = event.target
+    event.target.classList.add('selectedSquare');
+}
 
 function getColorsList(){
     var result;
@@ -352,21 +402,22 @@ function onLeaveGameClick() {
 }
 
 function onPlayMoveClick() {
-    var selectedCell;
     var cursorCell;
+    var selectedCell = $('.selectedSquare')[0];
 
-    if(selectedRow !== -1 && selectedCol !== -1){
+    if(selectedCell != null){
         cursorCell = $('.cursor')
 
+        var selectedRow = selectedCell.getAttribute('row');
+        var selectedCol = selectedCell.getAttribute('col');
         playMove(selectedRow, selectedCol);
 
-        //selectedCell.classList.remove("selectedSquare")
-        selectedRow=-1;
-        selectedCol=-1;
+        selectedCell.classList.remove("selectedSquare")
+
         imgElem = $(document.createElement('img'));
         imgElem.prop('src', "../../common/images/marker.png");
         selectedCell.append(imgElem)
-        selectedCell.addClass('cursor');
+        selectedCell.addClass('cursor'); //TODO: add img to class cursor on css
 
         $($('.cursorCell')).attr('src', '');
         cursorCell.classList.remove('cursor');
@@ -452,76 +503,7 @@ function getComputerChoice() {
     return result;
 }
 
-function updateGamePage() {
-    user = getUser();
-    $.ajax
-    (
-        {
-            url: '/games',
-            data:
-            {
-                action: 'boardDetails',
-                username: user.userName
-            },
-            type: 'GET',
-            success: createBoard
-        }
-    )
-}
 
-function turnPlayCallback(json) {
-    var currentMove = json.move;
-    // var totalMoves = $('.totalMoves')[0].innerHTML;
-    // if (totalMoves != undefined && totalMoves < currentMove)
-    // {
-    //     currentMove--;
-    // }
-
-    // $('.scoreSpan')[0].innerHTML = json.score;
-    // $('.currentMove')[0].innerHTML = currentMove;
-    // $('.undoSpan')[0].innerHTML = json.undo;
-    // $('.turnSpan')[0].innerHTML = json.turn;
-
-    // if (isMyTurn)
-    // {
-    //     $('.turnSpan')[0].innerHTML = json.turn;
-    // }
-    // else
-    // {
-    //     $('.turnSpan')[0].innerHTML = '0';
-    // }
-
-    var color;
- //   var board = json.board.m_Board;
-    var square;
-    turn = json.turn;
-    for (i=0; i<board.length; i++)
-    {
-        for (j=0; j<board[0].length; j++)
-        {
-            square = $('.square[row="' + i + '"][col="' + j + '"]')[0];
-            removeClass(square);
-            color = board[i][j].m_CellState;
-            if (color === 'BLACK')
-            {
-                square.classList.add('black');
-            }
-            else if (color ==='EMPTY')
-            {
-                square.classList.add('empty');
-            }
-            else
-            {
-                //nothing..
-            }
-        }
-    }
-    if (isMyTurn)
-    {
-        setPerfectRows(json.perfectRows);
-        setPerfectCols(json.perfectCols);
-    }
-}
 
 
 function clickHandler(e) {
@@ -602,42 +584,9 @@ function showEndGameDiaglogCallback(json) {
     }
     winnerSpan.innerHTML = winnerSpan.innerHTML + '.';
 
-    createBoardForEndDialog(board);
+   // createBoardForEndDialog(board);
 }
 
-function createBoardForEndDialog(board) {
-    var rows = board.m_Rows;
-    var cols = board.m_Cols;
-    var boardBody = $('.completedBoardBody');
-
-    for (i=0; i<rows; i++)
-    { // creates squares.
-        rowDiv = $(document.createElement('div'));
-        rowDiv.addClass('rowDiv');
-        rowSquares = $(document.createElement('div'));
-        rowSquares.addClass('rowSquares');
-        rowSquares.appendTo(rowDiv);
-
-        for (j=0; j<cols;j++)
-        { // add the squares.
-            squareDiv = $(document.createElement('div'));
-            squareDiv.addClass('square');
-            squareDiv.appendTo(rowSquares);
-
-            color = board.m_Board[i][j].m_CellState;
-            if (color === 'BLACK')
-            {
-                squareDiv.addClass('black');
-            }
-            else if (color ==='EMPTY')
-            {
-                squareDiv.addClass('empty');
-            }
-        }
-
-        rowDiv.appendTo(boardBody);
-    }
-}
 
 function setReason(reason) {
     switch(reason)
@@ -658,249 +607,10 @@ function setReason(reason) {
 }
 
 
-function onSquareClick(event) {
-    if (event.target.classList.contains('selected'))
-    {
-        event.target.classList.remove('selected')
-    }
-    else
-    {
-        event.target.classList.add('selected');
-    }
-}
-
-function onColorChooserClick(event) {
-    if (event.target.classList.contains('colorSelected'))
-    {
-        event.target.classList.remove('colorSelected');
-    }
-    else
-    {
-        var colorChoosers = $('.colorChooserDiv').children();
-        for (i=0; i<colorChoosers.length; i++)
-        {
-            if (colorChoosers[i].classList.contains('colorSelected'))
-            {
-                colorChoosers[i].classList.remove('colorSelected');
-            }
-        }
-        event.target.classList.add('colorSelected');
-    }
-}
-
-
-function setPerfectRows(perfectRows) {
-    if (perfectRows === undefined)
-    {
-        return;
-    }
-
-    for (i=0; i<perfectRows.length; i++)
-    {
-        for (j=0; j<perfectRows[0].length; j++)
-        {
-            var hint = $('.rowHint[row="' + i + '"][col="' + j + '"]')[0];
-            if (hint != undefined && hint.classList.contains('perfect'))
-            {
-                hint.classList.remove('perfect');
-            }
-
-            if (perfectRows[i][j])
-            {
-                hint.classList.add('perfect');
-            }
-        }
-    }
-}
-
-function setPerfectCols(perfectCols) {
-    if (perfectCols === undefined)
-    {
-        return;
-    }
-
-    for (i=0; i<perfectCols.length; i++)
-    {
-        for (j=0; j<perfectCols[0].length; j++)
-        {
-            var hint = $('.colHint[row="' + j + '"][col="' + i + '"]')[0];
-            if (hint != undefined && hint.classList.contains('perfect'))
-            {
-                hint.classList.remove('perfect');
-            }
-
-            if (perfectCols[i][j])
-            {
-                hint.classList.add('perfect');
-            }
-        }
-    }
-}
-
-function removeClass(square) {
-    if (square.classList.contains('black'))
-    {
-        square.classList.remove('black');
-    }
-    else if (square.classList.contains('empty'))
-    {
-        square.classList.remove('empty');
-    }
-}
-
-function getChooserColor() {
-    var color = $('.colorSelected')[0];
-    if (color == undefined)
-    {
-        return undefined;
-    }
-
-    if (color.classList.contains('blackChooser'))
-    {
-        return 'black';
-    }
-    else if (color.classList.contains('whiteChooser'))
-    {
-        return 'empty';
-    }
-    else if (color.classList.contains('undefinedChooser'))
-    {
-        return 'undefined';
-    }
-    else
-    {
-        return undefined;
-    }
-}
-
-function onEndMoveClick() {
-    isMyTurn = false;
-    turn = 0;
-    $.ajax
-    (
-        {
-            url: 'games',
-            data:
-            {
-                action: 'endMove'
-            },
-            type: 'POST',
-            success: updateGamePage
-        }
-    )
-}
-
-function onUndoClick() {
-    $.ajax
-    (
-        {
-            async: false,
-            url: 'games',
-            data:
-            {
-                action: 'undoMove'
-            },
-            type: 'POST',
-            success: updateGamePage
-        }
-    )
-}
-
-function onMoveListClick() {
-    $.ajax
-    (
-        {
-            url: 'games',
-            data:
-            {
-                action: 'moveList'
-            },
-            type: 'GET',
-            success: onMoveListClickCallback
-        }
-    )
-}
-
-function onMoveListClickCallback(json) {
-    isButtonsEnabled = false;
-    $('.moveListDialog')[0].style.display = "inline-block";
-
-    var body = $('.moveListBody');
-    var text;
-    var div;
-    body.contents().remove();
-
-    if (json.moves.length === 0)
-    {
-        text = 'There are no moves to show ..';
-        div = $(document.createElement('div')).text(text);
-        div.appendTo(body);
-    }
-
-    for (i=0; i<json.moves.length; i++)
-    {
-        text = json.moves[i];
-        div = $(document.createElement('div')).text(text);
-        div.appendTo(body);
-    }
-}
-
-function removeDialog(event) {
-    event.target.parentElement.parentElement.style.display = "none";
-    //$('.moveListDialog')[0].style.display = "none";
-    if (event.target.parentElement.parentElement != undefined && event.target.parentElement.parentElement.classList.contains('moveListDialog'))
-    {
-        isButtonsEnabled = true;
-    }
-}
-
-
-function onReplayClick() {
-    isReplayOn = true;
-    isEnabledSaver = isButtonsEnabled;
-    isButtonsEnabled = false;
-
-    $.ajax
-    (
-        {
-            async: false,
-            url: 'games',
-            data:
-            {
-                action: 'replay'
-            },
-            type: 'GET',
-            success: replayCallback
-        }
-    );
-}
-
-function onReplayClose() {
-    $('.replayDialog')[0].style.display = "none";
-    isButtonsEnabled = isEnabledSaver;
-    boardBody = $('.boardBody')[0];
-    board = $('.board')[0];
-    board.appendChild(boardBody);
-    isReplayOn = false;
-    updateGamePage();
-}
 
 var actions;
 var maxIndex;
 var index;
-
-function replayCallback(json) {
-    $('.replayDialog')[0].style.display = "inline-block";
-    boardBody = boardBody = $('.boardBody')[0];;
-    replayBoard = $('.replayBoardBody')[0];
-    replayBoard.appendChild(boardBody);
-    resetBoard();
-    actions = json.actions;
-    index = 0;
-    maxIndex = actions.length;
-    $('.currentTurnReplay')[0].innerHTML = '0';
-    $('.totalTurnReplay')[0].innerHTML = actions.length;
-}
 
 function resetBoard() {
     var squares = $('.square');
