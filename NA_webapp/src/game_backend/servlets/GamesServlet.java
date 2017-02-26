@@ -164,6 +164,8 @@ public class GamesServlet extends HttpServlet{
                 name = game.getGameEngine().getCurrentPlayerName();
             }
             out.println(gson.toJson(new GameStatusMessage(status, name)));
+
+
         }
     }
 

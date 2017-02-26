@@ -249,7 +249,7 @@ function gameStatusCallBack(json) {
 
             if(status !== "Finished") {
                 //handleEndGame();
-                alert(endGameMessage);
+                alert("Game Over");
                 gamePositions = getGamePositions();
                 gamePositionIndex = gamePositions.length - 1;
                 var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
