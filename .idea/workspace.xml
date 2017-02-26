@@ -89,9 +89,118 @@
       <file leaf-file-name="gameRoom.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="168">
+              <caret line="253" column="13" selection-start-line="253" selection-start-column="13" selection-end-line="253" selection-end-column="13" />
+              <folding>
+                <element signature="e#365#392#0" expanded="false" />
+                <element signature="n#!!block;n#checkLoginStatus#0" expanded="false" />
+                <element signature="e#441#593#0" expanded="false" />
+                <element signature="e#484#533#0" expanded="false" />
+                <element signature="n#!!block;n#statusCallback#0" expanded="false" />
+                <element signature="e#635#660#0" expanded="false" />
+                <element signature="e#866#930#0" expanded="false" />
+                <element signature="n#!!block;n#initializePage#0" expanded="false" />
+                <element signature="n#!!block;n#getUser#0" expanded="false" />
+                <element signature="e#1431#1640#0" expanded="false" />
+                <element signature="e#1496#1541#0" expanded="false" />
+                <element signature="e#1596#1634#0" expanded="false" />
+                <element signature="n#!!block;n#loadWindowDetails#0" expanded="false" />
+                <element signature="n#!!block;n#loadGameDetails#0" expanded="false" />
+                <element signature="e#1857#2178#0" expanded="false" />
+                <element signature="e#1942#2062#0" expanded="false" />
+                <element signature="n#!!block;n#loadGameDetailsCallback#0" expanded="false" />
+                <element signature="n#!!block;n#updatePlayersDetails#0" expanded="false" />
+                <element signature="e#2424#2622#0" expanded="false" />
+                <element signature="e#2483#2536#0" expanded="false" />
+                <element signature="n#!!block;n#updatePlayersDetailsCallback#0" expanded="false" />
+                <element signature="e#3080#3833#0" expanded="false" />
+                <element signature="e#4018#4459#0" expanded="false" />
+                <element signature="e#4168#4187#0" expanded="false" />
+                <element signature="n#!!block;n#gameStatus#0" expanded="false" />
+                <element signature="e#4596#4816#0" expanded="false" />
+                <element signature="e#4681#4740#0" expanded="false" />
+                <element signature="e#5095#5148#0" expanded="false" />
+                <element signature="e#5326#5372#0" expanded="false" />
+                <element signature="e#5541#6134#0" expanded="false" />
+                <element signature="e#5639#5948#0" expanded="false" />
+                <element signature="e#5715#5805#0" expanded="false" />
+                <element signature="e#5863#5930#0" expanded="false" />
+                <element signature="e#5969#6120#0" expanded="false" />
+                <element signature="e#6198#6334#0" expanded="false" />
+                <element signature="e#6394#6418#0" expanded="false" />
+                <element signature="n#!!block;n#getGamePositions#0" expanded="false" />
+                <element signature="e#6735#6975#0" expanded="false" />
+                <element signature="e#6796#6876#0" expanded="false" />
+                <element signature="e#6931#6969#0" expanded="false" />
+                <element signature="n#!!block;n#updateBoard#0" expanded="false" />
+                <element signature="e#7072#7295#0" expanded="false" />
+                <element signature="e#7131#7226#0" expanded="false" />
+                <element signature="n#!!block;n#createBoard#0" expanded="false" />
+                <element signature="e#7572#8652#0" expanded="false" />
+                <element signature="e#7696#8614#0" expanded="false" />
+                <element signature="e#7830#7871#0" expanded="false" />
+                <element signature="e#7999#8289#0" expanded="false" />
+                <element signature="e#8330#8564#0" expanded="false" />
+                <element signature="e#8659#8809#0" expanded="false" />
+                <element signature="e#8859#9048#0" expanded="false" />
+                <element signature="n#!!block;n#hasPossibleCells#0" expanded="false" />
+                <element signature="e#9123#9423#0" expanded="false" />
+                <element signature="e#9208#9268#0" expanded="false" />
+                <element signature="e#9332#9413#0" expanded="false" />
+                <element signature="n#!!block;n#skipTurn#0" expanded="false" />
+                <element signature="e#9493#9665#0" expanded="false" />
+                <element signature="e#9540#9593#0" expanded="false" />
+                <element signature="n#!!block;n#clickOnCell#0" expanded="false" />
+                <element signature="e#9813#9877#0" expanded="false" />
+                <element signature="n#!!block;n#getColorsList#0" expanded="false" />
+                <element signature="e#10045#10245#0" expanded="false" />
+                <element signature="e#10106#10146#0" expanded="false" />
+                <element signature="e#10201#10239#0" expanded="false" />
+                <element signature="n#!!block;n#onLeaveGameClick#0" expanded="false" />
+                <element signature="e#10320#10530#0" expanded="false" />
+                <element signature="e#10367#10419#0" expanded="false" />
+                <element signature="n#!!block;n#onPlayMoveClick#0" expanded="false" />
+                <element signature="e#10667#11100#0" expanded="false" />
+                <element signature="e#11104#11156#0" expanded="false" />
+                <element signature="n#!!block;n#playMove#0" expanded="false" />
+                <element signature="e#11225#11462#0" expanded="false" />
+                <element signature="e#11272#11390#0" expanded="false" />
+                <element signature="n#!!block;n#playComputerMove#0" expanded="false" />
+                <element signature="n#!!block;n#getComputerChoice#0" expanded="false" />
+                <element signature="e#11692#11953#0" expanded="false" />
+                <element signature="e#11777#11833#0" expanded="false" />
+                <element signature="e#11897#11943#0" expanded="false" />
+                <element signature="n#!!block;n#handleEndGame#0" expanded="false" />
+                <element signature="e#12049#12265#0" expanded="false" />
+                <element signature="e#12134#12190#0" expanded="false" />
+                <element signature="n#!!block;n#showEndGameDialog#0" expanded="false" />
+                <element signature="n#!!block;n#removeGameDialog#0" expanded="false" />
+                <element signature="n#!!block;n#redirectToLobby#0" expanded="false" />
+                <element signature="n#!!block;n#clickHandler#0" expanded="false" />
+                <element signature="e#12703#12767#0" expanded="false" />
+                <element signature="n#!!block;n#isButtonAvailable#0" expanded="false" />
+                <element signature="e#12977#13006#0" expanded="false" />
+                <element signature="e#13192#13220#0" expanded="false" />
+                <element signature="e#13244#13410#0" expanded="false" />
+                <element signature="e#13284#13320#0" expanded="false" />
+                <element signature="e#13367#13404#0" expanded="false" />
+                <element signature="e#13439#13742#0" expanded="false" />
+                <element signature="e#13479#13652#0" expanded="false" />
+                <element signature="e#13598#13642#0" expanded="false" />
+                <element signature="e#13699#13736#0" expanded="false" />
+                <element signature="e#13748#13782#0" expanded="false" />
+                <element signature="n#!!block;n#setReason#0" expanded="false" />
+                <element signature="e#14776#15237#0" expanded="false" />
+                <element signature="n#!!block;n#resetBoard#0" expanded="false" />
+                <element signature="e#15379#15720#0" expanded="false" />
+                <element signature="e#15452#15506#0" expanded="false" />
+                <element signature="e#15553#15607#0" expanded="false" />
+                <element signature="e#15657#15714#0" expanded="false" />
+                <element signature="e#15798#15854#0" expanded="false" />
+                <element signature="n#!!block;n#onNextClick#0" expanded="false" />
+                <element signature="n#!!block;n#onPrevClick#0" expanded="false" />
+                <element signature="e#15916#17124#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,8 +218,8 @@
       <file leaf-file-name="gameRoom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
+            <state relative-caret-position="264">
+              <caret line="69" column="51" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -147,9 +256,9 @@
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/signup/signup.html" />
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/lobby/lobby.css" />
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html" />
-        <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css" />
         <option value="$PROJECT_DIR$/NA_Logic/src/game/GameEngine.java" />
         <option value="$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java" />
+        <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css" />
         <option value="$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js" />
       </list>
     </option>
@@ -853,12 +962,12 @@
       <updated>1487969728522</updated>
       <workItem from="1487969729741" duration="9897000" />
       <workItem from="1488015529975" duration="47429000" />
-      <workItem from="1488126902097" duration="484000" />
+      <workItem from="1488126902097" duration="1949000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57810000" />
+    <option name="totallyTimeSpent" value="59275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -996,7 +1105,116 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7025">
           <caret line="281" column="31" selection-start-line="281" selection-start-column="31" selection-end-line="281" selection-end-column="31" />
-          <folding />
+          <folding>
+            <element signature="e#365#392#0" expanded="false" />
+            <element signature="n#!!block;n#checkLoginStatus#0" expanded="false" />
+            <element signature="e#441#593#0" expanded="false" />
+            <element signature="e#484#533#0" expanded="false" />
+            <element signature="n#!!block;n#statusCallback#0" expanded="false" />
+            <element signature="e#635#660#0" expanded="false" />
+            <element signature="e#866#930#0" expanded="false" />
+            <element signature="n#!!block;n#initializePage#0" expanded="false" />
+            <element signature="n#!!block;n#getUser#0" expanded="false" />
+            <element signature="e#1431#1640#0" expanded="false" />
+            <element signature="e#1496#1541#0" expanded="false" />
+            <element signature="e#1596#1634#0" expanded="false" />
+            <element signature="n#!!block;n#loadWindowDetails#0" expanded="false" />
+            <element signature="n#!!block;n#loadGameDetails#0" expanded="false" />
+            <element signature="e#1857#2178#0" expanded="false" />
+            <element signature="e#1942#2062#0" expanded="false" />
+            <element signature="n#!!block;n#loadGameDetailsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#updatePlayersDetails#0" expanded="false" />
+            <element signature="e#2424#2622#0" expanded="false" />
+            <element signature="e#2483#2536#0" expanded="false" />
+            <element signature="n#!!block;n#updatePlayersDetailsCallback#0" expanded="false" />
+            <element signature="e#3080#3833#0" expanded="false" />
+            <element signature="e#4018#4459#0" expanded="false" />
+            <element signature="e#4168#4187#0" expanded="false" />
+            <element signature="n#!!block;n#gameStatus#0" expanded="false" />
+            <element signature="e#4596#4816#0" expanded="false" />
+            <element signature="e#4681#4740#0" expanded="false" />
+            <element signature="e#5095#5148#0" expanded="false" />
+            <element signature="e#5326#5372#0" expanded="false" />
+            <element signature="e#5541#6134#0" expanded="false" />
+            <element signature="e#5639#5948#0" expanded="false" />
+            <element signature="e#5715#5805#0" expanded="false" />
+            <element signature="e#5863#5930#0" expanded="false" />
+            <element signature="e#5969#6120#0" expanded="false" />
+            <element signature="e#6198#6334#0" expanded="false" />
+            <element signature="e#6394#6418#0" expanded="false" />
+            <element signature="n#!!block;n#getGamePositions#0" expanded="false" />
+            <element signature="e#6735#6975#0" expanded="false" />
+            <element signature="e#6796#6876#0" expanded="false" />
+            <element signature="e#6931#6969#0" expanded="false" />
+            <element signature="n#!!block;n#updateBoard#0" expanded="false" />
+            <element signature="e#7072#7295#0" expanded="false" />
+            <element signature="e#7131#7226#0" expanded="false" />
+            <element signature="n#!!block;n#createBoard#0" expanded="false" />
+            <element signature="e#7572#8652#0" expanded="false" />
+            <element signature="e#7696#8614#0" expanded="false" />
+            <element signature="e#7830#7871#0" expanded="false" />
+            <element signature="e#7999#8289#0" expanded="false" />
+            <element signature="e#8330#8564#0" expanded="false" />
+            <element signature="e#8659#8809#0" expanded="false" />
+            <element signature="e#8859#9048#0" expanded="false" />
+            <element signature="n#!!block;n#hasPossibleCells#0" expanded="false" />
+            <element signature="e#9123#9423#0" expanded="false" />
+            <element signature="e#9208#9268#0" expanded="false" />
+            <element signature="e#9332#9413#0" expanded="false" />
+            <element signature="n#!!block;n#skipTurn#0" expanded="false" />
+            <element signature="e#9493#9665#0" expanded="false" />
+            <element signature="e#9540#9593#0" expanded="false" />
+            <element signature="n#!!block;n#clickOnCell#0" expanded="false" />
+            <element signature="e#9813#9877#0" expanded="false" />
+            <element signature="n#!!block;n#getColorsList#0" expanded="false" />
+            <element signature="e#10045#10245#0" expanded="false" />
+            <element signature="e#10106#10146#0" expanded="false" />
+            <element signature="e#10201#10239#0" expanded="false" />
+            <element signature="n#!!block;n#onLeaveGameClick#0" expanded="false" />
+            <element signature="e#10320#10530#0" expanded="false" />
+            <element signature="e#10367#10419#0" expanded="false" />
+            <element signature="n#!!block;n#onPlayMoveClick#0" expanded="false" />
+            <element signature="e#10667#11100#0" expanded="false" />
+            <element signature="e#11104#11156#0" expanded="false" />
+            <element signature="n#!!block;n#playMove#0" expanded="false" />
+            <element signature="e#11225#11462#0" expanded="false" />
+            <element signature="e#11272#11390#0" expanded="false" />
+            <element signature="n#!!block;n#playComputerMove#0" expanded="false" />
+            <element signature="n#!!block;n#getComputerChoice#0" expanded="false" />
+            <element signature="e#11692#11953#0" expanded="false" />
+            <element signature="e#11777#11833#0" expanded="false" />
+            <element signature="e#11897#11943#0" expanded="false" />
+            <element signature="n#!!block;n#handleEndGame#0" expanded="false" />
+            <element signature="e#12049#12265#0" expanded="false" />
+            <element signature="e#12134#12190#0" expanded="false" />
+            <element signature="n#!!block;n#showEndGameDialog#0" expanded="false" />
+            <element signature="n#!!block;n#removeGameDialog#0" expanded="false" />
+            <element signature="n#!!block;n#redirectToLobby#0" expanded="false" />
+            <element signature="n#!!block;n#clickHandler#0" expanded="false" />
+            <element signature="e#12703#12767#0" expanded="false" />
+            <element signature="n#!!block;n#isButtonAvailable#0" expanded="false" />
+            <element signature="e#12977#13006#0" expanded="false" />
+            <element signature="e#13192#13220#0" expanded="false" />
+            <element signature="e#13244#13410#0" expanded="false" />
+            <element signature="e#13284#13320#0" expanded="false" />
+            <element signature="e#13367#13404#0" expanded="false" />
+            <element signature="e#13439#13742#0" expanded="false" />
+            <element signature="e#13479#13652#0" expanded="false" />
+            <element signature="e#13598#13642#0" expanded="false" />
+            <element signature="e#13699#13736#0" expanded="false" />
+            <element signature="e#13748#13782#0" expanded="false" />
+            <element signature="n#!!block;n#setReason#0" expanded="false" />
+            <element signature="e#14776#15237#0" expanded="false" />
+            <element signature="n#!!block;n#resetBoard#0" expanded="false" />
+            <element signature="e#15379#15720#0" expanded="false" />
+            <element signature="e#15452#15506#0" expanded="false" />
+            <element signature="e#15553#15607#0" expanded="false" />
+            <element signature="e#15657#15714#0" expanded="false" />
+            <element signature="e#15798#15854#0" expanded="false" />
+            <element signature="n#!!block;n#onNextClick#0" expanded="false" />
+            <element signature="n#!!block;n#onPrevClick#0" expanded="false" />
+            <element signature="e#15916#17124#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,7 +1307,116 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6273">
           <caret line="369" column="24" selection-start-line="369" selection-start-column="4" selection-end-line="369" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#365#392#0" expanded="false" />
+            <element signature="n#!!block;n#checkLoginStatus#0" expanded="false" />
+            <element signature="e#441#593#0" expanded="false" />
+            <element signature="e#484#533#0" expanded="false" />
+            <element signature="n#!!block;n#statusCallback#0" expanded="false" />
+            <element signature="e#635#660#0" expanded="false" />
+            <element signature="e#866#930#0" expanded="false" />
+            <element signature="n#!!block;n#initializePage#0" expanded="false" />
+            <element signature="n#!!block;n#getUser#0" expanded="false" />
+            <element signature="e#1431#1640#0" expanded="false" />
+            <element signature="e#1496#1541#0" expanded="false" />
+            <element signature="e#1596#1634#0" expanded="false" />
+            <element signature="n#!!block;n#loadWindowDetails#0" expanded="false" />
+            <element signature="n#!!block;n#loadGameDetails#0" expanded="false" />
+            <element signature="e#1857#2178#0" expanded="false" />
+            <element signature="e#1942#2062#0" expanded="false" />
+            <element signature="n#!!block;n#loadGameDetailsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#updatePlayersDetails#0" expanded="false" />
+            <element signature="e#2424#2622#0" expanded="false" />
+            <element signature="e#2483#2536#0" expanded="false" />
+            <element signature="n#!!block;n#updatePlayersDetailsCallback#0" expanded="false" />
+            <element signature="e#3080#3833#0" expanded="false" />
+            <element signature="e#4018#4459#0" expanded="false" />
+            <element signature="e#4168#4187#0" expanded="false" />
+            <element signature="n#!!block;n#gameStatus#0" expanded="false" />
+            <element signature="e#4596#4816#0" expanded="false" />
+            <element signature="e#4681#4740#0" expanded="false" />
+            <element signature="e#5095#5148#0" expanded="false" />
+            <element signature="e#5326#5372#0" expanded="false" />
+            <element signature="e#5541#6134#0" expanded="false" />
+            <element signature="e#5639#5948#0" expanded="false" />
+            <element signature="e#5715#5805#0" expanded="false" />
+            <element signature="e#5863#5930#0" expanded="false" />
+            <element signature="e#5969#6120#0" expanded="false" />
+            <element signature="e#6198#6334#0" expanded="false" />
+            <element signature="e#6394#6418#0" expanded="false" />
+            <element signature="n#!!block;n#getGamePositions#0" expanded="false" />
+            <element signature="e#6735#6975#0" expanded="false" />
+            <element signature="e#6796#6876#0" expanded="false" />
+            <element signature="e#6931#6969#0" expanded="false" />
+            <element signature="n#!!block;n#updateBoard#0" expanded="false" />
+            <element signature="e#7072#7295#0" expanded="false" />
+            <element signature="e#7131#7226#0" expanded="false" />
+            <element signature="n#!!block;n#createBoard#0" expanded="false" />
+            <element signature="e#7572#8652#0" expanded="false" />
+            <element signature="e#7696#8614#0" expanded="false" />
+            <element signature="e#7830#7871#0" expanded="false" />
+            <element signature="e#7999#8289#0" expanded="false" />
+            <element signature="e#8330#8564#0" expanded="false" />
+            <element signature="e#8659#8809#0" expanded="false" />
+            <element signature="e#8859#9048#0" expanded="false" />
+            <element signature="n#!!block;n#hasPossibleCells#0" expanded="false" />
+            <element signature="e#9123#9423#0" expanded="false" />
+            <element signature="e#9208#9268#0" expanded="false" />
+            <element signature="e#9332#9413#0" expanded="false" />
+            <element signature="n#!!block;n#skipTurn#0" expanded="false" />
+            <element signature="e#9493#9665#0" expanded="false" />
+            <element signature="e#9540#9593#0" expanded="false" />
+            <element signature="n#!!block;n#clickOnCell#0" expanded="false" />
+            <element signature="e#9813#9877#0" expanded="false" />
+            <element signature="n#!!block;n#getColorsList#0" expanded="false" />
+            <element signature="e#10045#10245#0" expanded="false" />
+            <element signature="e#10106#10146#0" expanded="false" />
+            <element signature="e#10201#10239#0" expanded="false" />
+            <element signature="n#!!block;n#onLeaveGameClick#0" expanded="false" />
+            <element signature="e#10320#10530#0" expanded="false" />
+            <element signature="e#10367#10419#0" expanded="false" />
+            <element signature="n#!!block;n#onPlayMoveClick#0" expanded="false" />
+            <element signature="e#10667#11100#0" expanded="false" />
+            <element signature="e#11104#11156#0" expanded="false" />
+            <element signature="n#!!block;n#playMove#0" expanded="false" />
+            <element signature="e#11225#11462#0" expanded="false" />
+            <element signature="e#11272#11390#0" expanded="false" />
+            <element signature="n#!!block;n#playComputerMove#0" expanded="false" />
+            <element signature="n#!!block;n#getComputerChoice#0" expanded="false" />
+            <element signature="e#11692#11953#0" expanded="false" />
+            <element signature="e#11777#11833#0" expanded="false" />
+            <element signature="e#11897#11943#0" expanded="false" />
+            <element signature="n#!!block;n#handleEndGame#0" expanded="false" />
+            <element signature="e#12049#12265#0" expanded="false" />
+            <element signature="e#12134#12190#0" expanded="false" />
+            <element signature="n#!!block;n#showEndGameDialog#0" expanded="false" />
+            <element signature="n#!!block;n#removeGameDialog#0" expanded="false" />
+            <element signature="n#!!block;n#redirectToLobby#0" expanded="false" />
+            <element signature="n#!!block;n#clickHandler#0" expanded="false" />
+            <element signature="e#12703#12767#0" expanded="false" />
+            <element signature="n#!!block;n#isButtonAvailable#0" expanded="false" />
+            <element signature="e#12977#13006#0" expanded="false" />
+            <element signature="e#13192#13220#0" expanded="false" />
+            <element signature="e#13244#13410#0" expanded="false" />
+            <element signature="e#13284#13320#0" expanded="false" />
+            <element signature="e#13367#13404#0" expanded="false" />
+            <element signature="e#13439#13742#0" expanded="false" />
+            <element signature="e#13479#13652#0" expanded="false" />
+            <element signature="e#13598#13642#0" expanded="false" />
+            <element signature="e#13699#13736#0" expanded="false" />
+            <element signature="e#13748#13782#0" expanded="false" />
+            <element signature="n#!!block;n#setReason#0" expanded="false" />
+            <element signature="e#14776#15237#0" expanded="false" />
+            <element signature="n#!!block;n#resetBoard#0" expanded="false" />
+            <element signature="e#15379#15720#0" expanded="false" />
+            <element signature="e#15452#15506#0" expanded="false" />
+            <element signature="e#15553#15607#0" expanded="false" />
+            <element signature="e#15657#15714#0" expanded="false" />
+            <element signature="e#15798#15854#0" expanded="false" />
+            <element signature="n#!!block;n#onNextClick#0" expanded="false" />
+            <element signature="n#!!block;n#onPrevClick#0" expanded="false" />
+            <element signature="e#15916#17124#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1310,14 +1637,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="133" column="8" selection-start-line="133" selection-start-column="8" selection-end-line="133" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="129">
@@ -1326,11 +1645,128 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="69" column="51" selection-start-line="69" selection-start-column="51" selection-end-line="69" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="248" column="0" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="168">
+          <caret line="253" column="13" selection-start-line="253" selection-start-column="13" selection-end-line="253" selection-end-column="13" />
+          <folding>
+            <element signature="e#365#392#0" expanded="false" />
+            <element signature="n#!!block;n#checkLoginStatus#0" expanded="false" />
+            <element signature="e#441#593#0" expanded="false" />
+            <element signature="e#484#533#0" expanded="false" />
+            <element signature="n#!!block;n#statusCallback#0" expanded="false" />
+            <element signature="e#635#660#0" expanded="false" />
+            <element signature="e#866#930#0" expanded="false" />
+            <element signature="n#!!block;n#initializePage#0" expanded="false" />
+            <element signature="n#!!block;n#getUser#0" expanded="false" />
+            <element signature="e#1431#1640#0" expanded="false" />
+            <element signature="e#1496#1541#0" expanded="false" />
+            <element signature="e#1596#1634#0" expanded="false" />
+            <element signature="n#!!block;n#loadWindowDetails#0" expanded="false" />
+            <element signature="n#!!block;n#loadGameDetails#0" expanded="false" />
+            <element signature="e#1857#2178#0" expanded="false" />
+            <element signature="e#1942#2062#0" expanded="false" />
+            <element signature="n#!!block;n#loadGameDetailsCallback#0" expanded="false" />
+            <element signature="n#!!block;n#updatePlayersDetails#0" expanded="false" />
+            <element signature="e#2424#2622#0" expanded="false" />
+            <element signature="e#2483#2536#0" expanded="false" />
+            <element signature="n#!!block;n#updatePlayersDetailsCallback#0" expanded="false" />
+            <element signature="e#3080#3833#0" expanded="false" />
+            <element signature="e#4018#4459#0" expanded="false" />
+            <element signature="e#4168#4187#0" expanded="false" />
+            <element signature="n#!!block;n#gameStatus#0" expanded="false" />
+            <element signature="e#4596#4816#0" expanded="false" />
+            <element signature="e#4681#4740#0" expanded="false" />
+            <element signature="e#5095#5148#0" expanded="false" />
+            <element signature="e#5326#5372#0" expanded="false" />
+            <element signature="e#5541#6134#0" expanded="false" />
+            <element signature="e#5639#5948#0" expanded="false" />
+            <element signature="e#5715#5805#0" expanded="false" />
+            <element signature="e#5863#5930#0" expanded="false" />
+            <element signature="e#5969#6120#0" expanded="false" />
+            <element signature="e#6198#6334#0" expanded="false" />
+            <element signature="e#6394#6418#0" expanded="false" />
+            <element signature="n#!!block;n#getGamePositions#0" expanded="false" />
+            <element signature="e#6735#6975#0" expanded="false" />
+            <element signature="e#6796#6876#0" expanded="false" />
+            <element signature="e#6931#6969#0" expanded="false" />
+            <element signature="n#!!block;n#updateBoard#0" expanded="false" />
+            <element signature="e#7072#7295#0" expanded="false" />
+            <element signature="e#7131#7226#0" expanded="false" />
+            <element signature="n#!!block;n#createBoard#0" expanded="false" />
+            <element signature="e#7572#8652#0" expanded="false" />
+            <element signature="e#7696#8614#0" expanded="false" />
+            <element signature="e#7830#7871#0" expanded="false" />
+            <element signature="e#7999#8289#0" expanded="false" />
+            <element signature="e#8330#8564#0" expanded="false" />
+            <element signature="e#8659#8809#0" expanded="false" />
+            <element signature="e#8859#9048#0" expanded="false" />
+            <element signature="n#!!block;n#hasPossibleCells#0" expanded="false" />
+            <element signature="e#9123#9423#0" expanded="false" />
+            <element signature="e#9208#9268#0" expanded="false" />
+            <element signature="e#9332#9413#0" expanded="false" />
+            <element signature="n#!!block;n#skipTurn#0" expanded="false" />
+            <element signature="e#9493#9665#0" expanded="false" />
+            <element signature="e#9540#9593#0" expanded="false" />
+            <element signature="n#!!block;n#clickOnCell#0" expanded="false" />
+            <element signature="e#9813#9877#0" expanded="false" />
+            <element signature="n#!!block;n#getColorsList#0" expanded="false" />
+            <element signature="e#10045#10245#0" expanded="false" />
+            <element signature="e#10106#10146#0" expanded="false" />
+            <element signature="e#10201#10239#0" expanded="false" />
+            <element signature="n#!!block;n#onLeaveGameClick#0" expanded="false" />
+            <element signature="e#10320#10530#0" expanded="false" />
+            <element signature="e#10367#10419#0" expanded="false" />
+            <element signature="n#!!block;n#onPlayMoveClick#0" expanded="false" />
+            <element signature="e#10667#11100#0" expanded="false" />
+            <element signature="e#11104#11156#0" expanded="false" />
+            <element signature="n#!!block;n#playMove#0" expanded="false" />
+            <element signature="e#11225#11462#0" expanded="false" />
+            <element signature="e#11272#11390#0" expanded="false" />
+            <element signature="n#!!block;n#playComputerMove#0" expanded="false" />
+            <element signature="n#!!block;n#getComputerChoice#0" expanded="false" />
+            <element signature="e#11692#11953#0" expanded="false" />
+            <element signature="e#11777#11833#0" expanded="false" />
+            <element signature="e#11897#11943#0" expanded="false" />
+            <element signature="n#!!block;n#handleEndGame#0" expanded="false" />
+            <element signature="e#12049#12265#0" expanded="false" />
+            <element signature="e#12134#12190#0" expanded="false" />
+            <element signature="n#!!block;n#showEndGameDialog#0" expanded="false" />
+            <element signature="n#!!block;n#removeGameDialog#0" expanded="false" />
+            <element signature="n#!!block;n#redirectToLobby#0" expanded="false" />
+            <element signature="n#!!block;n#clickHandler#0" expanded="false" />
+            <element signature="e#12703#12767#0" expanded="false" />
+            <element signature="n#!!block;n#isButtonAvailable#0" expanded="false" />
+            <element signature="e#12977#13006#0" expanded="false" />
+            <element signature="e#13192#13220#0" expanded="false" />
+            <element signature="e#13244#13410#0" expanded="false" />
+            <element signature="e#13284#13320#0" expanded="false" />
+            <element signature="e#13367#13404#0" expanded="false" />
+            <element signature="e#13439#13742#0" expanded="false" />
+            <element signature="e#13479#13652#0" expanded="false" />
+            <element signature="e#13598#13642#0" expanded="false" />
+            <element signature="e#13699#13736#0" expanded="false" />
+            <element signature="e#13748#13782#0" expanded="false" />
+            <element signature="n#!!block;n#setReason#0" expanded="false" />
+            <element signature="e#14776#15237#0" expanded="false" />
+            <element signature="n#!!block;n#resetBoard#0" expanded="false" />
+            <element signature="e#15379#15720#0" expanded="false" />
+            <element signature="e#15452#15506#0" expanded="false" />
+            <element signature="e#15553#15607#0" expanded="false" />
+            <element signature="e#15657#15714#0" expanded="false" />
+            <element signature="e#15798#15854#0" expanded="false" />
+            <element signature="n#!!block;n#onNextClick#0" expanded="false" />
+            <element signature="n#!!block;n#onPrevClick#0" expanded="false" />
+            <element signature="e#15916#17124#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

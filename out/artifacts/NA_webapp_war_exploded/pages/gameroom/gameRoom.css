@@ -66,6 +66,10 @@ body{
     display: table-row;
 }
 
+.cursor.img{
+    content: url("../../common/images/marker.png");
+}
+
 .square:hover {
     background: antiquewhite;
     cursor: pointer;

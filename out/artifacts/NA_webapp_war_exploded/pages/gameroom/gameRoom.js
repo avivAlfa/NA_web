@@ -246,15 +246,16 @@ function gameStatusCallBack(json) {
             break;
         case "Finished":
             isMyTurn = false;
-            var endGameMessage = getEndGameMessage();
-            alert(endGameMessage);
-            gamePositions = getGamePositions();
-            gamePositionIndex = gamePositions.length - 1;
-            var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
-            nextPrevElements.attr('style', "visibility: visible;");
-            if(status !== "Finished") //already finished
-            //handleEndGame();
-                alert(endGameMessage);
+
+            if(status !== "Finished") {
+                handleEndGame();
+                // alert(endGameMessage);
+                // gamePositions = getGamePositions();
+                // gamePositionIndex = gamePositions.length - 1;
+                // var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
+                // nextPrevElements.attr('style', "visibility: visible;");
+            }
+
 
             // if (showScoreBoard) {
             //     showEndGameDiaglog();
@@ -444,9 +445,9 @@ function onPlayMoveClick() {
 
         selectedCell.classList.remove("selectedSquare")
 
-        imgElem = $(document.createElement('img'));
-        imgElem.prop('src', "../../common/images/marker.png");
-        selectedCell.append(imgElem)
+        // imgElem = $(document.createElement('img'));
+        // imgElem.prop('src', "../../common/images/marker.png");
+        // selectedCell.append(imgElem)
         selectedCell.classList.add('cursor'); //TODO: add img to class cursor on css
 
         $(cursorCell).attr('src','');
