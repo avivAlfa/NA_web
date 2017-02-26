@@ -334,6 +334,9 @@ public class GamesServlet extends HttpServlet{
         GameObject game = this.gamesManager.getGameByUserName(userName);
         if(game != null) {
             game.getGameEngine().removePlayer(userName);
+            if(game.getGameEngine().endGame()){
+                game.setGameStatus(GameStatus.Finished);
+            }
             //response.sendRedirect(LOBBY_URL);
         }
 
@@ -361,6 +364,9 @@ public class GamesServlet extends HttpServlet{
         GameObject game = this.gamesManager.getGameByUserName(userName);
         if(game != null) {
             game.getGameEngine().changeTurn();
+        }
+        if(game.getGameEngine().endGame()){
+            game.setGameStatus(GameStatus.Finished);
         }
     }
 
