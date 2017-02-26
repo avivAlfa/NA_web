@@ -30,6 +30,7 @@ public abstract class GameEngine {
     public abstract List<Point> getAllPossibleCells();
     public abstract void setPossibleAsEmpty(List<Point> possibleCells);
     public abstract Point getComputerChosenCellIndexes();
+    public abstract void removePlayerCells(int playerIndex);
 
 
     public int getMovesCnt() { return movesCnt; }
@@ -301,6 +302,8 @@ public abstract class GameEngine {
     public void removePlayer(String playerName){
         int playerIndex = getPlayerIndexByName(playerName);
 
+        removePlayerCells(playerIndex);
+
         if(playerIndex == playerTurnIndex){
             removeCurrentPlayerFromGame();
         }
@@ -311,7 +314,6 @@ public abstract class GameEngine {
             resignedPlayers.add(players.get(playerIndex));
             players.remove(playerIndex);
         }
-
     }
 
     public void removeCurrentPlayerFromGame(){

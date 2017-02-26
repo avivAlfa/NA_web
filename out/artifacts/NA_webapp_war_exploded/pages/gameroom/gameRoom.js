@@ -245,6 +245,7 @@ function gameStatusCallBack(json) {
         case "Finished":
             isMyTurn = false;
             alert("Game Over");
+
             // if (showScoreBoard) {
             //     showEndGameDiaglog();
             //     showScoreBoard = false;

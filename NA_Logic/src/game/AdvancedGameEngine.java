@@ -201,6 +201,20 @@ public class AdvancedGameEngine extends GameEngine {
         }
         return chosenIndexes;
     }
+    @Override
+    public void removePlayerCells(int playerIndex){
+        Cell currCell;
+
+        for (int j = 0; j < gameBoard.getSize(); j++) {
+            for(int i = 0; i< gameBoard.getSize(); i++) {
+                currCell = gameBoard.getCell(i, j);
+                if ((!currCell.isEmpty()) && ((!currCell.isCursor())) && currCell.getColor() == players.get(playerIndex).getColor()) {
+                    //possibleCells.add(new Point(i, j));
+                     currCell.setAsEmpty();
+                }
+            }
+        }
+    }
 
 
 

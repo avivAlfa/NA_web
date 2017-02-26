@@ -174,4 +174,7 @@ protected List<PoolElement> createPool(int boardSize, int rangeFrom, int rangeTo
         return chosenIndexes;
     }
 
+    @Override
+    public void removePlayerCells(int playerIndex) {
+    }
 }

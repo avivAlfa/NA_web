@@ -244,7 +244,9 @@ function gameStatusCallBack(json) {
             break;
         case "Finished":
             isMyTurn = false;
-            alert("Game Over");
+            var endGameMessage = getEndGameMessage();
+            alert(endGameMessage);
+
             // if (showScoreBoard) {
             //     showEndGameDiaglog();
             //     showScoreBoard = false;
@@ -503,7 +505,25 @@ function getComputerChoice() {
     return result;
 }
 
-
+function getEndGameMessage(){
+    var result;
+    $.ajax
+    (
+        {
+            async: false,
+            url: '/games',
+            data:
+            {
+                action: 'endGameMessage'
+            },
+            type: 'GET',
+            success: function (json) {
+                result = json;
+            }
+        }
+    )
+    return result;
+}
 
 
 function clickHandler(e) {
