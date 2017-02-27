@@ -869,7 +869,11 @@ function onPrevClick() {
         showGamePosition(gamePositions.get(gamePositionIndex));
     }
 }
+<<<<<<< HEAD
+
+=======
 */
+>>>>>>> b1a52e7403856e00f27baed7258c4a0551b77de9
 function showGamePosition(gamePosition) {
     $('.currentPlayerName').text(gamePosition.getCurrPlayer().getName());
 }
