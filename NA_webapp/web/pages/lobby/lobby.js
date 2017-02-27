@@ -38,7 +38,12 @@ function refreshUserListCallback(json) {
 
 function refreshLoginStatus() {
     var userName = getUserName();
-    $('.userNameSpan').text("Hello " + userName);
+    if(userName != null){
+        $('.userNameSpan').text("Hello " + userName);
+    }
+    else {
+        window.location = "../signup/signup.html";
+    }
 }
 
 function getUserName() {
@@ -280,8 +285,15 @@ function joinGameClicked(gameId) {
                 isComputer: user.isComputer,
                 gameId: gameId
             },
-            type: 'POST',
-            success: function() {window.location = "../gameroom/gameRoom.html"}
+            type: 'GET',
+            success: function(json) {
+                if(json){
+                    window.location = "../gameroom/gameRoom.html";
+                }
+                else{
+                    alert(user.userName + ", You have already signed to other game");
+                }
+            }
             //success: joinGameClickedCallback
         }
     );

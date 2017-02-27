@@ -248,34 +248,20 @@ function gameStatusCallBack(json) {
             isMyTurn = false;
 
             if(status !== "Finished") {
-<<<<<<< HEAD
-                //handleEndGame();
-                alert("Game Over");
-                gamePositions = getGamePositions();
-                gamePositionIndex = gamePositions.length - 1;
-                var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
-                nextPrevElements.attr('style', "visibility: visible;");
-=======
                 handleEndGame();
-                // alert(endGameMessage);
+                // alert("Game Over");
                 // gamePositions = getGamePositions();
                 // gamePositionIndex = gamePositions.length - 1;
                 // var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
                 // nextPrevElements.attr('style', "visibility: visible;");
->>>>>>> 2c1be1e0ac9e8a52dd973607d335f51f971a08a9
             }
-
-
-            // if (showScoreBoard) {
-            //     showEndGameDiaglog();
-            //     showScoreBoard = false;
-            // }
             break;
     }
     status = newStatus;
     $('.gameStatus').text('Game status: ' + status);
 }
 //-------------------
+
 
 function getGamePositions() {
     var result;
@@ -453,58 +439,14 @@ function onPlayMoveClick() {
         playMove(selectedRow, selectedCol);
 
         selectedCell.classList.remove("selectedSquare")
-
-        // imgElem = $(document.createElement('img'));
-        // imgElem.prop('src', "../../common/images/marker.png");
-        // selectedCell.append(imgElem)
         selectedCell.classList.add('cursor'); //TODO: add img to class cursor on css
 
         $(cursorCell).attr('src','');
         $(cursorCell).removeClass("cursor");
-        //$($('.cursor')).attr('src', '');
-       // var cursor = $($('.cursor'))
-      //  if (cursor != null)
-        //    cursor  .classList.remove('cursor');
+
     }else{
         alert("Please choose a cell first");
     }
-    // var selectedSquares = $('.selected');
-    // var row;
-    // var col;
-    // var color = getChooserColor();
-    // var decription = $('.textInput')[0].value;
-    //
-    // if (selectedSquares.length != 0 && color != undefined && turn < 2)
-    // {
-    //     $('.colorSelected')[0].classList.remove('colorSelected');
-    //     $('.textInput')[0].value = "";
-    //     var pairList = [];
-    //     for (i=0; i<selectedSquares.length; i++)
-    //     {
-    //         row = selectedSquares[i].getAttribute('row');
-    //         col = selectedSquares[i].getAttribute('col');
-    //         //  pairList.push({row,col});
-    //         selectedSquares[i].classList.remove('selected');
-    //     }
-    //
-    //     var list = {cells: pairList};
-    //     var toSend = JSON.stringify(list);
-    //     $.ajax
-    //     (
-    //         {
-    //             url: 'games',
-    //             data:
-    //             {
-    //                 action: 'turnPlay',
-    //                 cells: toSend,
-    //                 color: color,
-    //                 description: decription
-    //             },
-    //             type: 'POST',
-    //             success: turnPlayCallback
-    //         }
-    //     )
-    // }
 }
 
 function playMove(selectedRow, selectedCol){
@@ -578,7 +520,7 @@ function removeGameDialog() {
 }
 
 function redirectToLobby(){
-    window.location = "../lobby/lobby.html"
+    onLeaveGameClick(); //its like leave from pending game
 }
 
 function clickHandler(e) {

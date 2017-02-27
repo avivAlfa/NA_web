@@ -318,6 +318,11 @@ public abstract class GameEngine {
         }
     }
 
+    public void removePlayerFromNotRunningGame(String playerName){
+        int playerIndex = getPlayerIndexByName(playerName);
+        players.remove(playerIndex);
+    }
+
     public void removeCurrentPlayerFromGame(){
         if(resignedPlayers == null){
             resignedPlayers = new ArrayList<>();

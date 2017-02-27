@@ -53,9 +53,16 @@ public class UsersListServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             Gson gson = new Gson();
             String currentUserName = SessionUtils.getUsername(request);
-            String json = gson.toJson(currentUserName);
-            out.println(json);
-            out.flush();
+            if(currentUserName != ""){
+                String json = gson.toJson(currentUserName);
+                out.println(json);
+                out.flush();
+            }
+            else {
+                out.println(gson.toJson(null));
+                out.flush();
+//                response.sendRedirect("/pages/signup/signup.html");
+            }
         }
     }
 
