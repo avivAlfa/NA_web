@@ -236,24 +236,10 @@ th {
     vertical-align: middle;
 }
 
-.rowBlock {
-    display: block;
-    height: 30px;
-    text-align: center;
-}
-
-.colBlock{
-    display: inline-block;
-    width: 30px;
-    text-align: center;
-    border: 1px solid transparent;
-}
 
 .rowSquares {
     display: inline-block;
 }
-
-
 
 .image {
     height: 50px;

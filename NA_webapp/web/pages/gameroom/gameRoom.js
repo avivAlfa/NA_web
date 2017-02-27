@@ -1,3 +1,4 @@
+var chatVersion = 0;
 var refreshRate = 2000;
 var status;
 var user;
@@ -10,7 +11,7 @@ var isEnabledSaver = true;
 var gamePositionIndex;
 var gamePositions;
 // var selectedCell = null;
-
+//var CHAT_LIST_URL = buildUrlWithContextPath("game_backend");
 
 var showScoreBoard;
 var myTurnSaver = false;
@@ -20,6 +21,7 @@ var isReplayOn = false;
 window.onload = function()
 {
     checkLoginStatus();
+    chatOnload();
 };
 
 function checkLoginStatus() {
@@ -287,6 +289,11 @@ function getGamePositions() {
     return result;
 }
 
+function startChat() {
+    $(".chatRows").attr("style", "visibility:visible");
+    $("#chatButton").attr("style", "visibility:hidden");
+}
+
 function updateBoard() {
     user = getUser();
     $.ajax
@@ -438,29 +445,31 @@ function onLeaveGameClick() {
 }
 
 function onPlayMoveClick() {
-    var cursorCell;
-    var selectedCell = $('.selectedSquare')[0];
+    if(status == "Running") {
+        var cursorCell;
+        var selectedCell = $('.selectedSquare')[0];
 
-    if(selectedCell != null){
-        cursorCell = $('.cursor')
+        if (selectedCell != null) {
+            cursorCell = $('.cursor')
 
-        var selectedRow = selectedCell.getAttribute('row');
-        var selectedCol = selectedCell.getAttribute('col');
-        playMove(selectedRow, selectedCol);
+            var selectedRow = selectedCell.getAttribute('row');
+            var selectedCol = selectedCell.getAttribute('col');
+            playMove(selectedRow, selectedCol);
 
-        selectedCell.classList.remove("selectedSquare")
-        selectedCell.classList.add('cursor'); //TODO: add img to class cursor on css
+            selectedCell.classList.remove("selectedSquare")
+            selectedCell.classList.add('cursor'); //TODO: add img to class cursor on css
 
-        $(cursorCell).attr('src','');
-        $(cursorCell).removeClass("cursor");
-        updateBoard();
+            $(cursorCell).attr('src', '');
+            $(cursorCell).removeClass("cursor");
+            updateBoard();
 
-    }else{
-        if(isMyTurn){
-            alert("Please choose a cell first");
-        }
-        else{
-            alert("Yo! Not your turn");
+        } else {
+            if (isMyTurn) {
+                alert("Please choose a cell first");
+            }
+            else {
+                alert("Yo! Not your turn");
+            }
         }
     }
 }
@@ -479,6 +488,7 @@ function playMove(selectedRow, selectedCol){
             success: function() {}
         }
     );
+
 }
 
 function playComputerMove() {
@@ -588,40 +598,95 @@ function isButtonAvailable(e) {
     }
 }
 
+function appendToChatArea(entries) {
+//    $("#chatarea").children(".success").removeClass("success");
+
+    // add the relevant entries
+    $.each(entries || [], appendChatEntry);
+
+    // handle the scroller to auto scroll to the end of the game_backend area
+    var scroller = $("#chatarea");
+    var height = scroller[0].scrollHeight - $(scroller).height();
+    $(scroller).stop().animate({ scrollTop: height }, "slow");
+}
+
+function appendChatEntry(index, entry){
+    var entryElement = createChatEntry(entry);
+    $("#chatarea").append(entryElement).append("<br>");
+}
+
+function createChatEntry (entry){
+    entry.chatString = entry.chatString.replace (":)", "<span class='smiley'></span>");
+    return $("<span class=\"success\">").append(entry.username + "> " + entry.chatString);
+}
+
+//call the server and get the game_backend version
+//we also send it the current game_backend version so in case there was a change
+//in the game_backend content, we will get the new string as well
+function ajaxChatContent() {
+    $.ajax({
+        url: "/game_backend",
+        data: "chatversion=" + chatVersion,
+        dataType: 'json',
+        success: function(data) {
+
+            console.log("Server game_backend version: " + data.version + ", Current game_backend version: " + chatVersion);
+            if (data.version !== chatVersion) {
+                chatVersion = data.version;
+                appendToChatArea(data.entries);
+            }
+            triggerAjaxChatContent();
+        },
+        error: function(error) {
+            triggerAjaxChatContent();
+        }
+    });
+}
+
+//add a method to the button in order to make that form use AJAX
+//and not actually submit the form
+function chatOnload() { // onload...do
+    //add a function to the submit event
+    $("#chatform").submit(function() {
+        $.ajax({
+            data: $(this).serialize(),
+            url: this.action,
+            timeout: 2000,
+            error: function() {
+                //console.error("Failed to submit");
+            },
+            success: function(r) {
+                //do not add the user string to the game_backend area
+                //since it's going to be retrieved from the server
+                //$("#result h1").text(r);
+            }
+        });
+
+        $("#userstring").val("");
+        // by default - we'll always return false so it doesn't redirect the user.
+        return false;
+    });
+}
+
+function triggerAjaxChatContent() {
+    setTimeout(ajaxChatContent, refreshRate);
+}
+
+//activate the timer calls after the page is loaded
+$(function() {
+
+    //prevent IE from caching ajax calls
+    $.ajaxSetup({cache: false});
+
+    //The users list is refreshed automatically every second
+   // setInterval(ajaxUsersList, refreshRate);
+
+    //The game_backend content is refreshed only once (using a timeout) but
+    //on each call it triggers another execution of itself later (1 second later)
+    triggerAjaxChatContent();
+});
 
 
-// function showEndGameDiaglog() {
-//     $('.winnerDialog')[0].style.display = "inline-block";
-//     $.ajax
-//     (
-//         {
-//             url: 'games',
-//             data:
-//             {
-//                 action: 'gameEnd'
-//             },
-//             type: 'GET',
-//             success: showEndGameDiaglogCallback
-//         }
-//     )
-// }
-// function showEndGameDiaglogCallback(json) {
-//     setReason(json.reason);
-//     var board = json.board;
-//     $('.highestScore')[0].innerHTML = json.winnersScore;
-//     var winnerDiv = $('.winnerDiv')[0];
-//
-//     for (i = 0; i < json.winners.length; i++)
-//     {
-//         var winnerSpan = document.createElement('span');
-//         winnerSpan.classList.add('winnerName');
-//         winnerDiv.appendChild(winnerSpan);
-//         winnerSpan.innerHTML = winnerSpan.innerHTML + json.winners[i].m_Name + " ";
-//     }
-//     winnerSpan.innerHTML = winnerSpan.innerHTML + '.';
-//
-//    // createBoardForEndDialog(board);
-// }
 
 
 function setReason(reason) {
@@ -672,93 +737,6 @@ function resetBoard() {
         perfects[i].classList.remove('perfect');
     }
 }
-/*
-function onNextClick() {
-    if(gamePositionIndex < gamePositions.size() - 1) {
-        gamePositionIndex++;
-
-        // if(gamePositionIndex == gamePositions.size() - 1 || gamePositionIndex == 0) {
-        //     isNextDisabled.setValue(true);
-        //     isPrevDisabled.setValue(false);
-        // } else {
-        //     isPrevDisabled.setValue(false);
-        //     isNextDisabled.setValue(false);
-        // }
-        //showGamePosition();
-
-        var position = gamePositions.get(gamePositionIndex - 1);
-
-        if(gamePositions.get(gamePositionIndex).getResinedPoints() != null) {
-
-            for(var point in gamePositions.get(gamePositionIndex).getResinedPoints()) {
-                gameEngine.setCellValue(point, new Cell(-999, 0, true, false));
-                gameBoardUI.getCell((point.getX(), point.getY()).updateValues());
-            }
-
-
-        } else {
-
-            gameEngine.setCellValue(position.getSelectedPoint(), new Cell(-999, 0, true, false));
-            gameBoardUI.getCell(position.getSelectedPoint().getX(), position.getSelectedPoint().getY()).updateValues();
-
-            gameEngine.setCellValue(gamePositions.get(gamePositionIndex).getSelectedPoint(),
-                new Cell(999, 0, false, true));
-            gameBoardUI.getCell(gamePositions.get(gamePositionIndex).getSelectedPoint().getX(),
-                 gamePositions.get(gamePositionIndex).getSelectedPoint().getY()).updateValues();
-        }
-        showGamePosition(gamePositions.get(gamePositionIndex));
-    }
-}
-
-function onPrevClick() {
-    if(gamePositionIndex != 0) {
-        gamePositionIndex--;
-
-        // if(gamePositionIndex == gamePositions.size() - 1 || gamePositionIndex == 0) {
-        //     isPrevDisabled.setValue(true);
-        //     isNextDisabled.setValue(false);
-        //
-        // } else {
-        //     isPrevDisabled.setValue(false);
-        //     isNextDisabled.setValue(false);
-        // }
-
-
-
-        var position = gamePositions.get(gamePositionIndex + 1);
-
-        if(position.getResinedPoints() != null) {
-
-            var resinedIndex = 0;
-            for(var point in position.getResinedPoints()) {
-
-                gameEngine.setCellValue(point, new Cell
-                (position.getResinedCells().get(resinedIndex).getValue(),
-                    position.getResinedCells().get(resinedIndex).getColor(), true, false));
-                gameBoardUI.getCell(point.getX(), point.getY()).updateValues();
-                resinedIndex++;
-            }
-
-
-        } else {
-
-            gameEngine.setCellValue(position.getSelectedPoint(), position.getSelectedCell());
-            gameBoardUI.getCell( position.getSelectedPoint().getX(), position.getSelectedPoint().getY()).updateValues();
-
-            gameEngine.setCellValue(gamePositions.get(gamePositionIndex).getSelectedPoint(),
-                new Cell(999, 0, false, true));
-            gameBoardUI.getCell(gamePositions.get(gamePositionIndex).getSelectedPoint().getX(),
-                gamePositions.get(gamePositionIndex).getSelectedPoint().getY()).updateValues();
-        }
-        showGamePosition(gamePositions.get(gamePositionIndex));
-    }
-}
-*/
-function showGamePosition(gamePosition) {
-    $('.currentPlayerName').text(gamePosition.getCurrPlayer().getName());
-}
-
-
 
 /*function onNextClick() {
     if (index < maxIndex)
