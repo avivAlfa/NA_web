@@ -66,6 +66,7 @@ function initializePage() {
     // setInterval(checkLoginStatus, refreshRate);
     setInterval(updatePlayersDetails, refreshRate);
     setInterval(gameStatus, refreshRate);
+
 }
 
 function getUser() {
@@ -212,9 +213,11 @@ function gameStatusCallBack(json) {
             }
 
             //if now changed to my turn, or not my turn then update board
-            if((!isMyTurn && newCurrentPlayerName === userName) || newCurrentPlayerName !== userName) {
+   //         if(((!isMyTurn && newCurrentPlayerName === userName) || newCurrentPlayerName !== userName)|| isComputer){
+     //           updateBoard();
+      //      }
+            if(newCurrentPlayerName !== userName || isComputer)
                 updateBoard();
-            }
 
             $('.currentPlayerName')[0].innerHTML = newCurrentPlayerName;
 
@@ -224,12 +227,14 @@ function gameStatusCallBack(json) {
                 if(possibleCellFlag) {
                     isMyTurn = true;
                     if (!isComputer) {
+                        updateBoard();
                         alert('Hey Buddy! it is now your turn !');
                     }
 
                     if (isComputer)
                     {
-                        playComputerMove();
+                        isMyTurn = false;
+                         setTimeout(playComputerMove, 1200);
                     }
                 }
                 else{
@@ -287,6 +292,7 @@ function updateBoard() {
     $.ajax
     (
         {
+            async: false,//TODO
             url: '/games',
             data:
             {
@@ -375,6 +381,7 @@ function hasPossibleCells(){
 function skipTurn(){
     $.ajax(
         {
+            async: false,
             url: '/games',
             data: {
                 action: "changeTurn",
@@ -386,15 +393,18 @@ function skipTurn(){
 }
 
 function clickOnCell(event) {
-    //remove previus selected
-    var selectedCell = $('.selectedSquare')[0];
-    if(selectedCell != null) {
-        selectedCell.classList.remove('selectedSquare');
+    if(isMyTurn){
+        //remove previus selected
+        var selectedCell = $('.selectedSquare')[0];
+        if(selectedCell != null) {
+            selectedCell.classList.remove('selectedSquare');
+        }
+
+        //set new selected
+        selectedCell = event.target
+        event.target.classList.add('selectedSquare');
     }
 
-    //set new selected
-    selectedCell = event.target
-    event.target.classList.add('selectedSquare');
 }
 
 function getColorsList(){
@@ -443,15 +453,22 @@ function onPlayMoveClick() {
 
         $(cursorCell).attr('src','');
         $(cursorCell).removeClass("cursor");
+        updateBoard();
 
     }else{
-        alert("Please choose a cell first");
+        if(isMyTurn){
+            alert("Please choose a cell first");
+        }
+        else{
+            alert("Yo! Not your turn");
+        }
     }
 }
 
 function playMove(selectedRow, selectedCol){
     $.ajax(
         {
+            async: false,
             url: '/games',
             data: {
                 action: "playMove",
@@ -467,6 +484,7 @@ function playMove(selectedRow, selectedCol){
 function playComputerMove() {
     var chosenCellByComputer = getComputerChoice();
     playMove(chosenCellByComputer.x, chosenCellByComputer.y);
+    updateBoard();
 }
 
 function getComputerChoice() {
@@ -490,6 +508,7 @@ function getComputerChoice() {
 }
 
 function handleEndGame(){
+    updateBoard();
     var result;
     $.ajax
     (
@@ -653,7 +672,7 @@ function resetBoard() {
         perfects[i].classList.remove('perfect');
     }
 }
-
+/*
 function onNextClick() {
     if(gamePositionIndex < gamePositions.size() - 1) {
         gamePositionIndex++;
@@ -734,7 +753,7 @@ function onPrevClick() {
         showGamePosition(gamePositions.get(gamePositionIndex));
     }
 }
-
+*/
 function showGamePosition(gamePosition) {
     $('.currentPlayerName').text(gamePosition.getCurrPlayer().getName());
 }
