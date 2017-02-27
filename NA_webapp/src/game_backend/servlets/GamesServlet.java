@@ -425,10 +425,11 @@ public class GamesServlet extends HttpServlet{
         GameObject game = this.gamesManager.getGameByUserName(userName);
         if(game != null) {
             game.getGameEngine().changeTurn();
+            if(game.getGameEngine().endGame() && game.getGameStatus() == GameStatus.Running){
+                game.setGameStatus(GameStatus.Finished);
+            }
         }
-        if(game.getGameEngine().endGame()){
-            game.setGameStatus(GameStatus.Finished);
-        }
+
     }
 
     /**
