@@ -85,8 +85,16 @@ body{
     visibility: hidden;
 }
 
-div.prevNexDiv > div:nth-child(1) {
-    width: 50%;
+.prevNexDiv .action {
+    width: 49%;
+}
+
+.prevNexDiv > div:nth-child(1) {
+    float: left;
+}
+
+.prevNexDiv > div:nth-child(2) {
+    float: right;
 }
 
 .mainDivBody {
@@ -160,6 +168,8 @@ div.prevNexDiv > div:nth-child(1) {
     white-space: nowrap;
     line-height: 0;
     margin-left: 40px;
+    float: left;
+    width: calc(100% - 400px);
 }
 
 .square{
