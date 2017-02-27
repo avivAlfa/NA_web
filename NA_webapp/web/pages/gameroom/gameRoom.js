@@ -245,30 +245,23 @@ function gameStatusCallBack(json) {
 
             break;
         case "Finished":
-
             isMyTurn = false;
 
             if(status !== "Finished") {
-                //handleEndGame();
-                alert("Game Over");
-                gamePositions = getGamePositions();
-                gamePositionIndex = gamePositions.length - 1;
-                var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
-                nextPrevElements.attr('style', "visibility: visible;");
+                handleEndGame();
+                // alert("Game Over");
+                // gamePositions = getGamePositions();
+                // gamePositionIndex = gamePositions.length - 1;
+                // var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
+                // nextPrevElements.attr('style', "visibility: visible;");
             }
-
-
-
-            // if (showScoreBoard) {
-            //     showEndGameDiaglog();
-            //     showScoreBoard = false;
-            // }
             break;
     }
     status = newStatus;
     $('.gameStatus').text('Game status: ' + status);
 }
 //-------------------
+
 
 function getGamePositions() {
     var result;
@@ -527,7 +520,7 @@ function removeGameDialog() {
 }
 
 function redirectToLobby(){
-    window.location = "../lobby/lobby.html"
+    onLeaveGameClick(); //its like leave from pending game
 }
 
 function clickHandler(e) {

@@ -63,4 +63,14 @@ public class GamesManager {
         return null;
     }
 
+    public boolean isUserNameRegisteredToAnyOtherGame(String userName, GameObject currentGame) {
+        for (Map.Entry<Integer, GameObject> gameEntry : this.games.entrySet()) {
+            GameObject game = gameEntry.getValue();
+            if (game != currentGame) {
+                if (game.containsUserName(userName))
+                    return true;
+            }
+        }
+        return false;
+    }
 }

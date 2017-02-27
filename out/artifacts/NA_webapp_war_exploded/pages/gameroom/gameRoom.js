@@ -245,30 +245,23 @@ function gameStatusCallBack(json) {
 
             break;
         case "Finished":
-
             isMyTurn = false;
 
             if(status !== "Finished") {
-                //handleEndGame();
-                alert("Game Over");
-                gamePositions = getGamePositions();
-                gamePositionIndex = gamePositions.length - 1;
-                var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
-                nextPrevElements.attr('style', "visibility: visible;");
+                handleEndGame();
+                // alert("Game Over");
+                // gamePositions = getGamePositions();
+                // gamePositionIndex = gamePositions.length - 1;
+                // var nextPrevElements = $(".prevNexDiv") //TODO: only prev?
+                // nextPrevElements.attr('style', "visibility: visible;");
             }
-
-
-
-            // if (showScoreBoard) {
-            //     showEndGameDiaglog();
-            //     showScoreBoard = false;
-            // }
             break;
     }
     status = newStatus;
     $('.gameStatus').text('Game status: ' + status);
 }
 //-------------------
+
 
 function getGamePositions() {
     var result;
@@ -527,7 +520,7 @@ function removeGameDialog() {
 }
 
 function redirectToLobby(){
-    window.location = "../lobby/lobby.html"
+    onLeaveGameClick(); //its like leave from pending game
 }
 
 function clickHandler(e) {
@@ -664,6 +657,7 @@ function resetBoard() {
 function onNextClick() {
     if(gamePositionIndex < gamePositions.size() - 1) {
         gamePositionIndex++;
+<<<<<<< HEAD
 
         // if(gamePositionIndex == gamePositions.size() - 1 || gamePositionIndex == 0) {
         //     isNextDisabled.setValue(true);
@@ -678,6 +672,22 @@ function onNextClick() {
 
         if(gamePositions.get(gamePositionIndex).getResinedPoints() != null) {
 
+=======
+
+        // if(gamePositionIndex == gamePositions.size() - 1 || gamePositionIndex == 0) {
+        //     isNextDisabled.setValue(true);
+        //     isPrevDisabled.setValue(false);
+        // } else {
+        //     isPrevDisabled.setValue(false);
+        //     isNextDisabled.setValue(false);
+        // }
+        //showGamePosition();
+
+        var position = gamePositions.get(gamePositionIndex - 1);
+
+        if(gamePositions.get(gamePositionIndex).getResinedPoints() != null) {
+
+>>>>>>> dd567d4a750b60670de4f509a511ba3e9dac4504
             for(var point in gamePositions.get(gamePositionIndex).getResinedPoints()) {
                 gameEngine.setCellValue(point, new Cell(-999, 0, true, false));
                 gameBoardUI.getCell((point.getX(), point.getY()).updateValues());
@@ -710,11 +720,19 @@ function onPrevClick() {
         //     isPrevDisabled.setValue(false);
         //     isNextDisabled.setValue(false);
         // }
+<<<<<<< HEAD
 
 
 
         var position = gamePositions.get(gamePositionIndex + 1);
 
+=======
+
+
+
+        var position = gamePositions.get(gamePositionIndex + 1);
+
+>>>>>>> dd567d4a750b60670de4f509a511ba3e9dac4504
         if(position.getResinedPoints() != null) {
 
             var resinedIndex = 0;
@@ -740,12 +758,21 @@ function onPrevClick() {
         }
         showGamePosition(gamePositions.get(gamePositionIndex));
     }
+<<<<<<< HEAD
 }
 
 function showGamePosition(gamePosition) {
     $('.currentPlayerName').text(gamePosition.getCurrPlayer().getName());
 }
 
+=======
+}
+
+function showGamePosition(gamePosition) {
+    $('.currentPlayerName').text(gamePosition.getCurrPlayer().getName());
+}
+
+>>>>>>> dd567d4a750b60670de4f509a511ba3e9dac4504
 
 
 /*function onNextClick() {

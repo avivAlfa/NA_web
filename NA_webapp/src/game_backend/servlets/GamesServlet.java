@@ -97,6 +97,9 @@ public class GamesServlet extends HttpServlet{
             case "gamesList":
                 getGamesList(request, response);
                 break;
+            case "joinGame":
+                joinGameAction(request, response);
+                break;
             case "gameStatusMessage":
                 getGameStatusAndCurrentPlayerName(request,response);
                 break;
@@ -267,9 +270,9 @@ public class GamesServlet extends HttpServlet{
             case "loadGame":
                 loadGameAction(request, response);
                 break;
-            case "joinGame":
-                joinGameAction(request, response);
-                break;
+//            case "joinGame":
+//                joinGameAction(request, response);
+//                break;
             case "leaveGame":
                 leaveGameAction(request, response);
                 break;
@@ -346,16 +349,24 @@ public class GamesServlet extends HttpServlet{
         int gameId = Integer.parseInt(request.getParameter("gameId"));
         GameObject currentGame = this.gamesManager.getGameByKey(gameId);
         //  LoginManager loginManager = LoginManager.getInstance();
-        //PrintWriter out = response.getWriter();
-        //Gson gson = new Gson();
-        //response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
+        Gson gson = new Gson();
+        response.setContentType("application/json");
         //  if(loginManager.canUserJoinGame(userName) && currentGame.getStatus().equals(GameStatus.WaitingForPlayers)) {
         //     loginManager.userJoinGame(userName, gameId);
-        currentGame.getGameEngine().addPlayer(userName, isComputer);
 
-        if(currentGame.getGameEngine().getPlayers().size() == currentGame.getRequiredNumOfPlayers())//if room is full
-            currentGame.setGameStatus(GameStatus.Running);
 
+        if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !gamesManager.isUserNameRegisteredToAnyOtherGame(userName,currentGame)) {
+            if(!currentGame.containsUserName(userName)){
+                currentGame.getGameEngine().addPlayer(userName, isComputer);
+                if (currentGame.getGameEngine().getPlayers().size() == currentGame.getRequiredNumOfPlayers())//if room is full
+                    currentGame.setGameStatus(GameStatus.Running);
+            }
+            out.print(gson.toJson(true));
+        }
+        else{
+            out.print(gson.toJson(false));
+        }
         //out.print(gson.toJson(new LoadGameStatus(true, "")));
         // } else {
         //     out.print(gson.toJson(new LoadGameStatus(false, "Couldn\'t join game.")));
@@ -367,10 +378,22 @@ public class GamesServlet extends HttpServlet{
         String userName = SessionUtils.getUsername(request);
         GameObject game = this.gamesManager.getGameByUserName(userName);
         if(game != null) {
-            game.getGameEngine().removePlayer(userName);
-            if(game.getGameEngine().endGame()){
-                game.setGameStatus(GameStatus.Finished);
+            GameStatus gameStatus = game.getGameStatus();
+            switch (gameStatus){
+                case Running:
+                    game.getGameEngine().removePlayer(userName);
+                    if(game.getGameEngine().endGame()){
+                        game.setGameStatus(GameStatus.Finished);
+                    }
+                    break;
+                case WaitingForPlayers:
+                    game.getGameEngine().removePlayerFromNotRunningGame(userName);
+                    break;
+                case Finished:
+                    game.getGameEngine().removePlayerFromNotRunningGame(userName);
             }
+
+
             //response.sendRedirect(LOBBY_URL);
         }
 
