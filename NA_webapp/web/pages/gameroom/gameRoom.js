@@ -130,7 +130,8 @@ function updatePlayersDetails() {
     )
 }
 function updatePlayersDetailsCallback(json) {
-    //$('.registeredPlayers').text(json.length);
+    var activePlayers = json[0];
+    var resignedPlayers = json[1];
 
     var playersNamesDiv = $('.playersNamesBody');
     var playersTypeDiv = $('.playersTypesBody');
@@ -141,7 +142,7 @@ function updatePlayersDetailsCallback(json) {
     playersTypeDiv.empty();
     playersColorDiv.empty();
     playersScoreDiv.empty();
-    for (i=0; i<json.length; i++)
+    for (i=0; i<activePlayers.length; i++)
     {
         var playerContainerDiv = $(document.createElement('div'));
         playerContainerDiv.addClass('playerContainerDiv');
@@ -169,19 +170,134 @@ function updatePlayersDetailsCallback(json) {
     var colorDivs = $('.colorDiv');
     var scoreDivs = $('.scoreDiv');
 
-    for (i=0; i<json.length; i++)
+    for (i=0; i<activePlayers.length; i++)
     {
-        playerDivs[i].innerHTML = json[i].name// + ' #' + json[i].id;
-        typeDivs[i].innerHTML = (json[i].isHuman?"Human":"Computer");
+        playerDivs[i].innerHTML = activePlayers[i].name// + ' #' + json[i].id;
+        typeDivs[i].innerHTML = (activePlayers[i].isHuman?"Human":"Computer");
         // if(json[i].type)
         //     typeDivs[i].innerHTML = "Computer";
         // else
         //     typeDivs[i].innerHTML = "Human";
 
         var colorsList = getColorsList();
-        colorDivs[i].innerHTML = colorsList[json[i].color];
-        scoreDivs[i].innerHTML = json[i].score;
+        colorDivs[i].innerHTML = colorsList[activePlayers[i].color];
+        scoreDivs[i].innerHTML = activePlayers[i].score;
     }
+
+    updateResignedPlayersDetails(resignedPlayers);
+
+
+    // //$('.registeredPlayers').text(json.length);
+    //
+    // var playersNamesDiv = $('.playersNamesBody');
+    // var playersTypeDiv = $('.playersTypesBody');
+    // var playersColorDiv = $('.playersColorBody');
+    // var playersScoreDiv = $('.playersScoreBody');
+    //
+    // playersNamesDiv.empty();
+    // playersTypeDiv.empty();
+    // playersColorDiv.empty();
+    // playersScoreDiv.empty();
+    // for (i=0; i<json.length; i++)
+    // {
+    //     var playerContainerDiv = $(document.createElement('div'));
+    //     playerContainerDiv.addClass('playerContainerDiv');
+    //     playerContainerDiv.appendTo(playersNamesDiv);
+    //
+    //     var playerDiv = $(document.createElement('div'));
+    //     playerDiv.addClass('playerDiv');
+    //     playerDiv.appendTo(playerContainerDiv);
+    //
+    //     var typeDiv = $(document.createElement('div'));
+    //     typeDiv.addClass('typeDiv');
+    //     typeDiv.appendTo(playersTypeDiv);
+    //
+    //     var colorDiv = $(document.createElement('div'));
+    //     colorDiv.addClass('colorDiv');
+    //     colorDiv.appendTo(playersColorDiv);
+    //
+    //     var scoreDiv = $(document.createElement('div'));
+    //     scoreDiv.addClass('scoreDiv');
+    //     scoreDiv.appendTo(playersScoreDiv);
+    // }
+    //
+    // var playerDivs = $('.playerDiv');
+    // var typeDivs = $('.typeDiv');
+    // var colorDivs = $('.colorDiv');
+    // var scoreDivs = $('.scoreDiv');
+    //
+    // for (i=0; i<json.length; i++)
+    // {
+    //     playerDivs[i].innerHTML = json[i].name// + ' #' + json[i].id;
+    //     typeDivs[i].innerHTML = (json[i].isHuman?"Human":"Computer");
+    //     // if(json[i].type)
+    //     //     typeDivs[i].innerHTML = "Computer";
+    //     // else
+    //     //     typeDivs[i].innerHTML = "Human";
+    //
+    //     var colorsList = getColorsList();
+    //     colorDivs[i].innerHTML = colorsList[json[i].color];
+    //     scoreDivs[i].innerHTML = json[i].score;
+    // }
+
+
+}
+
+function updateResignedPlayersDetails(resignedPlayers) {
+    if(resignedPlayers != null){
+        var resignedPlayersNamesDiv = $('.resignedPlayersNamesBody');
+        var resignedPlayersTypeDiv = $('.resignedPlayersTypesBody');
+        var resignedPlayersColorDiv = $('.resignedPlayersColorBody');
+        var resignedPlayersScoreDiv = $('.resignedPlayersScoreBody');
+
+        resignedPlayersNamesDiv.empty();
+        resignedPlayersTypeDiv.empty();
+        resignedPlayersColorDiv.empty();
+        resignedPlayersScoreDiv.empty();
+
+        for (i=0; i<resignedPlayers.length; i++)
+        {
+            var resignedPlayerContainerDiv = $(document.createElement('div'));
+            resignedPlayerContainerDiv.addClass('resignedPlayerContainerDiv');
+            resignedPlayerContainerDiv.appendTo(resignedPlayersNamesDiv);
+
+            var resignedPlayerDiv = $(document.createElement('div'));
+            resignedPlayerDiv.addClass('resignedPlayerDiv');
+            resignedPlayerDiv.appendTo(resignedPlayerContainerDiv);
+
+            var resignedPlayerTypeDiv = $(document.createElement('div'));
+            resignedPlayerTypeDiv.addClass('resignedPlayerTypeDiv');
+            resignedPlayerTypeDiv.appendTo(resignedPlayersTypeDiv);
+
+            var resignedPlayerColorDiv = $(document.createElement('div'));
+            resignedPlayerColorDiv.addClass('resignedPlayerColorDiv');
+            resignedPlayerColorDiv.appendTo(resignedPlayersColorDiv);
+
+            var resignedPlayerScoreDiv = $(document.createElement('div'));
+            resignedPlayerScoreDiv.addClass('resignedPlayerScoreDiv');
+            resignedPlayerScoreDiv.appendTo(resignedPlayersScoreDiv);
+        }
+
+        var resignedPlayerDivs = $('.resignedPlayerDiv');
+        var resignedPlayerTypeDivs = $('.resignedPlayerTypeDiv');
+        var resignedPlayerColorDivs = $('.resignedPlayerColorDiv');
+        var resignedPlayerScoreDivs = $('.resignedPlayerScoreDiv');
+
+        for (i=0; i<resignedPlayers.length; i++)
+        {
+            resignedPlayerDivs[i].innerHTML = resignedPlayers[i].name// + ' #' + json[i].id;
+            resignedPlayerTypeDivs[i].innerHTML = (resignedPlayers[i].isHuman?"Human":"Computer");
+            // if(json[i].type)
+            //     typeDivs[i].innerHTML = "Computer";
+            // else
+            //     typeDivs[i].innerHTML = "Human";
+
+            var resignedPlayersColorsList = getColorsList();
+            resignedPlayerColorDivs[i].innerHTML = resignedPlayersColorsList[resignedPlayers[i].color];
+            resignedPlayerScoreDivs[i].innerHTML = resignedPlayers[i].score;
+        }
+    }
+
 }
 
 function gameStatus() { //this function refresh all game details(except players details), kind of game loop

@@ -124,7 +124,23 @@ body{
 .players {
     margin-bottom: 2%;
     display: inline-block;
-    height: 300px;
+    height: 200px;
+    /*float: right;*/
+    text-align: left;
+    background: lightslategray;
+    /*opacity: 0.6;*/
+    border-radius: 5px;
+    /*box-shadow: 3px 6px 17px 1px;*/
+    font-size: 15px;
+    font-family: "Century Gothic";
+    color: black;
+    /*float:left;*/
+}
+
+.resignedPlayers {
+    margin-bottom: 2%;
+    display: inline-block;
+    height: 200px;
     /*float: right;*/
     text-align: left;
     background: lightslategray;
@@ -182,11 +198,11 @@ body{
     text-align: center;
 }
 
-.playerContainerDiv {
+.playerContainerDiv, .resignedplayerContainerDiv{
     position: relative;
 }
 
-.playersNames {
+.playersNames, .resignedPlayersNames{
     display: inline-block;
     border-radius: inherit;
     height: inherit;
@@ -196,7 +212,7 @@ body{
     white-space: nowrap;
 }
 
-.playersTypes {
+.playersTypes, .resignedPlayersTypes {
     display: inline-block;
     border-radius: inherit;
     height: inherit;
@@ -204,7 +220,7 @@ body{
     vertical-align: top;
 }
 
-.playersColor {
+.playersColor, .resignedPlayersColor{
     display: inline-block;
     border-radius: inherit;
     height: inherit;
@@ -213,7 +229,7 @@ body{
     vertical-align: top;
 }
 
-.playersScore {
+.playersScore, .resignedPlayersScore {
     display: inline-block;
     border-radius: inherit;
     height: inherit;
@@ -222,7 +238,7 @@ body{
     vertical-align: top;
 }
 
-.playerDiv{
+.playerDiv, .resignedPlayerDiv{
     text-overflow: ellipsis;
     overflow: hidden;
 }

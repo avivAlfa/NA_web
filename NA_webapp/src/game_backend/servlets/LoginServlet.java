@@ -1,10 +1,12 @@
 package game_backend.servlets;
 
+import com.google.gson.Gson;
 import game_backend.constants.Constants;
 import game_backend.utils.SessionUtils;
 import game_backend.utils.ServletUtils;
 import webEngine.users.UserManager;
 import java.io.IOException;
+import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -80,6 +82,22 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
+    protected void isUserLoggedOn(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        String usernameFromSession = SessionUtils.getUsername(request);
+        Gson gson = new Gson();
+        PrintWriter out = response.getWriter();
+        response.setContentType("application/json");
+        if (usernameFromSession == null) {
+            //user is not logged in yet
+            out.println(gson.toJson(false));
+        } else {
+            //user is already logged in
+            out.println(gson.toJson(true));
+            }
+        }
+
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -92,7 +110,16 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        String action = request.getParameter("action");
+        switch (action) {
+            case "login":
+                processRequest(request, response);
+                break;
+            case "checkUser":
+                isUserLoggedOn(request,response);
+                break;
+        }
+
     }
 
     /**
