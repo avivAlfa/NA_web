@@ -1,5 +1,6 @@
 package webEngine.gamesManager;
 
+import Exceptions.duplicateGameNameException;
 import game.GameEngine;
 
 import java.io.InputStream;
@@ -35,6 +36,13 @@ public class GamesManager {
         GameObject newGame = new GameObject();
 
         String gameName = newGame.initGame(xmlDescription, creator, Integer.valueOf(numberOfGames.intValue() + 1));
+
+        for (GameObject game:this.games.values()) {
+            if(game.getTitle().equals(gameName)){
+                throw new duplicateGameNameException();
+            }
+        }
+
         numberOfGames = Integer.valueOf(numberOfGames.intValue() + 1);
        // if(this.isGameNameTaken(gameName)) {
         //    throw new InvalidGameDataException("Game title is already in use.");

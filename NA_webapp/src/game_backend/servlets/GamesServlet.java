@@ -1,6 +1,7 @@
 package game_backend.servlets;
 
 import Exceptions.CellOutOfBoundsException;
+import Exceptions.duplicateGameNameException;
 import com.google.gson.Gson;
 
 import game.Board;
@@ -181,7 +182,10 @@ public class GamesServlet extends HttpServlet{
         PrintWriter out = response.getWriter();
         response.setContentType("application/json");
         if(game != null) {
-            out.println(gson.toJson(game.getGameEngine().getPlayers()));
+            List<Object> activeAndResignPlayers = new ArrayList<>();
+            activeAndResignPlayers.add(game.getGameEngine().getPlayers());
+            activeAndResignPlayers.add(game.getGameEngine().getResignedPlayers());
+            out.println(gson.toJson(activeAndResignPlayers));
         }
     }
 
@@ -299,7 +303,8 @@ public class GamesServlet extends HttpServlet{
             this.gamesManager.addGame(gameContent, gameCreator);
             out.println(gson.toJson(new LoadGameStatus(true, "")));
 
-
+        } catch (duplicateGameNameException e) {
+            out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
         } catch (CellOutOfBoundsException e) {
             out.println(gson.toJson(new LoadGameStatus(false, e.getMessage())));
         } catch (Exceptions.CursorCellException e) {
@@ -331,7 +336,7 @@ public class GamesServlet extends HttpServlet{
             out.println(gson.toJson(new LoadGameStatus(false, "Error trying to retrieve data from XML file")));
         } catch (Exception e) {
            // out.println(gson.toJson(new LoadGameStatus(false, "An unhandled error occured")));
-            out.println(gson.toJson(new LoadGameStatus(false, e.getClass().toString())));
+            out.println(gson.toJson(new LoadGameStatus(false, "An Unhandled error occured")));
 
         }
 //            out.println(gson.toJson(new LoadGameStatus(true, "")));
@@ -356,7 +361,8 @@ public class GamesServlet extends HttpServlet{
         //     loginManager.userJoinGame(userName, gameId);
 
 
-        if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !gamesManager.isUserNameRegisteredToAnyOtherGame(userName,currentGame)) {
+        //if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !gamesManager.isUserNameRegisteredToAnyOtherGame(userName,currentGame)) {
+        if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !currentGame.getGameEngine().getPlayers().contains(userName)){
             if(!currentGame.containsUserName(userName)){
                 currentGame.getGameEngine().addPlayer(userName, isComputer);
                 if (currentGame.getGameEngine().getPlayers().size() == currentGame.getRequiredNumOfPlayers())//if room is full

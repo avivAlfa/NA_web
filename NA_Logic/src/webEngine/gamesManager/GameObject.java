@@ -38,6 +38,10 @@ public class GameObject {
         this.gameStatus = gameStatus;
     }
 
+    public String getTitle() {
+        return title;
+    }
+
     public int getRequiredNumOfPlayers() {
         return requiredNumOfPlayers;
     }
