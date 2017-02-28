@@ -548,16 +548,20 @@ function getColorsList(){
 }
 
 function onLeaveGameClick() {
-    $.ajax(
-        {
-            url: '/games',
-            data: {
-                action: "leaveGame",
-            },
-            type: 'POST',
-            success: function() {window.location = "../lobby/lobby.html"}
-        }
-    );
+    if (!isComputer || isComputer && status === "Finished") {
+        $.ajax(
+            {
+                url: '/games',
+                data: {
+                    action: "leaveGame",
+                },
+                type: 'POST',
+                success: function () {
+                    window.location = "../lobby/lobby.html"
+                }
+            }
+        );
+    }
 }
 
 function onPlayMoveClick() {

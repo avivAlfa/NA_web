@@ -216,6 +216,13 @@ public class AdvancedGameEngine extends GameEngine {
         }
     }
 
+    @Override
+    public void addPlayer(String userName, boolean isComputer) {
+        Player player = new Player(userName, 0, 0 , players.size() + 1, !isComputer);
+
+        players.add(player);
+    }
+
 
 
 }

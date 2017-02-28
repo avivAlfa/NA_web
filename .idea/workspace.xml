@@ -25,9 +25,22 @@
       <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="92" column="24" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="24" />
-              <folding />
+            <state relative-caret-position="-27">
+              <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+              <folding>
+                <element signature="e#6676#6677#0" expanded="false" />
+                <marker date="1488310884302" expanded="true" signature="1882:4706" ph="{...}" />
+                <marker date="1488310884302" expanded="true" signature="2352:2539" ph="//..." />
+                <marker date="1488310884302" expanded="true" signature="2956:3461" ph="//..." />
+                <marker date="1488310884302" expanded="true" signature="3992:4194" ph="//..." />
+                <marker date="1488310884302" expanded="true" signature="4318:4501" ph="//..." />
+                <marker date="1488310884302" expanded="true" signature="5981:5987" ph="{...}" />
+                <marker date="1488310884302" expanded="false" signature="5981:6694" ph="HttpServlet methods. Click on the + sign on the left to edit the code." />
+                <marker date="1488310884302" expanded="true" signature="5993:6256" ph="/**...*/" />
+                <marker date="1488310884302" expanded="true" signature="6404:6454" ph="{...}" />
+                <marker date="1488310884302" expanded="true" signature="6460:6584" ph="/**...*/" />
+                <marker date="1488310884302" expanded="false" signature="6633:6644" ph=" { " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,16 +59,16 @@
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="4761">
-              <caret line="753" column="27" selection-start-line="753" selection-start-column="23" selection-end-line="753" selection-end-column="27" />
+              <caret line="757" column="27" selection-start-line="757" selection-start-column="23" selection-end-line="757" selection-end-column="27" />
               <folding>
-                <marker date="1488228022574" expanded="false" signature="524:698" ph="{...}" />
-                <marker date="1488228022574" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
-                <marker date="1488228022574" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
-                <marker date="1488228022574" expanded="false" signature="730:1033" ph="{...}" />
-                <marker date="1488228022574" expanded="false" signature="736:939" ph="//..." />
-                <marker date="1488228022574" expanded="false" signature="967:1031" ph="{...}" />
-                <marker date="1488228022574" expanded="false" signature="1061:1476" ph="{...}" />
-                <marker date="1488228022574" expanded="false" signature="23697:24905" ph="/*...*/" />
+                <marker date="1488310884316" expanded="false" signature="524:698" ph="{...}" />
+                <marker date="1488310884316" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
+                <marker date="1488310884316" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
+                <marker date="1488310884316" expanded="false" signature="730:1033" ph="{...}" />
+                <marker date="1488310884316" expanded="false" signature="736:939" ph="//..." />
+                <marker date="1488310884316" expanded="false" signature="967:1031" ph="{...}" />
+                <marker date="1488310884316" expanded="false" signature="1061:1476" ph="{...}" />
+                <marker date="1488310884316" expanded="false" signature="23844:25052" ph="/*...*/" />
               </folding>
             </state>
           </provider>
@@ -97,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/signup/signup.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="109">
-              <caret line="15" column="35" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="35" />
+              <caret line="10" column="35" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -126,10 +139,10 @@
       <file leaf-file-name="GamesServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="568">
-              <caret line="333" column="78" selection-start-line="333" selection-start-column="78" selection-end-line="333" selection-end-column="78" />
+            <state relative-caret-position="517">
+              <caret line="330" column="78" selection-start-line="330" selection-start-column="78" selection-end-line="330" selection-end-column="78" />
               <folding>
-                <element signature="e#2589#2708#0" expanded="true" />
+                <element signature="e#2527#2646#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -955,12 +968,12 @@
       <workItem from="1487969729741" duration="9897000" />
       <workItem from="1488015529975" duration="47429000" />
       <workItem from="1488126902097" duration="484000" />
-      <workItem from="1488127602927" duration="31499000" />
+      <workItem from="1488127602927" duration="32099000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89309000" />
+    <option name="totallyTimeSpent" value="89909000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -1012,7 +1025,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java</url>
-          <line>229</line>
+          <line>226</line>
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -1050,14 +1063,14 @@
         <state relative-caret-position="7025">
           <caret line="281" column="31" selection-start-line="281" selection-start-column="31" selection-end-line="281" selection-end-column="31" />
           <folding>
-            <marker date="1488228022574" expanded="false" signature="524:698" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
-            <marker date="1488228022574" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
-            <marker date="1488228022574" expanded="false" signature="730:1033" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="736:939" ph="//..." />
-            <marker date="1488228022574" expanded="false" signature="967:1031" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="1061:1476" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="23697:24905" ph="/*...*/" />
+            <marker date="1488310884316" expanded="false" signature="524:698" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488310884316" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
+            <marker date="1488310884316" expanded="false" signature="730:1033" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="736:939" ph="//..." />
+            <marker date="1488310884316" expanded="false" signature="967:1031" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="1061:1476" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="23844:25052" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -1067,7 +1080,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2589#2708#0" expanded="true" />
+            <element signature="e#2527#2646#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1130,14 +1143,14 @@
         <state relative-caret-position="6273">
           <caret line="369" column="24" selection-start-line="369" selection-start-column="4" selection-end-line="369" selection-end-column="24" />
           <folding>
-            <marker date="1488228022574" expanded="false" signature="524:698" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
-            <marker date="1488228022574" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
-            <marker date="1488228022574" expanded="false" signature="730:1033" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="736:939" ph="//..." />
-            <marker date="1488228022574" expanded="false" signature="967:1031" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="1061:1476" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="23697:24905" ph="/*...*/" />
+            <marker date="1488310884316" expanded="false" signature="524:698" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488310884316" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
+            <marker date="1488310884316" expanded="false" signature="730:1033" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="736:939" ph="//..." />
+            <marker date="1488310884316" expanded="false" signature="967:1031" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="1061:1476" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="23844:25052" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -1164,7 +1177,7 @@
         <state relative-caret-position="2533">
           <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
           <folding>
-            <element signature="e#2589#2708#0" expanded="true" />
+            <element signature="e#2527#2646#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1408,10 +1421,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/GamesServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="333" column="78" selection-start-line="333" selection-start-column="78" selection-end-line="333" selection-end-column="78" />
+        <state relative-caret-position="517">
+          <caret line="330" column="78" selection-start-line="330" selection-start-column="78" selection-end-line="330" selection-end-column="78" />
           <folding>
-            <element signature="e#2589#2708#0" expanded="true" />
+            <element signature="e#2527#2646#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1419,16 +1432,16 @@
     <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/gameroom/gameRoom.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4761">
-          <caret line="753" column="27" selection-start-line="753" selection-start-column="23" selection-end-line="753" selection-end-column="27" />
+          <caret line="757" column="27" selection-start-line="757" selection-start-column="23" selection-end-line="757" selection-end-column="27" />
           <folding>
-            <marker date="1488228022574" expanded="false" signature="524:698" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
-            <marker date="1488228022574" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
-            <marker date="1488228022574" expanded="false" signature="730:1033" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="736:939" ph="//..." />
-            <marker date="1488228022574" expanded="false" signature="967:1031" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="1061:1476" ph="{...}" />
-            <marker date="1488228022574" expanded="false" signature="23697:24905" ph="/*...*/" />
+            <marker date="1488310884316" expanded="false" signature="524:698" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488310884316" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
+            <marker date="1488310884316" expanded="false" signature="730:1033" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="736:939" ph="//..." />
+            <marker date="1488310884316" expanded="false" signature="967:1031" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="1061:1476" ph="{...}" />
+            <marker date="1488310884316" expanded="false" signature="23844:25052" ph="/*...*/" />
           </folding>
         </state>
       </provider>
@@ -1454,7 +1467,7 @@
     <entry file="file://$PROJECT_DIR$/NA_webapp/web/pages/signup/signup.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="109">
-          <caret line="15" column="35" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="35" />
+          <caret line="10" column="35" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1469,9 +1482,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/NA_webapp/src/game_backend/servlets/LoginServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="92" column="24" selection-start-line="92" selection-start-column="22" selection-end-line="92" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="-27">
+          <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
+          <folding>
+            <element signature="e#6676#6677#0" expanded="false" />
+            <marker date="1488310884302" expanded="true" signature="1882:4706" ph="{...}" />
+            <marker date="1488310884302" expanded="true" signature="2352:2539" ph="//..." />
+            <marker date="1488310884302" expanded="true" signature="2956:3461" ph="//..." />
+            <marker date="1488310884302" expanded="true" signature="3992:4194" ph="//..." />
+            <marker date="1488310884302" expanded="true" signature="4318:4501" ph="//..." />
+            <marker date="1488310884302" expanded="true" signature="5981:5987" ph="{...}" />
+            <marker date="1488310884302" expanded="false" signature="5981:6694" ph="HttpServlet methods. Click on the + sign on the left to edit the code." />
+            <marker date="1488310884302" expanded="true" signature="5993:6256" ph="/**...*/" />
+            <marker date="1488310884302" expanded="true" signature="6404:6454" ph="{...}" />
+            <marker date="1488310884302" expanded="true" signature="6460:6584" ph="/**...*/" />
+            <marker date="1488310884302" expanded="false" signature="6633:6644" ph=" { " />
+          </folding>
         </state>
       </provider>
     </entry>

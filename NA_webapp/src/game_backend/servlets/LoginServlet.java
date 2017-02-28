@@ -82,21 +82,21 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
-    protected void isUserLoggedOn(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String usernameFromSession = SessionUtils.getUsername(request);
-        Gson gson = new Gson();
-        PrintWriter out = response.getWriter();
-        response.setContentType("application/json");
-        if (usernameFromSession == null) {
-            //user is not logged in yet
-            out.println(gson.toJson(false));
-        } else {
-            //user is already logged in
-            out.println(gson.toJson(true));
-            }
-        }
+//    protected void isUserLoggedOn(HttpServletRequest request, HttpServletResponse response)
+//            throws ServletException, IOException {
+//        response.setContentType("text/html;charset=UTF-8");
+//        String usernameFromSession = SessionUtils.getUsername(request);
+//        Gson gson = new Gson();
+//        PrintWriter out = response.getWriter();
+//        response.setContentType("application/json");
+//        if (usernameFromSession == null) {
+//            //user is not logged in yet
+//            out.println(gson.toJson(false));
+//        } else {
+//            //user is already logged in
+//            out.println(gson.toJson(true));
+//            }
+//        }
 
 // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -110,16 +110,7 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String action = request.getParameter("action");
-        switch (action) {
-            case "login":
-                processRequest(request, response);
-                break;
-            case "checkUser":
-                isUserLoggedOn(request,response);
-                break;
-        }
-
+            processRequest(request, response);
     }
 
     /**

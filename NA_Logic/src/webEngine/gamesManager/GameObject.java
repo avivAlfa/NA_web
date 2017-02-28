@@ -64,9 +64,14 @@ public class GameObject {
 
         gameDescriptor = game.XML_Handler.getGameDescriptorFromXml(inputStream);
         game.XML_Handler.validate(gameDescriptor);
-        this.title = gameDescriptor.getDynamicPlayers().getGameTitle();
-        this.requiredNumOfPlayers = gameDescriptor.getDynamicPlayers().getTotalPlayers();
         if (gameDescriptor != null) {
+            if(gameDescriptor.getGameType().equals("AdvanceDynamic")){
+                this.title = gameDescriptor.getDynamicPlayers().getGameTitle();
+                this.requiredNumOfPlayers = gameDescriptor.getDynamicPlayers().getTotalPlayers();
+            }else{
+                this.title = "Basic Game";
+                this.requiredNumOfPlayers = 2;
+            }
             loadGameEngine(gameDescriptor); //loading basic/advance gameEngine
         }
     }
