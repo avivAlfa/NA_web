@@ -86,12 +86,14 @@
         </div>
         </div>
         <div class="chat-container">
+
             <div id="chatButton" onclick="startChat()">Chat</div>
             <div class="chatRows" style="visibility: hidden">
+                <div id="chatHeader"><h4>Chat</h4></div>
                 <div class="col-xs-4">
                     <div class="content">
                         <div id="chatwindow">
-                            <h4>Chat</h4>
+
                             <div id="chatarea" class="span6"></div>
                             <form id="chatform" method="POST" action="/sendChat">
                             <!--<form id="chatform" >-->
