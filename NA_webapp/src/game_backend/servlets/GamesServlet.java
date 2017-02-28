@@ -4,10 +4,7 @@ import Exceptions.CellOutOfBoundsException;
 import Exceptions.duplicateGameNameException;
 import com.google.gson.Gson;
 
-import game.Board;
-import game.Cell;
-import game.Colors;
-import game.Player;
+import game.*;
 import game_backend.utils.SessionUtils;
 import webEngine.gamesManager.*;
 
@@ -336,7 +333,7 @@ public class GamesServlet extends HttpServlet{
             out.println(gson.toJson(new LoadGameStatus(false, "Error trying to retrieve data from XML file")));
         } catch (Exception e) {
            // out.println(gson.toJson(new LoadGameStatus(false, "An unhandled error occured")));
-            out.println(gson.toJson(new LoadGameStatus(false, "An Unhandled error occured")));
+            out.println(gson.toJson(new LoadGameStatus(false, e.getClass().toString())));
 
         }
 //            out.println(gson.toJson(new LoadGameStatus(true, "")));
@@ -364,7 +361,8 @@ public class GamesServlet extends HttpServlet{
         //if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !gamesManager.isUserNameRegisteredToAnyOtherGame(userName,currentGame)) {
         if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !currentGame.getGameEngine().getPlayers().contains(userName)){
             if(!currentGame.containsUserName(userName)){
-                currentGame.getGameEngine().addPlayer(userName, isComputer);
+                    currentGame.getGameEngine().addPlayer(userName, isComputer);
+
                 if (currentGame.getGameEngine().getPlayers().size() == currentGame.getRequiredNumOfPlayers())//if room is full
                     currentGame.setGameStatus(GameStatus.Running);
             }

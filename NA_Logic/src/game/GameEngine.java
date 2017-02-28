@@ -33,6 +33,7 @@ public abstract class GameEngine {
     public abstract void setPossibleAsEmpty(List<Point> possibleCells);
     public abstract Point getComputerChosenCellIndexes();
     public abstract void removePlayerCells(int playerIndex);
+    public abstract void addPlayer(String username, boolean isComputer);
 
 
     public int getMovesCnt() { return movesCnt; }
@@ -198,8 +199,12 @@ public abstract class GameEngine {
 
         if(gd.getBoard().getStructure().getType().toLowerCase().equals("random")) {
             //List<GameDescriptor.Players.Player> players = (gd.getPlayers()!=null)?gd.getPlayers().getPlayer():null;
+
             //gameBoard = buildRandomBoard(gd.getBoard().getSize().intValue(), gd.getBoard().getStructure().getRange().getFrom(), gd.getBoard().getStructure().getRange().getTo(), players);
-            int numOfPlayers = gd.getDynamicPlayers().getTotalPlayers();
+            int numOfPlayers=0;
+            if(!gd.getGameType().equals("Basic")) {
+                numOfPlayers = gd.getDynamicPlayers().getTotalPlayers();
+            }
             gameBoard = buildRandomBoard(gd.getBoard().getSize().intValue(), gd.getBoard().getStructure().getRange().getFrom(), gd.getBoard().getStructure().getRange().getTo(),numOfPlayers);
 
         } else {
@@ -241,10 +246,10 @@ public abstract class GameEngine {
 
     public void buildBasicPlayers(){
         players = new ArrayList<Player>();
-        Player player1 = new Player("RowPlayer", 0, true);
-        Player player2 = new Player("ColPlayer", 0, true);
-        players.add(player1);
-        players.add(player2);
+//        Player player1 = new Player("RowPlayer", 0, true);
+//        Player player2 = new Player("ColPlayer", 0, true);
+//        players.add(player1);
+//        players.add(player2);
     }
 
     public Cell[][] createEmptyBoard(int boardSize) {
@@ -413,12 +418,6 @@ public abstract class GameEngine {
         }
 
         return newList;
-    }
-
-    public void addPlayer(String userName, boolean isComputer) {
-        Player player = new Player(userName, 0, 0 , players.size() + 1, !isComputer);
-
-        players.add(player);
     }
 
     public Player getCurrentPlayer() {

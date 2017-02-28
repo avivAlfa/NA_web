@@ -177,4 +177,11 @@ protected List<PoolElement> createPool(int boardSize, int rangeFrom, int rangeTo
     @Override
     public void removePlayerCells(int playerIndex) {
     }
+
+    @Override
+    public void addPlayer(String userName, boolean isComputer) {
+        Player player = new Player(userName, 0, 0 , 0, !isComputer);
+
+        players.add(player);
+    }
 }
