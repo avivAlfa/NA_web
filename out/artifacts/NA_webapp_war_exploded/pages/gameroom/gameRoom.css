@@ -1,13 +1,13 @@
 body{
-    /*: aliceblue;*/
+    background: aliceblue;
     margin: 0;
     min-width: 750px;
 }
 
 .toolBar{
     height: 50px;
-    background:#111111;
-    color: white;
+    background:steelblue;
+    color: black;
     margin-bottom: 5%;
     font-family: Tahoma;
     font-size: 14px;
@@ -123,13 +123,13 @@ body{
     height: 300px;
     /*float: right;*/
     text-align: left;
-    background: #111111;
+    background: steelblue;;
     /*opacity: 0.5;*/
     border-radius: 5px;
     /*box-shadow: 3px 6px 17px 1px;*/
     font-size: 15px;
     font-family: "Century Gothic";
-    color: whitesmoke;
+    color: white;
     /*float:left;*/
 }
 
@@ -138,7 +138,7 @@ body{
     display: inline-block;
     height: 200px;
     text-align: left;
-    background: black;
+    background: steelblue;;
     border-radius: 5px;
     font-size: 15px;
     font-family: "Century Gothic";
@@ -217,7 +217,7 @@ body{
     -webkit-border-radius:3px;
     border-radius:3px;
     /*border:1px solid #dcdcdc;*/
-    border:1px solid black;
+    border:1px solid steelblue;
     /*display:inline-block;*/
     display: table-cell;
     cursor:pointer;
@@ -393,6 +393,7 @@ body{
     top: 20px;
     font-size: x-large;
     right: 200px;
+    color:black;
 }
 
 #chatButton {

@@ -101,8 +101,8 @@ public class XML_Handler {
             throw new InvalidRangeValuesException();
         }
 
-//        if(numOfPlayers < 3 || numOfPlayers > 6)//TODO:release from comments
-//            throw new InvalidNumberOfPlayersException();
+        if(numOfPlayers < 3 || numOfPlayers > 6)
+            throw new InvalidNumberOfPlayersException();
     }
 
     private static void validateExplicitBoard(GameDescriptor gd) throws Exception{
@@ -136,8 +136,8 @@ public class XML_Handler {
 
         if(gd.getGameType().equals("AdvanceDynamic")){
             int numOfPlayers = gd.getDynamicPlayers().getTotalPlayers();
-     //       if(numOfPlayers < 3 || numOfPlayers > 6)//TODO
-      //          throw new InvalidNumberOfPlayersException();
+            if(numOfPlayers < 3 || numOfPlayers > 6)
+                throw new InvalidNumberOfPlayersException();
         }
     }
 
