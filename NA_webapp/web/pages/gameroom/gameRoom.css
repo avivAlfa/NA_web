@@ -6,7 +6,8 @@ body{
 
 .toolBar{
     height: 50px;
-    background: gainsboro;
+    background:#111111;
+    color: white;
     margin-bottom: 5%;
     font-family: Tahoma;
     font-size: 14px;
@@ -46,7 +47,17 @@ body{
 }
 
 .selectedSquare {
-    background-color: red;
+    -moz-box-shadow:inset 0px 1px 0px 0px #dcecfb !important;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #dcecfb !important;
+    box-shadow:inset 0px 1px 0px 0px #dcecfb !important;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bdddfa), color-stop(1, #80b5ea)) !important;
+    background:-moz-linear-gradient(top, #bdddfa 5%, #80b5ea 100%) !important;
+    background:-webkit-linear-gradient(top, #bdddfa 5%, #80b5ea 100%) !important;
+    background:-o-linear-gradient(top, #bdddfa 5%, #80b5ea 100%) !important;
+    background:-ms-linear-gradient(top, #bdddfa 5%, #80b5ea 100%) !important;
+    background:linear-gradient(to bottom, #bdddfa 5%, #80b5ea 100%) !important;
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0) !important;
+    background-color:#bdddfa !important;
 }
 
 .mainDivBody {
@@ -59,6 +70,39 @@ body{
     margin-bottom: 10%;
 }
 
+/*.playersAndActions{*/
+    /*margin-left: 1%;*/
+    /*margin-right: 1%;*/
+    /*!*margin-top:3.5%;*!*/
+    /*margin-bottom: 1%;*/
+    /*width: 320px;*/
+    /*text-align: left;*/
+    /*border-radius: 5px;*/
+    /*font-size: 15px;*/
+    /*font-family: "Century Gothic";*/
+    /*float:left;*/
+/*}*/
+
+/*.players {*/
+    /*margin-bottom: 2%;*/
+    /*display: inline-block;*/
+    /*height: 200px;*/
+    /*!*float: right;*!*/
+    /*text-align: left;*/
+    /*background: black;*/
+    /*!*opacity: 0.6;*!*/
+    /*border-radius: 5px;*/
+
+    /*!*box-shadow: 3px 6px 17px 1px;*!*/
+    /*font-size: 15px;*/
+    /*font-family: "Century Gothic";*/
+    /*!*color: black;*!*/
+    /*!*float:left;*!*/
+    /*opacity: 0.5;*/
+    /*color: white;*/
+
+/*}*/
+
 .playersAndActions{
     margin-left: 1%;
     margin-right: 1%;
@@ -69,23 +113,23 @@ body{
     border-radius: 5px;
     font-size: 15px;
     font-family: "Century Gothic";
-    color: black;
+    /*color: black;*/
     float:left;
 }
 
 .players {
     margin-bottom: 2%;
     display: inline-block;
-    height: 200px;
+    height: 300px;
     /*float: right;*/
     text-align: left;
-    background: lightslategray;
-    /*opacity: 0.6;*/
+    background: #111111;
+    /*opacity: 0.5;*/
     border-radius: 5px;
     /*box-shadow: 3px 6px 17px 1px;*/
     font-size: 15px;
     font-family: "Century Gothic";
-    color: black;
+    color: whitesmoke;
     /*float:left;*/
 }
 
@@ -94,11 +138,13 @@ body{
     display: inline-block;
     height: 200px;
     text-align: left;
-    background: lightslategray;
+    background: black;
     border-radius: 5px;
     font-size: 15px;
     font-family: "Century Gothic";
-    color: black;
+    opacity: 0.5;
+    color: white;
+
 }
 
 .resignedPlayers > div {
@@ -106,23 +152,27 @@ body{
     margin-left: 10px;
 }
 
-.actions > div {
-    height: 20px;
-    font-size: 14px;
-    font-family: "Century Gothic";
-}
+/*.actions > div {*/
+    /*height: 20px;*/
+    /*font-size: 14px;*/
+    /*font-family: "Century Gothic";*/
+/*}*/
 
 .action{
-    border: 1px solid black;
-    border-radius: 8px;
-    background: lightslategray;
+    height: 20px;
+    font-size: 14px;
     text-align: center;
     /*box-shadow: 4px 0px 9px 1px;*/
     color: black;
+
+    border: grey 1px solid;
+    border-radius: 4px;
+    background: aliceblue;
+    box-shadow: inset 3px 3px 9px -2px rgba(0,0,0,0.75);
 }
 
 .action:hover {
-    background: aliceblue;
+    background: lightblue;
     cursor: pointer;
 }
 
@@ -141,14 +191,62 @@ body{
     width: calc(100% - 400px);
 }
 
-.square{
-    border: 1px black solid;
+/*.square{*/
+    /*border: 1px black solid;*/
+    /*width: 50px;*/
+    /*height: 50px;*/
+    /*font-size: medium;*/
+    /*vertical-align: middle;*/
+    /*display: table-cell;*/
+    /*text-align: center;*/
+/*}*/
+
+.square {
+    -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
+    background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
+    background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
+    background-color:#ededed;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    /*border:1px solid #dcdcdc;*/
+    border:1px solid black;
+    /*display:inline-block;*/
+    display: table-cell;
+    cursor:pointer;
+    color:#777777;
+    font-family:Arial;
+    font-size: medium;
+    font-weight:bold;
+    /*padding:32px 32px;*/
+    text-decoration:none;
+    text-shadow:0px 1px 0px #ffffff;
+    text-align: center;
     width: 50px;
     height: 50px;
-    font-size: medium;
     vertical-align: middle;
-    display: table-cell;
-    text-align: center;
+
+}
+.square:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
+    background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
+    background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
+    background-color:#dfdfdf;
+}
+.square:active {
+    position:relative;
+    top:0.5px;
 }
 
 .playerContainerDiv, .resignedplayerContainerDiv{
@@ -245,6 +343,7 @@ body{
     bottom: 100px;
     left: 30px;
     width: 100px;
+    color:black;
 }
 
 .close:hover {
@@ -266,18 +365,26 @@ body{
     background: gainsboro;
 }
 
-#chatButton, .leaveGame {
+#chatButton{
     display: inline-block;
     margin-right: 8px;
+    padding: 2px;
+    border: grey 1px solid;
+    border-radius: 4px;
+    background: aliceblue;
+    box-shadow: inset 3px 3px 9px -2px rgba(0,0,0,0.75);
+    color: black;
+}
+
+.leaveGame {
+    margin-left: 5px;
+    display: inline-block;
     padding: 5px;
     border: grey 1px solid;
     border-radius: 4px;
     background: aliceblue;
     box-shadow: inset 3px 3px 9px -2px rgba(0,0,0,0.75);
-}
-
-.leaveGame {
-    margin-left: 5px;
+    color: black;
 }
 
 #chatHeader {
@@ -299,6 +406,7 @@ body{
     position: fixed;
     bottom: 10px;
     right: 10px;
+    color:black;
 }
 
 #chatButton:hover {
