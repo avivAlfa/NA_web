@@ -170,13 +170,6 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="MavenProjectNavigator">
     <treeState />
   </component>
@@ -915,12 +908,12 @@
       <workItem from="1488015529975" duration="47429000" />
       <workItem from="1488126902097" duration="484000" />
       <workItem from="1488127602927" duration="29298000" />
-      <workItem from="1488273979857" duration="13780000" />
+      <workItem from="1488273979857" duration="13882000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100888000" />
+    <option name="totallyTimeSpent" value="100990000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="7" />
