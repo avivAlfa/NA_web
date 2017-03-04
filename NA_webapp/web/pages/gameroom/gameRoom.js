@@ -415,7 +415,7 @@ function updateBoard() {
     $.ajax
     (
         {
-            async: false,//TODO
+            async: false,
             url: '/games',
             data:
             {
@@ -577,7 +577,7 @@ function onPlayMoveClick() {
             playMove(selectedRow, selectedCol);
 
             selectedCell.classList.remove("selectedSquare")
-            selectedCell.classList.add('cursor'); //TODO: add img to class cursor on css
+            selectedCell.classList.add('cursor');
 
             $(cursorCell).attr('src', '');
             $(cursorCell).removeClass("cursor");

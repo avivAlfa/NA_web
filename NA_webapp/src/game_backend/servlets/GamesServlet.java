@@ -358,8 +358,8 @@ public class GamesServlet extends HttpServlet{
         //     loginManager.userJoinGame(userName, gameId);
 
 
-        //if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !gamesManager.isUserNameRegisteredToAnyOtherGame(userName,currentGame)) {
-        if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !currentGame.getGameEngine().getPlayers().contains(userName)){
+        if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !gamesManager.isUserNameRegisteredToAnyOtherGame(userName,currentGame)) {
+        //if(currentGame.getGameStatus() == GameStatus.WaitingForPlayers && !currentGame.getGameEngine().getPlayers().contains(userName)){
             if(!currentGame.containsUserName(userName)){
                     currentGame.getGameEngine().addPlayer(userName, isComputer);
 
