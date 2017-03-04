@@ -28,6 +28,7 @@
             <state relative-caret-position="-27">
               <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <element signature="e#6676#6677#0" expanded="false" />
                 <marker date="1488310884302" expanded="true" signature="1882:4706" ph="{...}" />
                 <marker date="1488310884302" expanded="true" signature="2352:2539" ph="//..." />
@@ -61,6 +62,8 @@
             <state relative-caret-position="4761">
               <caret line="757" column="27" selection-start-line="757" selection-start-column="23" selection-end-line="757" selection-end-column="27" />
               <folding>
+                <marker date="1488310884316" expanded="true" signature="233:323" ph="//..." />
+                <marker date="1488310884316" expanded="true" signature="448:493" ph="{...}" />
                 <marker date="1488310884316" expanded="false" signature="524:698" ph="{...}" />
                 <marker date="1488310884316" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
                 <marker date="1488310884316" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
@@ -68,6 +71,70 @@
                 <marker date="1488310884316" expanded="false" signature="736:939" ph="//..." />
                 <marker date="1488310884316" expanded="false" signature="967:1031" ph="{...}" />
                 <marker date="1488310884316" expanded="false" signature="1061:1476" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="1061:1478" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="1499:1765" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="1533:1742" ph="{&quot;url&quot;: '/userslist'...}" />
+                <marker date="1488310884316" expanded="true" signature="1598:1643" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
+                <marker date="1488310884316" expanded="true" signature="1796:1903" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="1932:2288" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="1959:2280" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488310884316" expanded="true" signature="2044:2164" ph="{&quot;action&quot;: 'boardDetails'...}" />
+                <marker date="1488310884316" expanded="true" signature="2328:2447" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="2499:2732" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="2526:2724" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488310884316" expanded="true" signature="2585:2638" ph="{&quot;action&quot;: 'gamePlayers'...}" />
+                <marker date="1488310884316" expanded="true" signature="2777:6658" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="3210:3963" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="4157:4634" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="4325:4459" ph="//..." />
+                <marker date="1488310884316" expanded="true" signature="4693:6654" ph="//..." />
+                <marker date="1488310884316" expanded="true" signature="6715:9274" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="6748:9271" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="7251:8340" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="8660:9265" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="8866:9012" ph="//..." />
+                <marker date="1488310884316" expanded="true" signature="9298:9637" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="9409:9629" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488310884316" expanded="true" signature="9494:9553" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
+                <marker date="1488310884316" expanded="true" signature="9672:11939" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="9781:11860" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="9908:9961" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="9975:10205" ph="//..." />
+                <marker date="1488310884316" expanded="true" signature="10469:11160" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="10567:10974" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="10643:10772" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="10830:10956" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="10995:11146" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="11475:11835" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="11526:11821" ph="//..." />
+                <marker date="1488310884316" expanded="true" signature="11992:12314" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="12052:12292" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488310884316" expanded="true" signature="12113:12193" ph="{&quot;action&quot;: &quot;positions&quot;...}" />
+                <marker date="1488310884316" expanded="true" signature="12337:12453" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="12478:12790" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="12527:12782" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488310884316" expanded="true" signature="12618:12713" ph="{&quot;action&quot;: 'boardDetails'...}" />
+                <marker date="1488310884316" expanded="true" signature="12819:14538" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="13059:14139" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="13183:14101" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="13317:13417" ph="//..." />
+                <marker date="1488310884316" expanded="true" signature="13486:13776" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="13817:14051" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="14146:14296" ph="/*...*/" />
+                <marker date="1488310884316" expanded="true" signature="14567:14937" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="14610:14910" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488310884316" expanded="true" signature="14695:14755" ph="{&quot;action&quot;: 'possibleCellsFlag'...}" />
+                <marker date="1488310884316" expanded="true" signature="14819:14900" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="14958:15187" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="14980:15178" ph="{&quot;url&quot;: '/games'...}" />
+                <marker date="1488310884316" expanded="true" signature="15053:15106" ph="{&quot;action&quot;: &quot;changeTurn&quot;...}" />
+                <marker date="1488310884316" expanded="true" signature="15217:15555" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="15235:15552" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="15356:15428" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="15581:15838" ph="{...}" />
+                <marker date="1488310884316" expanded="true" signature="15615:15815" ph="{&quot;url&quot;: '/utils'...}" />
+                <marker date="1488310884316" expanded="true" signature="15676:15716" ph="{&quot;action&quot;: &quot;colors&quot;...}" />
+                <marker date="1488310884316" expanded="true" signature="15868:16256" ph="{...}" />
                 <marker date="1488310884316" expanded="false" signature="23844:25052" ph="/*...*/" />
               </folding>
             </state>
@@ -197,8 +264,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -958,15 +1025,15 @@
       <workItem from="1487969729741" duration="9897000" />
       <workItem from="1488015529975" duration="47429000" />
       <workItem from="1488126902097" duration="484000" />
-      <workItem from="1488127602927" duration="32276000" />
+      <workItem from="1488127602927" duration="32868000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90086000" />
+    <option name="totallyTimeSpent" value="90678000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -978,12 +1045,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2974359" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19397993" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25869894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18230277" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1053,6 +1120,8 @@
         <state relative-caret-position="7025">
           <caret line="281" column="31" selection-start-line="281" selection-start-column="31" selection-end-line="281" selection-end-column="31" />
           <folding>
+            <marker date="1488310884316" expanded="true" signature="233:323" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="448:493" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="524:698" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
             <marker date="1488310884316" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
@@ -1060,6 +1129,70 @@
             <marker date="1488310884316" expanded="false" signature="736:939" ph="//..." />
             <marker date="1488310884316" expanded="false" signature="967:1031" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="1061:1476" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1061:1478" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1499:1765" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1533:1742" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488310884316" expanded="true" signature="1598:1643" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="1796:1903" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1932:2288" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1959:2280" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="2044:2164" ph="{&quot;action&quot;: 'boardDetails'...}" />
+            <marker date="1488310884316" expanded="true" signature="2328:2447" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="2499:2732" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="2526:2724" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="2585:2638" ph="{&quot;action&quot;: 'gamePlayers'...}" />
+            <marker date="1488310884316" expanded="true" signature="2777:6658" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="3210:3963" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="4157:4634" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="4325:4459" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="4693:6654" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="6715:9274" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="6748:9271" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="7251:8340" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="8660:9265" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="8866:9012" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="9298:9637" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9409:9629" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="9494:9553" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
+            <marker date="1488310884316" expanded="true" signature="9672:11939" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9781:11860" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9908:9961" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9975:10205" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="10469:11160" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10567:10974" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10643:10772" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10830:10956" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10995:11146" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="11475:11835" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="11526:11821" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="11992:12314" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="12052:12292" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="12113:12193" ph="{&quot;action&quot;: &quot;positions&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="12337:12453" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="12478:12790" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="12527:12782" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="12618:12713" ph="{&quot;action&quot;: 'boardDetails'...}" />
+            <marker date="1488310884316" expanded="true" signature="12819:14538" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13059:14139" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13183:14101" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13317:13417" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="13486:13776" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13817:14051" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14146:14296" ph="/*...*/" />
+            <marker date="1488310884316" expanded="true" signature="14567:14937" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14610:14910" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="14695:14755" ph="{&quot;action&quot;: 'possibleCellsFlag'...}" />
+            <marker date="1488310884316" expanded="true" signature="14819:14900" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14958:15187" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14980:15178" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="15053:15106" ph="{&quot;action&quot;: &quot;changeTurn&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="15217:15555" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15235:15552" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15356:15428" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15581:15838" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15615:15815" ph="{&quot;url&quot;: '/utils'...}" />
+            <marker date="1488310884316" expanded="true" signature="15676:15716" ph="{&quot;action&quot;: &quot;colors&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="15868:16256" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="23844:25052" ph="/*...*/" />
           </folding>
         </state>
@@ -1133,6 +1266,8 @@
         <state relative-caret-position="6273">
           <caret line="369" column="24" selection-start-line="369" selection-start-column="4" selection-end-line="369" selection-end-column="24" />
           <folding>
+            <marker date="1488310884316" expanded="true" signature="233:323" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="448:493" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="524:698" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
             <marker date="1488310884316" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
@@ -1140,6 +1275,70 @@
             <marker date="1488310884316" expanded="false" signature="736:939" ph="//..." />
             <marker date="1488310884316" expanded="false" signature="967:1031" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="1061:1476" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1061:1478" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1499:1765" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1533:1742" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488310884316" expanded="true" signature="1598:1643" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="1796:1903" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1932:2288" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1959:2280" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="2044:2164" ph="{&quot;action&quot;: 'boardDetails'...}" />
+            <marker date="1488310884316" expanded="true" signature="2328:2447" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="2499:2732" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="2526:2724" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="2585:2638" ph="{&quot;action&quot;: 'gamePlayers'...}" />
+            <marker date="1488310884316" expanded="true" signature="2777:6658" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="3210:3963" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="4157:4634" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="4325:4459" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="4693:6654" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="6715:9274" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="6748:9271" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="7251:8340" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="8660:9265" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="8866:9012" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="9298:9637" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9409:9629" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="9494:9553" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
+            <marker date="1488310884316" expanded="true" signature="9672:11939" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9781:11860" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9908:9961" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9975:10205" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="10469:11160" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10567:10974" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10643:10772" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10830:10956" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10995:11146" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="11475:11835" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="11526:11821" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="11992:12314" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="12052:12292" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="12113:12193" ph="{&quot;action&quot;: &quot;positions&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="12337:12453" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="12478:12790" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="12527:12782" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="12618:12713" ph="{&quot;action&quot;: 'boardDetails'...}" />
+            <marker date="1488310884316" expanded="true" signature="12819:14538" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13059:14139" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13183:14101" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13317:13417" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="13486:13776" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13817:14051" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14146:14296" ph="/*...*/" />
+            <marker date="1488310884316" expanded="true" signature="14567:14937" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14610:14910" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="14695:14755" ph="{&quot;action&quot;: 'possibleCellsFlag'...}" />
+            <marker date="1488310884316" expanded="true" signature="14819:14900" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14958:15187" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14980:15178" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="15053:15106" ph="{&quot;action&quot;: &quot;changeTurn&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="15217:15555" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15235:15552" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15356:15428" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15581:15838" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15615:15815" ph="{&quot;url&quot;: '/utils'...}" />
+            <marker date="1488310884316" expanded="true" signature="15676:15716" ph="{&quot;action&quot;: &quot;colors&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="15868:16256" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="23844:25052" ph="/*...*/" />
           </folding>
         </state>
@@ -1424,6 +1623,8 @@
         <state relative-caret-position="4761">
           <caret line="757" column="27" selection-start-line="757" selection-start-column="23" selection-end-line="757" selection-end-column="27" />
           <folding>
+            <marker date="1488310884316" expanded="true" signature="233:323" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="448:493" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="524:698" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="542:694" ph="{&quot;url&quot;: '/userslist'...}" />
             <marker date="1488310884316" expanded="false" signature="585:634" ph="{&quot;action&quot;: &quot;currentUserName&quot;...}" />
@@ -1431,6 +1632,70 @@
             <marker date="1488310884316" expanded="false" signature="736:939" ph="//..." />
             <marker date="1488310884316" expanded="false" signature="967:1031" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="1061:1476" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1061:1478" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1499:1765" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1533:1742" ph="{&quot;url&quot;: '/userslist'...}" />
+            <marker date="1488310884316" expanded="true" signature="1598:1643" ph="{&quot;action&quot;: &quot;currentUser&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="1796:1903" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1932:2288" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="1959:2280" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="2044:2164" ph="{&quot;action&quot;: 'boardDetails'...}" />
+            <marker date="1488310884316" expanded="true" signature="2328:2447" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="2499:2732" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="2526:2724" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="2585:2638" ph="{&quot;action&quot;: 'gamePlayers'...}" />
+            <marker date="1488310884316" expanded="true" signature="2777:6658" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="3210:3963" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="4157:4634" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="4325:4459" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="4693:6654" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="6715:9274" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="6748:9271" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="7251:8340" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="8660:9265" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="8866:9012" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="9298:9637" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9409:9629" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="9494:9553" ph="{&quot;action&quot;: 'gameStatusMessage'...}" />
+            <marker date="1488310884316" expanded="true" signature="9672:11939" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9781:11860" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9908:9961" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="9975:10205" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="10469:11160" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10567:10974" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10643:10772" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10830:10956" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="10995:11146" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="11475:11835" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="11526:11821" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="11992:12314" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="12052:12292" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="12113:12193" ph="{&quot;action&quot;: &quot;positions&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="12337:12453" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="12478:12790" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="12527:12782" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="12618:12713" ph="{&quot;action&quot;: 'boardDetails'...}" />
+            <marker date="1488310884316" expanded="true" signature="12819:14538" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13059:14139" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13183:14101" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13317:13417" ph="//..." />
+            <marker date="1488310884316" expanded="true" signature="13486:13776" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="13817:14051" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14146:14296" ph="/*...*/" />
+            <marker date="1488310884316" expanded="true" signature="14567:14937" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14610:14910" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="14695:14755" ph="{&quot;action&quot;: 'possibleCellsFlag'...}" />
+            <marker date="1488310884316" expanded="true" signature="14819:14900" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14958:15187" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="14980:15178" ph="{&quot;url&quot;: '/games'...}" />
+            <marker date="1488310884316" expanded="true" signature="15053:15106" ph="{&quot;action&quot;: &quot;changeTurn&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="15217:15555" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15235:15552" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15356:15428" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15581:15838" ph="{...}" />
+            <marker date="1488310884316" expanded="true" signature="15615:15815" ph="{&quot;url&quot;: '/utils'...}" />
+            <marker date="1488310884316" expanded="true" signature="15676:15716" ph="{&quot;action&quot;: &quot;colors&quot;...}" />
+            <marker date="1488310884316" expanded="true" signature="15868:16256" ph="{...}" />
             <marker date="1488310884316" expanded="false" signature="23844:25052" ph="/*...*/" />
           </folding>
         </state>
@@ -1475,6 +1740,7 @@
         <state relative-caret-position="-27">
           <caret line="84" column="24" selection-start-line="84" selection-start-column="24" selection-end-line="84" selection-end-column="24" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="e#6676#6677#0" expanded="false" />
             <marker date="1488310884302" expanded="true" signature="1882:4706" ph="{...}" />
             <marker date="1488310884302" expanded="true" signature="2352:2539" ph="//..." />
